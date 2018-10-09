@@ -17,8 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="562.0" prefWidth="418.0" style="-fx-background-color: #455A64;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="ars.controllers.SignupController">
+<AnchorPane id="AnchorPane" prefHeight="562.0" prefWidth="418.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.SignupController">
    <children>
       <Pane prefHeight="562.0" prefWidth="418.0" style="-fx-background-color: #455A64;">
          <children>
@@ -65,7 +64,7 @@
                               <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
                            </VBox.margin>
                         </JFXTextField>
-                        <JFXDatePicker id="datePicker" defaultColor="#cfd8dc" overLay="true" prefHeight="25.0" prefWidth="366.0" promptText="Date of birth">
+                        <JFXDatePicker id="datePicker" defaultColor="#eeeeee" prefHeight="25.0" prefWidth="366.0" promptText="Date of birth" style="-fx-prompt-text-fill: gray; -jfx-unfocus-color: blue;">
                            <VBox.margin>
                               <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
                            </VBox.margin>
