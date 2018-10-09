@@ -17,7 +17,7 @@ import javafx.fxml.Initializable;
 public class SignupController implements Initializable {
 
     /**
-     * Initializes the controller class.
+     * Sharaf
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
