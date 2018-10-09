@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="ARS.jar" size="6740" download="eager" />
+    <jar href="ARS.jar" size="7807" download="eager" />
     <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
     <jar href="lib\jfoenix-8.0.7.jar" size="2631271" download="eager" />
   </resources>
