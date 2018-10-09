@@ -6,6 +6,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
@@ -25,11 +27,22 @@
                      <children>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Label alignment="CENTER" contentDisplay="TOP" prefHeight="73.0" prefWidth="716.0" text="ARS" textAlignment="CENTER" textFill="WHITE">
+                              <Label alignment="CENTER" contentDisplay="TOP" prefHeight="51.0" prefWidth="691.0" text="iFly" textAlignment="CENTER" textFill="WHITE">
                                  <font>
                                     <Font name="Century Gothic" size="30.0" />
                                  </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" top="40.0" />
+                                 </HBox.margin>
                               </Label>
+                              <ImageView fitHeight="40.0" fitWidth="45.0" onMouseClicked="#exitAction" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Resources/exit.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
                            </children>
                         </HBox>
                         <JFXTextField fx:id="emailTextField" focusColor="#009688" labelFloat="true" promptText="Email" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
