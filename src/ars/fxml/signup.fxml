@@ -23,7 +23,15 @@
          <children>
             <HBox prefHeight="63.0" prefWidth="418.0">
                <children>
-                  <Label alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="420.0" text="User" textAlignment="RIGHT" textFill="WHITE">
+                  <ImageView fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Resources/back-arrow.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="326.0" text="User" textAlignment="RIGHT" textFill="WHITE">
                      <HBox.margin>
                         <Insets top="20.0" />
                      </HBox.margin>
@@ -44,14 +52,6 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="40.0" fitWidth="45.0" onMouseClicked="#exitAction" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Resources/back-arrow.png" />
-                     </image>
-                     <HBox.margin>
-                        <Insets right="10.0" top="10.0" />
-                     </HBox.margin>
-                  </ImageView>
                </children>
             </HBox>
             <Pane layoutY="63.0" prefHeight="499.0" prefWidth="418.0">
