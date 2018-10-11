@@ -7,6 +7,10 @@ package ars.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import com.jfoenix.controls.JFXComboBox;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 /**
@@ -19,9 +23,17 @@ public class SignupController implements Initializable {
     /**
      * Sharaf
      */
+    @FXML
+    JFXComboBox<Object> userGender;
+
+    @FXML
+    public void onBackClicked(){
+        LoginController.signUpStage.close();
+        LoginController.loginStage.show();
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        userGender.getItems().addAll("Male","Female");
     }    
     
 }

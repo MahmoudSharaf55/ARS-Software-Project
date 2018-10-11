@@ -41,6 +41,7 @@ public class Main extends Application {
         });
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(scene);
+        primaryStage.getIcons().add(new Image("ars/Resources/iFlyIcon.png"));
         primaryStage.show();
     }
 

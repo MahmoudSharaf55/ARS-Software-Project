@@ -23,12 +23,12 @@
          <children>
             <HBox prefHeight="63.0" prefWidth="418.0">
                <children>
-                  <ImageView fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="31.0" fitWidth="35.0" onMouseClicked="#onBackClicked" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../Resources/back-arrow.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="10.0" top="10.0" />
+                        <Insets left="10.0" top="15.0" />
                      </HBox.margin>
                   </ImageView>
                   <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="326.0" text="User" textAlignment="RIGHT" textFill="WHITE">
@@ -77,7 +77,7 @@
                               <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
                            </VBox.margin>
                         </JFXDatePicker>
-                        <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="338.0" promptText="Gender" style="-fx-prompt-text-fill: gray;" unFocusColor="#cfd8dc">
+                        <JFXComboBox fx:id="userGender" focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="338.0" promptText="Gender" style="-fx-prompt-text-fill: gray;" unFocusColor="#cfd8dc">
                            <VBox.margin>
                               <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
                            </VBox.margin>
