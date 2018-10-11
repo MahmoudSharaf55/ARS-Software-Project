@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/Resources/user (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterController$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterController$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/master.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ars/Resources/user (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ars/controllers/MasterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ars/fxml/master.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/signup.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ars/fxml/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/fxml/signup.fxml" afterDir="false" />
+    </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -85,6 +97,7 @@
         </counts>
       </usages-collector>
     </session>
+<<<<<<< HEAD
     <session id="-2054838719">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
@@ -116,6 +129,44 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="381" />
+=======
+    <session id="-421461712">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="fxml" value="2" />
+          <entry key="java" value="154" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="154" />
+          <entry key="XML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="SignupController" value="1" />
+          <entry key="fxml" value="3" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="5" />
+          <entry key="png" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="Image" value="6" />
+          <entry key="JAVA" value="5" />
+          <entry key="UML" value="1" />
+          <entry key="XML" value="3" />
+>>>>>>> master
         </counts>
       </usages-collector>
     </session>
@@ -128,8 +179,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ars/Main.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="205">
               <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+=======
+            <state relative-caret-position="-225">
+              <caret line="24" column="72" selection-start-line="24" selection-start-column="72" selection-end-line="24" selection-end-column="72" />
+>>>>>>> master
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1574#1575#0" expanded="true" />
@@ -140,8 +196,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/controllers/LoginController.java">
+        <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterController.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="187">
               <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
             </state>
@@ -156,12 +213,28 @@
               <folding>
                 <element signature="e#624#625#0" expanded="true" />
                 <element signature="e#685#686#0" expanded="true" />
+=======
+            <state relative-caret-position="347">
+              <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1155#1156#0" expanded="true" />
+                <element signature="e#1222#1223#0" expanded="true" />
+>>>>>>> master
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -176,6 +249,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/ars/Controller.java" />
         <option value="$PROJECT_DIR$/src/ars/controllers/Controller.java" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/src/ars/controllers/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/ars/fxml/master.fxml" />
+        <option value="$PROJECT_DIR$/src/ars/controllers/MasterController.java" />
+>>>>>>> master
         <option value="$PROJECT_DIR$/src/ars/Main.java" />
         <option value="$PROJECT_DIR$/src/ars/controllers/SignupController.java" />
         <option value="$PROJECT_DIR$/src/ars/controllers/LoginController.java" />
@@ -189,11 +268,13 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="220" />
-    <option name="y" value="65" />
-    <option name="width" value="1615" />
-    <option name="height" value="879" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="952" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
@@ -235,6 +316,7 @@
               <item name="ars" type="462c0819:PsiDirectoryNode" />
               <item name="fxml" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
             <path>
               <item name="ARS-SE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ARS-SE" type="462c0819:PsiDirectoryNode" />
@@ -246,6 +328,8 @@
               <item name="ARS-SE" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
+=======
+>>>>>>> master
           </expand>
           <select />
         </subPane>
@@ -264,18 +348,26 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539189760060" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539214086062" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="F:/PROoOG/JAVA DEVELOPER/jfoenix-8.0.7.jar!/" />
     <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
+<<<<<<< HEAD
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\ARS-SE\src\ars\Resources" />
+=======
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Education\Projects\ARS SE 3rd\ARS-SE\src\ars\Resources" />
+>>>>>>> master
       <recent name="D:\Education\ARS-SE\src\ars" />
       <recent name="D:\Education\ARS-SE\src\ars\fxml" />
       <recent name="D:\Education\ARS-SE\src\ars\controllers" />
@@ -377,18 +469,31 @@
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1539189113039" duration="662000" />
       <workItem from="1539207130565" duration="237000" />
+<<<<<<< HEAD
       <workItem from="1539214009850" duration="303000" />
       <workItem from="1539214414917" duration="4678000" />
+=======
+      <workItem from="1539207534229" duration="4811000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="7182000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21860817" />
+=======
+    <option name="totallyTimeSpent" value="7012000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="762" y="0" width="781" height="830" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.28016645" />
+>>>>>>> master
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -398,7 +503,11 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" weight="0.32786885" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32796487" />
+>>>>>>> master
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -441,10 +550,29 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ars/sample.fxml" />
     <entry file="file://$PROJECT_DIR$/src/ars/controllers/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/src/ars/fxml/login.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="uml://JAVA/ars.controllers.SignupController">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>ars.controllers.SignupController</OriginalElement>
+          <nodes>
+            <node x="" y="">javafx.fxml.Initializable</node>
+            <node x="" y="">ars.controllers.SignupController</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="68.5" y="54.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ARS-SE.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/ars/Resources/avatar.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -452,24 +580,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/SignupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+>>>>>>> master
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1574#1575#0" expanded="true" />
-            <element signature="e#1602#1603#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/ars/fxml/signup.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="25" column="79" selection-start-line="25" selection-start-column="79" selection-end-line="25" selection-end-column="79" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/ars/Resources/user (1).png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/fxml/login.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+>>>>>>> master
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ars/controllers/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="187">
           <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
         </state>
@@ -482,6 +625,63 @@
           <folding>
             <element signature="e#624#625#0" expanded="true" />
             <element signature="e#685#686#0" expanded="true" />
+=======
+        <state relative-caret-position="395">
+          <caret line="61" column="17" lean-forward="true" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/Resources/logout.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/Resources/iFlyIcon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/Resources/back-arrow.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/Resources/avatar.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/Resources/airplane.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/javafx-src.zip!/javafx/fxml/Initializable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/fxml/master.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1155#1156#0" expanded="true" />
+            <element signature="e#1222#1223#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225">
+          <caret line="24" column="72" selection-start-line="24" selection-start-column="72" selection-end-line="24" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1574#1575#0" expanded="true" />
+            <element signature="e#1602#1603#0" expanded="true" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
