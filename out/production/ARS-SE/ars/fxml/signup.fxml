@@ -39,7 +39,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <JFXToggleButton prefHeight="45.0" prefWidth="58.0" text=" ">
+                  <JFXToggleButton fx:id="toggleSwitch" prefHeight="45.0" prefWidth="58.0" text=" ">
                      <HBox.margin>
                         <Insets top="5.0" />
                      </HBox.margin>
@@ -54,7 +54,7 @@
                   </Label>
                </children>
             </HBox>
-            <Pane layoutY="63.0" prefHeight="499.0" prefWidth="418.0">
+            <Pane fx:id="signupUserPane" layoutY="63.0" prefHeight="499.0" prefWidth="418.0">
                <children>
                   <VBox prefHeight="499.0" prefWidth="418.0">
                      <children>
@@ -62,7 +62,7 @@
                            <children>
                               <ImageView fitHeight="110.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Resources/user%20(1).png" />
+                                    <Image url="@../Resources/avatar.png" />
                                  </image>
                               </ImageView>
                            </children>
@@ -101,7 +101,7 @@
                   </VBox>
                </children>
             </Pane>
-            <Pane layoutY="63.0" prefHeight="499.0" prefWidth="418.0" visible="false">
+            <Pane fx:id="signupMasterPane" layoutY="63.0" prefHeight="499.0" prefWidth="418.0" visible="false">
                <children>
                   <VBox prefHeight="499.0" prefWidth="418.0">
                      <children>

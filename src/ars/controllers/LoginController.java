@@ -63,6 +63,7 @@ public class LoginController implements Initializable {
             signUpStage.initStyle(StageStyle.UNDECORATED);
             signUpStage.setTitle("Sign Up");
             signUpStage.getIcons().add(new Image("ars/Resources/iFlyIcon.png"));
+            signUpStage.setResizable(false);
             signUpStage.show();
         } catch (IOException ex) {
             Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
