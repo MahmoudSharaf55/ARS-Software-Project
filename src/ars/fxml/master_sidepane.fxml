@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<VBox prefHeight="782.0" prefWidth="292.0" style="-fx-background-color: #607D8B;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="183.0" fitWidth="312.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/google-material-design-wallpaper-14.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton accessibleText="dashboard" prefHeight="84.0" prefWidth="294.0" text="Dashboard" textFill="WHITE" />
+      <JFXButton prefHeight="84.0" prefWidth="294.0" text="Search Engine" textFill="WHITE" />
+      <JFXButton prefHeight="84.0" prefWidth="294.0" text="Add Flights" textFill="WHITE" />
+      <JFXButton prefHeight="84.0" prefWidth="294.0" text="Edit Flights" textFill="WHITE" />
+      <JFXButton prefHeight="84.0" prefWidth="294.0" text="Passengers" textFill="WHITE" />
+      <JFXButton prefHeight="84.0" prefWidth="294.0" text="Manage Tickets" textFill="WHITE" />
+      <HBox accessibleText="hbox" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/logout_small_icon.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" top="33.0" />
+               </HBox.margin>
+            </ImageView>
+            <JFXButton prefHeight="100.0" prefWidth="102.0" text="Logout" textFill="WHITE" />
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/exit_small_icon.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="40.0" top="33.0" />
+               </HBox.margin>
+            </ImageView>
+            <JFXButton accessibleText="exit" prefHeight="100.0" prefWidth="102.0" text="Exit" textFill="WHITE" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
