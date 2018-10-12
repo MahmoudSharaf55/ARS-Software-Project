@@ -80,7 +80,35 @@ public class LoginController implements Initializable {
                 Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
-            //TODO: Sharaf Load user scene here.
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/user.fxml"));
+                Parent root;
+                root = (Parent) fxmlLoader.load();
+                Stage userStage = new Stage();
+                userStage.setScene(new Scene(root, 1044, 662));
+                root.setOnMousePressed(new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        xOffset1 = event.getSceneX();
+                        yOffset1 = event.getSceneY();
+                    }
+                });
+                root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        userStage.setX(event.getScreenX() - xOffset1);
+                        userStage.setY(event.getScreenY() - yOffset1);
+                    }
+                });
+                userStage.initStyle(StageStyle.UNDECORATED);
+                userStage.setTitle("User");
+                userStage.getIcons().add(new Image("ars/Resources/iFlyIcon.png"));
+                userStage.setResizable(false);
+                userStage.show();
+                loginStage.close();
+            } catch (IOException ex) {
+                Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
 
     }

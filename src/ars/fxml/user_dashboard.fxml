@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ars.controllers.UserDashboardController"
+            prefHeight="749.0" prefWidth="1093.0" style="-fx-background-color: #455A64;">
+
+
+</AnchorPane>
