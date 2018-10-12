@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -20,26 +20,27 @@
       <JFXButton prefHeight="84.0" prefWidth="294.0" text="Edit Flights" textFill="WHITE" />
       <JFXButton prefHeight="84.0" prefWidth="294.0" text="Passengers" textFill="WHITE" />
       <JFXButton prefHeight="84.0" prefWidth="294.0" text="Manage Tickets" textFill="WHITE" />
-      <HBox accessibleText="hbox" prefHeight="100.0" prefWidth="200.0">
+      <HBox accessibleText="hbox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Resources/logout_small_icon.png" />
-               </image>
-               <HBox.margin>
-                  <Insets left="20.0" top="33.0" />
-               </HBox.margin>
-            </ImageView>
-            <JFXButton prefHeight="100.0" prefWidth="102.0" text="Logout" textFill="WHITE" />
-            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Resources/exit_small_icon.png" />
-               </image>
-               <HBox.margin>
-                  <Insets left="40.0" top="33.0" />
-               </HBox.margin>
-            </ImageView>
-            <JFXButton accessibleText="exit" prefHeight="100.0" prefWidth="102.0" text="Exit" textFill="WHITE" />
+            <JFXButton prefHeight="100.0" prefWidth="150.0" text="  Logout" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Resources/logout_small_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton accessibleText="exit" prefHeight="100.0" prefWidth="150.0" text="  Exit" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Resources/exit_small_icon.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic></JFXButton>
          </children>
       </HBox>
    </children>

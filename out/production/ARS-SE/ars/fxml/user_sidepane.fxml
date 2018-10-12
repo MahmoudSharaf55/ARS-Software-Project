@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="772.0" prefWidth="294.0" style="-fx-background-color: #607D8B;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ImageView fitHeight="200.0" fitWidth="294.0" pickOnBounds="true">
+            <image>
+                <Image url="@../Resources/UserFlatWallpaper.jpg" />
+            </image>
+        </ImageView>
+        <JFXButton accessibleText="dashboard" prefHeight="84.0" prefWidth="294.0" text="Dashboard" textFill="WHITE" />
+        <JFXButton prefHeight="84.0" prefWidth="294.0" text="Search Engine" textFill="WHITE" />
+        <JFXButton prefHeight="84.0" prefWidth="294.0" text="Booking Ticket" textFill="WHITE" />
+        <JFXButton prefHeight="84.0" prefWidth="294.0" text="Editing Ticket" textFill="WHITE" />
+        <JFXButton prefHeight="84.0" prefWidth="294.0" text="Canceling Ticket" textFill="WHITE" />
+        <JFXButton prefHeight="84.0" prefWidth="294.0" text="Edit Profile" textFill="WHITE" />
+        <HBox accessibleText="hbox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+                <JFXButton prefHeight="100.0" prefWidth="150.0" text="  Logout" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Resources/logout_small_icon.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+                <JFXButton accessibleText="exit" prefHeight="100.0" prefWidth="150.0" text="  Exit" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Resources/exit_small_icon.png" />
+                            </image>
+                            <viewport>
+                                <Rectangle2D />
+                            </viewport>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+            </children>
+        </HBox>
+    </children>
+</VBox>
