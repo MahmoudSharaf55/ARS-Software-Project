@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <VBox prefHeight="772.0" prefWidth="294.0" style="-fx-background-color: #607D8B;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <ImageView fitHeight="200.0" fitWidth="294.0" pickOnBounds="true">
-            <image>
-                <Image url="@../Resources/UserFlatWallpaper.jpg" />
-            </image>
-        </ImageView>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url('ars/Resources/UserFlatWallpaper.jpg');">
+         <left>
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../Resources/avatar.png" />
+               </image>
+               <BorderPane.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </ImageView>
+         </left>
+         <bottom>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="294.0" text="Mahmoud Sharaf" textAlignment="RIGHT" textFill="#cfd8dc" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Century Gothic Bold" size="21.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" />
+               </BorderPane.margin>
+            </Label>
+         </bottom>
+      </BorderPane>
         <JFXButton accessibleText="dashboard" prefHeight="84.0" prefWidth="294.0" text="Dashboard" textFill="WHITE" />
         <JFXButton prefHeight="84.0" prefWidth="294.0" text="Search Engine" textFill="WHITE" />
         <JFXButton prefHeight="84.0" prefWidth="294.0" text="Booking Ticket" textFill="WHITE" />
