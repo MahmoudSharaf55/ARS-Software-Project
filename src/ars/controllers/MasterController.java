@@ -35,9 +35,11 @@ public class MasterController implements Initializable {
     @FXML
     private Pane container;
 
+    private String current;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        drawer.setVisible(false);
         try {
             Node dashboard = FXMLLoader.load(getClass().getResource("../fxml/master_dashboard.fxml"));
             container.getChildren().setAll(dashboard);
@@ -49,12 +51,11 @@ public class MasterController implements Initializable {
             e.printStackTrace();
         }
 
-        hamburger.setOnMousePressed(new EventHandler<MouseEvent>() {
+        hamburger.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                System.out.println("Class Master: Clicked ");
                 hamburger.setVisible(false);
-
+                drawer.setVisible(true);
                 drawer.open();
             }
         });
@@ -62,6 +63,8 @@ public class MasterController implements Initializable {
             @Override
             public void handle(JFXDrawerEvent event) {
                 hamburger.setVisible(true);
+                drawer.setVisible(false);
+
 
             }
 
