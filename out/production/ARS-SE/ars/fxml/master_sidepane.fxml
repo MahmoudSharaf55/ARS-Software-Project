@@ -15,7 +15,7 @@
          </image>
       </ImageView>
       <JFXButton accessibleText="dashboard" prefHeight="84.0" prefWidth="294.0" text="Dashboard" textFill="WHITE" />
-      <JFXButton prefHeight="84.0" prefWidth="294.0" text="Search Engine" textFill="WHITE" />
+      <JFXButton accessibleText="search" prefHeight="84.0" prefWidth="294.0" text="Search Engine" textFill="WHITE" />
       <JFXButton prefHeight="84.0" prefWidth="294.0" text="Add Flights" textFill="WHITE" />
       <JFXButton prefHeight="84.0" prefWidth="294.0" text="Edit Flights" textFill="WHITE" />
       <JFXButton prefHeight="84.0" prefWidth="294.0" text="Passengers" textFill="WHITE" />

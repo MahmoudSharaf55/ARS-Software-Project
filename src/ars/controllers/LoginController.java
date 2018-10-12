@@ -81,7 +81,6 @@ public class LoginController implements Initializable {
             }
         } else {
             //TODO: Sharaf Load user scene here.
-
         }
 
     }

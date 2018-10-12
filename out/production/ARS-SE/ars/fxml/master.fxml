@@ -2,18 +2,33 @@
 
 <?import com.jfoenix.controls.JFXDrawer?>
 <?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXToolbar?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="anchorPane" prefHeight="662.0" prefWidth="1044.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.MasterController">
    <children>
-      <Pane fx:id="container" layoutX="45.0" layoutY="55.0" prefHeight="749.0" prefWidth="1093.0" />
+      <JFXToolbar prefHeight="52.0" prefWidth="1138.0" style="-fx-background-color: #607D8B;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <Label fx:id="toolbarTitle" text="Dashboard" textFill="#cfd8dc" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Century Gothic" size="21.0" />
+               </font>
+            </Label>
+         </center>
+         <left>
+            <JFXHamburger fx:id="hamburger" stylesheets="@../Resources/stylesheets/master.css" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </JFXHamburger>
+         </left>
+      </JFXToolbar>
+      <Pane fx:id="container" layoutX="45.0" layoutY="56.0" prefHeight="749.0" prefWidth="1093.0" />
       <JFXDrawer fx:id="drawer" defaultDrawerSize="300.0" layoutX="20.0" layoutY="20.0" overLayVisible="false" prefHeight="782.0" prefWidth="292.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <JFXHamburger fx:id="hamburger" layoutX="20.0" layoutY="20.0" stylesheets="@../Resources/stylesheets/master.css" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
-      </JFXHamburger>
    </children>
 </AnchorPane>

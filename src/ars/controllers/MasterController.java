@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -22,7 +23,8 @@ import java.util.ResourceBundle;
 
 public class MasterController implements Initializable {
 
-
+    @FXML
+    private Label toolbarTitle;
     @FXML
     private AnchorPane anchorPane;
 
@@ -35,9 +37,11 @@ public class MasterController implements Initializable {
     @FXML
     private Pane container;
 
+    private String current;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        drawer.setVisible(false);
         try {
             Node dashboard = FXMLLoader.load(getClass().getResource("../fxml/master_dashboard.fxml"));
             container.getChildren().setAll(dashboard);
@@ -49,12 +53,11 @@ public class MasterController implements Initializable {
             e.printStackTrace();
         }
 
-        hamburger.setOnMousePressed(new EventHandler<MouseEvent>() {
+        hamburger.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                System.out.println("Class Master: Clicked ");
                 hamburger.setVisible(false);
-
+                drawer.setVisible(true);
                 drawer.open();
             }
         });
@@ -62,6 +65,8 @@ public class MasterController implements Initializable {
             @Override
             public void handle(JFXDrawerEvent event) {
                 hamburger.setVisible(true);
+                drawer.setVisible(false);
+
 
             }
 
@@ -93,14 +98,12 @@ public class MasterController implements Initializable {
                             case "dashboard":
                                 node.requestFocus();
                                 node.setFocusTraversable(false);
-                                try {
-                                    Node dashboard = FXMLLoader.load(getClass().getResource("../fxml/master_dashboard.fxml"));
-                                    container.getChildren().setAll(dashboard);
-                                } catch (IOException e1) {
-                                    e1.printStackTrace();
-                                }
-                                drawer.close();
-
+                                openScene("../fxml/master_dashboard.fxml", "Dashboard");
+                                break;
+                            case "search":
+                                node.requestFocus();
+                                node.setFocusTraversable(false);
+                                openScene("../fxml/master_search.fxml", "Search Engine");
                                 break;
                             default:
                                 System.out.println("Error Master");
@@ -111,5 +114,22 @@ public class MasterController implements Initializable {
         }
     }
 
+    /**
+     * Function for loading nodes into the container :)
+     *
+     * @param path  the path of the fxml file
+     * @param title the title for the toolbar
+     */
+
+    private void openScene(String path, String title) {
+        try {
+            Node node = FXMLLoader.load(getClass().getResource(path));
+            container.getChildren().setAll(node);
+            toolbarTitle.setText(title);
+            drawer.close();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+    }
 
 }
