@@ -1,14 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ars.controllers.MasterSearchController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="749.0" prefWidth="1093.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.MasterSearchController">
+   <children>
+      <VBox layoutY="-21.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="34.0" prefWidth="913.0">
+               <children>
+                  <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="932.0" promptText="Search By" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXComboBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="90.0" right="90.0" top="30.0" />
+               </VBox.margin>
+            </HBox>
+            <JFXTextField editable="false" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Flight Number" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+               <VBox.margin>
+                  <Insets left="90.0" right="90.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <HBox prefHeight="34.0" prefWidth="913.0">
+               <children>
+                  <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Depart" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+                  <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Destination" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                     <HBox.margin>
+                        <Insets left="100.0" right="50.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="90.0" right="90.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Search" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="90.0" right="90.0" top="20.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXTreeTableView>
+               <VBox.margin>
+                  <Insets left="90.0" right="90.0" top="20.0" />
+               </VBox.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXTreeTableView>
+            <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Manage" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="90.0" right="90.0" top="20.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+      <JFXSpinner prefHeight="149.0" prefWidth="220.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="300.0" />
+   </children>
 </AnchorPane>

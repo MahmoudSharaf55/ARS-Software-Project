@@ -73,6 +73,7 @@ public class MasterController implements Initializable {
         });
     }
 
+
     private void setAnchorPaneListeners(VBox vBox) {
         for (Node node : vBox.getChildren()) {
             if (node.getAccessibleText() != null) {

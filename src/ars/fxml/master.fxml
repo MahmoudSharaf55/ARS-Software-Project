@@ -28,7 +28,7 @@
             </JFXHamburger>
          </left>
       </JFXToolbar>
-      <Pane fx:id="container" layoutX="45.0" layoutY="56.0" prefHeight="749.0" prefWidth="1093.0" />
+      <Pane fx:id="container" layoutX="45.0" layoutY="56.0" prefHeight="749.0" prefWidth="1068.0" />
       <JFXDrawer fx:id="drawer" defaultDrawerSize="300.0" layoutX="20.0" layoutY="20.0" overLayVisible="false" prefHeight="782.0" prefWidth="292.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
 </AnchorPane>
