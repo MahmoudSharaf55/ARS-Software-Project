@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 
-<AnchorPane prefHeight="749.0" prefWidth="1093.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.DashboardController">
+<AnchorPane prefHeight="604.0" prefWidth="1056.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.DashboardController">
    <children>
-      <FlowPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #455A64;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <FlowPane prefHeight="604.0" prefWidth="1056.0" style="-fx-background-color: #455A64;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #ffffff;">
                <effect>

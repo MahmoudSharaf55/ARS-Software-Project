@@ -1,3 +1,20 @@
 .jfx-hamburger StackPane {
     -fx-background-color: white;
 }
+
+.jfx-date-picker .jfx-text-field {
+    -fx-text-fill: white;
+    -jfx-unfocus-color: #cfd8dc;
+    -fx-prompt-text-fill: GRAY;
+}
+
+.jfx-combo-box .cell {
+    -fx-text-fill: white;
+    -fx-background-color: #455A64;
+
+}
+.jfx-time-picker .jfx-text-field {
+    -fx-text-fill: white;
+    -jfx-unfocus-color: #cfd8dc;
+    -fx-prompt-text-fill: GRAY;
+}

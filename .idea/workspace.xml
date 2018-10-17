@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="e6fec2ae-ddbd-49f3-9285-c44dcc9add26" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+=======
+    <list default="true" id="40f22464-171e-4715-a167-e41741694a59" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ars/controllers/MasterFlightAdd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ars/fxml/master_flight_add.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/Resources/stylesheets/master.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/Resources/stylesheets/master.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/master.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/master.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/master_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/master_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/master_search.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/master_search.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/master_sidepane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/master_sidepane.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/signup.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ars/Resources/stylesheets/master.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/Resources/stylesheets/master.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ars/controllers/MasterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/controllers/MasterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ars/fxml/master.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/fxml/master.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ars/fxml/master_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/fxml/master_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ars/fxml/master_search.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/fxml/master_search.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ars/fxml/master_sidepane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/fxml/master_sidepane.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ars/fxml/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/fxml/signup.fxml" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,57 +35,111 @@
     <session id="-2054838719">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+<<<<<<< Updated upstream
           <entry key="project.closed" value="1" />
+=======
+          <entry key="project.closed" value="16" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.12" value="2" />
+>>>>>>> Stashed changes
           <entry key="project.open.time.13" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+<<<<<<< Updated upstream
           <entry key="fxml" value="4" />
           <entry key="java" value="2" />
           <entry key="xml" value="1" />
+=======
+          <entry key="UserDashboardController" value="1" />
+          <entry key="css" value="6" />
+          <entry key="fxml" value="11" />
+          <entry key="java" value="8" />
+>>>>>>> Stashed changes
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+<<<<<<< Updated upstream
           <entry key="JAVA" value="2" />
           <entry key="XML" value="5" />
+=======
+          <entry key="CSS" value="6" />
+          <entry key="JAVA" value="8" />
+          <entry key="UML" value="1" />
+          <entry key="XML" value="11" />
+>>>>>>> Stashed changes
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< Updated upstream
           <entry key="fxml" value="26" />
           <entry key="java" value="24" />
+=======
+          <entry key="css" value="111" />
+          <entry key="fxml" value="17" />
+          <entry key="java" value="98" />
+>>>>>>> Stashed changes
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< Updated upstream
           <entry key="JAVA" value="24" />
           <entry key="XML" value="26" />
+=======
+          <entry key="CSS" value="111" />
+          <entry key="JAVA" value="98" />
+          <entry key="XML" value="17" />
+>>>>>>> Stashed changes
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
+<<<<<<< Updated upstream
     <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ars/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="27" column="20" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="20" />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ars/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="989">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ars/fxml/user.fxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-153" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1522">
+              <caret line="109" column="28" lean-forward="true" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+>>>>>>> Stashed changes
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ars/fxml/user_searchEngine.fxml">
           <provider selected="true" editor-type-id="text-editor">
@@ -82,11 +158,20 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ars/fxml/master_flight_add.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
         <entry file="file://$PROJECT_DIR$/src/ars/fxml/master.fxml">
           <provider selected="true" editor-type-id="text-editor" />
           <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -96,6 +181,32 @@
         <entry file="file://$PROJECT_DIR$/src/ars/fxml/user_dashboard.fxml">
           <provider selected="true" editor-type-id="text-editor" />
           <provider editor-type-id="JavaFX-Scene-Builder" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterFlightAdd.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ars/Resources/stylesheets/master.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ars/Resources/stylesheets/palette.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" column="44" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="44" />
+            </state>
+          </provider>
+>>>>>>> Stashed changes
         </entry>
       </file>
     </leaf>
@@ -107,12 +218,25 @@
         <option value="Class" />
       </list>
     </option>
+<<<<<<< Updated upstream
+=======
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+>>>>>>> Stashed changes
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/src/ars/controllers/User_SearchEngine.java" />
         <option value="$PROJECT_DIR$/src/ars/fxml/user_searchEngine.fxml" />
+=======
+        <option value="$PROJECT_DIR$/src/ars/controllers/MasterFlightAdd.java" />
+        <option value="$PROJECT_DIR$/src/ars/fxml/master_flight_add.fxml" />
+        <option value="$PROJECT_DIR$/src/ars/Resources/stylesheets/master.css" />
+        <option value="$PROJECT_DIR$/src/ars/controllers/MasterController.java" />
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -123,18 +247,23 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1615" />
-    <option name="height" value="880" />
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< Updated upstream
       <pane id="Scope" />
       <pane id="PackagesPane" />
+=======
+>>>>>>> Stashed changes
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,6 +286,10 @@
               <item name="ARS-SE" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ars" type="462c0819:PsiDirectoryNode" />
+<<<<<<< Updated upstream
+=======
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+>>>>>>> Stashed changes
             </path>
             <path>
               <item name="ARS-SE" type="b2602c69:ProjectViewProjectNode" />
@@ -170,12 +303,18 @@
               <item name="ARS-SE" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ars" type="462c0819:PsiDirectoryNode" />
+<<<<<<< Updated upstream
               <item name="fxml" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
+>>>>>>> Stashed changes
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< Updated upstream
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -185,6 +324,19 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+=======
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539820157215" />
+    <property name="last_opened_file_path" value="D:/Downloads/Compressed/controlsfx-8.40.14/controlsfx-8.40.14.jar!/" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+>>>>>>> Stashed changes
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -221,12 +373,33 @@
       <created>1539809867299</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< Updated upstream
       <updated>1539809867299</updated>
       <workItem from="1539809875282" duration="7752000" />
+=======
+      <updated>1539356208467</updated>
+      <workItem from="1539356212565" duration="903000" />
+      <workItem from="1539377410584" duration="3895000" />
+      <workItem from="1539382829571" duration="562000" />
+      <workItem from="1539424087895" duration="89000" />
+      <workItem from="1539427526434" duration="1009000" />
+      <workItem from="1539442914711" duration="659000" />
+      <workItem from="1539445279167" duration="78000" />
+      <workItem from="1539447108090" duration="613000" />
+      <workItem from="1539501960731" duration="845000" />
+      <workItem from="1539588452720" duration="1232000" />
+      <workItem from="1539598176793" duration="1511000" />
+      <workItem from="1539600749286" duration="209000" />
+      <workItem from="1539612967332" duration="1303000" />
+      <workItem from="1539767997692" duration="42000" />
+      <workItem from="1539768133498" duration="17000" />
+      <workItem from="1539808562063" duration="9388000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="7752000" />
   </component>
   <component name="ToolWindowManager">
@@ -255,17 +428,42 @@
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+=======
+    <option name="totallyTimeSpent" value="8424000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29865772" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3299566" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3299566" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3299566" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3299566" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+>>>>>>> Stashed changes
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -311,6 +509,57 @@
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/ars/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="989">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/Resources/stylesheets/palette.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/fxml/master_sidepane.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/Resources/stylesheets/master.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterFlightAdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/fxml/master_flight_add.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1522">
+          <caret line="109" column="28" lean-forward="true" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+>>>>>>> Stashed changes
     </entry>
   </component>
   <component name="masterDetails">

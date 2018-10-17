@@ -72,12 +72,12 @@
                               <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
                            </VBox.margin>
                         </JFXTextField>
-                        <JFXDatePicker id="datePicker" defaultColor="#eeeeee" prefHeight="25.0" prefWidth="366.0" promptText="Date of birth" style="-fx-prompt-text-fill: gray; -jfx-unfocus-color: blue;">
+                        <JFXDatePicker id="datePicker" defaultColor="#eeeeee" prefHeight="25.0" prefWidth="366.0" promptText="Date of birth" style="-jfx-default-color: #009688;" stylesheets="@../Resources/stylesheets/master.css">
                            <VBox.margin>
                               <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
                            </VBox.margin>
                         </JFXDatePicker>
-                        <JFXComboBox fx:id="userGender" focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="338.0" promptText="Gender" style="-fx-prompt-text-fill: gray;" unFocusColor="#cfd8dc">
+                        <JFXComboBox fx:id="userGender" focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="338.0" promptText="Gender" style="-fx-prompt-text-fill: gray;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
                            <VBox.margin>
                               <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
                            </VBox.margin>
