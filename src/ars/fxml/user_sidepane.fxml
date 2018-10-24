@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="772.0" prefWidth="294.0" style="-fx-background-color: #607D8B;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="719.0" prefWidth="294.0" style="-fx-background-color: #607D8B;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
     <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url('ars/Resources/UserFlatWallpaper.jpg');">
          <left>
@@ -35,15 +35,13 @@
             </Label>
          </bottom>
       </BorderPane>
-        <JFXButton accessibleText="dashboard" prefHeight="84.0" prefWidth="294.0" text="Dashboard" textFill="WHITE" />
-        <JFXButton prefHeight="84.0" prefWidth="294.0" text="Search Engine" textFill="WHITE" />
-        <JFXButton prefHeight="84.0" prefWidth="294.0" text="Booking Ticket" textFill="WHITE" />
-        <JFXButton prefHeight="84.0" prefWidth="294.0" text="Editing Ticket" textFill="WHITE" />
-        <JFXButton prefHeight="84.0" prefWidth="294.0" text="Canceling Ticket" textFill="WHITE" />
-        <JFXButton prefHeight="84.0" prefWidth="294.0" text="Edit Profile" textFill="WHITE" />
-        <HBox accessibleText="hbox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+        <JFXButton accessibleText="dashboard" prefHeight="100.0" prefWidth="294.0" text="Dashboard" textFill="WHITE" />
+        <JFXButton accessibleText="search" prefHeight="100.0" prefWidth="294.0" text="Search Engine" textFill="WHITE" />
+        <JFXButton accessibleText="booking" prefHeight="100.0" prefWidth="294.0" text="Booking Ticket" textFill="WHITE" />
+        <JFXButton accessibleText="editing_profile" prefHeight="100.0" prefWidth="294.0" text="Edit Profile" textFill="WHITE" />
+        <HBox accessibleText="hbox" alignment="CENTER" prefHeight="119.0" prefWidth="200.0">
             <children>
-                <JFXButton prefHeight="100.0" prefWidth="150.0" text="  Logout" textFill="WHITE">
+                <JFXButton accessibleText="logout" prefHeight="119.0" prefWidth="150.0" text="  Logout" textFill="WHITE">
                     <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -52,9 +50,9 @@
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton accessibleText="exit" prefHeight="100.0" prefWidth="150.0" text="  Exit" textFill="WHITE">
+                <JFXButton accessibleText="exit" prefHeight="119.0" prefWidth="150.0" text="  Exit" textFill="WHITE">
                     <graphic>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView accessibleText="exit" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../Resources/exit_small_icon.png" />
                             </image>

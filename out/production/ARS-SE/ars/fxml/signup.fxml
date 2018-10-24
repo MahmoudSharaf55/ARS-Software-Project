@@ -14,144 +14,150 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="562.0" prefWidth="418.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.SignupController">
+
+<StackPane fx:id="stackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="418.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.SignupController">
    <children>
-      <Pane prefHeight="562.0" prefWidth="418.0" style="-fx-background-color: #455A64;">
+      <AnchorPane id="AnchorPane" prefHeight="562.0" prefWidth="418.0" style="-fx-background-color: #455A64;">
          <children>
-            <HBox prefHeight="63.0" prefWidth="418.0">
+            <Pane prefHeight="562.0" prefWidth="418.0" style="-fx-background-color: #455A64;">
                <children>
-                  <ImageView fitHeight="31.0" fitWidth="35.0" onMouseClicked="#onBackClicked" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Resources/back-arrow.png" />
-                     </image>
-                     <HBox.margin>
-                        <Insets left="10.0" top="15.0" />
-                     </HBox.margin>
-                  </ImageView>
-                  <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="326.0" text="User" textAlignment="RIGHT" textFill="WHITE">
-                     <HBox.margin>
-                        <Insets top="20.0" />
-                     </HBox.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <JFXToggleButton fx:id="toggleSwitch" prefHeight="45.0" prefWidth="58.0" text=" ">
-                     <HBox.margin>
-                        <Insets top="5.0" />
-                     </HBox.margin>
-                  </JFXToggleButton>
-                  <Label prefHeight="21.0" prefWidth="375.0" text="Master" textFill="WHITE">
-                     <HBox.margin>
-                        <Insets top="20.0" />
-                     </HBox.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <Pane fx:id="signupUserPane" layoutY="63.0" prefHeight="499.0" prefWidth="418.0">
-               <children>
-                  <VBox prefHeight="499.0" prefWidth="418.0">
+                  <HBox prefHeight="63.0" prefWidth="418.0">
                      <children>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <ImageView fitHeight="110.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Resources/avatar.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </HBox>
-                        <JFXTextField focusColor="#009688" labelFloat="true" promptText="Full Name" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
-                           </VBox.margin>
-                        </JFXTextField>
-                        <JFXDatePicker id="datePicker" defaultColor="#eeeeee" prefHeight="25.0" prefWidth="366.0" promptText="Date of birth" style="-jfx-default-color: #009688;" stylesheets="@../Resources/stylesheets/master.css">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
-                           </VBox.margin>
-                        </JFXDatePicker>
-                        <JFXComboBox fx:id="userGender" focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="338.0" promptText="Gender" style="-fx-prompt-text-fill: gray;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
-                           </VBox.margin>
-                        </JFXComboBox>
-                        <JFXTextField focusColor="#009688" labelFloat="true" promptText="Email" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
-                           </VBox.margin>
-                        </JFXTextField>
-                        <JFXPasswordField focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="523.0" promptText="Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
-                           </VBox.margin>
-                        </JFXPasswordField>
-                        <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="690.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Sign Up" textFill="WHITE">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="40.0" right="40.0" top="40.0" />
-                           </VBox.margin>
-                        </JFXButton>
+                        <ImageView fitHeight="31.0" fitWidth="35.0" onMouseClicked="#onBackClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Resources/back-arrow.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="10.0" top="15.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="326.0" text="User" textAlignment="RIGHT" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXToggleButton fx:id="toggleSwitch" prefHeight="45.0" prefWidth="58.0" text=" ">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </JFXToggleButton>
+                        <Label prefHeight="21.0" prefWidth="375.0" text="Master" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
                      </children>
-                  </VBox>
-               </children>
-            </Pane>
-            <Pane fx:id="signupMasterPane" layoutY="63.0" prefHeight="499.0" prefWidth="418.0" visible="false">
-               <children>
-                  <VBox prefHeight="499.0" prefWidth="418.0">
+                  </HBox>
+                  <Pane fx:id="signupUserPane" layoutY="63.0" prefHeight="499.0" prefWidth="418.0">
                      <children>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                        <VBox prefHeight="499.0" prefWidth="418.0">
                            <children>
-                              <ImageView fitHeight="110.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Resources/airplane.png" />
-                                 </image>
-                              </ImageView>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="110.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Resources/avatar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <JFXTextField focusColor="#009688" labelFloat="true" promptText="Full Name" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXDatePicker id="datePicker" defaultColor="#eeeeee" prefHeight="25.0" prefWidth="366.0" promptText="Date of birth" style="-jfx-default-color: #009688;" stylesheets="@../Resources/stylesheets/master.css">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXDatePicker>
+                              <JFXComboBox fx:id="userGender" focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="338.0" promptText="Gender" style="-fx-prompt-text-fill: gray;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXComboBox>
+                              <JFXTextField focusColor="#009688" labelFloat="true" promptText="Email" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXPasswordField focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="523.0" promptText="Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXPasswordField>
+                              <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="690.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Sign Up" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="40.0" right="40.0" top="40.0" />
+                                 </VBox.margin>
+                              </JFXButton>
                            </children>
-                        </HBox>
-                        <JFXTextField focusColor="#009688" labelFloat="true" promptText="Full Name" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
-                           </VBox.margin>
-                        </JFXTextField>
-                        <JFXDatePicker id="datePicker" defaultColor="#cfd8dc" overLay="true" prefHeight="25.0" prefWidth="366.0" promptText="Date of birth">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
-                           </VBox.margin>
-                        </JFXDatePicker>
-                        <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="338.0" promptText="Gender" style="-fx-prompt-text-fill: gray;" unFocusColor="#cfd8dc">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
-                           </VBox.margin>
-                        </JFXComboBox>
-                        <JFXTextField focusColor="#009688" labelFloat="true" promptText="Email" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
-                           </VBox.margin>
-                        </JFXTextField>
-                        <JFXPasswordField focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="523.0" promptText="Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
-                           </VBox.margin>
-                        </JFXPasswordField>
-                        <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="690.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Sign Up" textFill="WHITE">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="40.0" right="40.0" top="40.0" />
-                           </VBox.margin>
-                        </JFXButton>
+                        </VBox>
                      </children>
-                  </VBox>
+                  </Pane>
+                  <Pane fx:id="signupMasterPane" layoutY="63.0" prefHeight="499.0" prefWidth="418.0" visible="false">
+                     <children>
+                        <VBox prefHeight="499.0" prefWidth="418.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="110.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Resources/airplane.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <JFXTextField focusColor="#009688" labelFloat="true" promptText="Full Name" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXDatePicker id="datePicker" defaultColor="#cfd8dc" overLay="true" prefHeight="25.0" prefWidth="366.0" promptText="Date of birth" stylesheets="@../Resources/stylesheets/master.css">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXDatePicker>
+                              <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="338.0" promptText="Gender" style="-fx-prompt-text-fill: gray;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXComboBox>
+                              <JFXTextField focusColor="#009688" labelFloat="true" promptText="Email" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXPasswordField focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="523.0" promptText="Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXPasswordField>
+                              <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="690.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Sign Up" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="40.0" right="40.0" top="40.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
                </children>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Pane>
          </children>
-         <effect>
-            <DropShadow />
-         </effect>
-      </Pane>
+      </AnchorPane>
    </children>
-</AnchorPane>
+</StackPane>

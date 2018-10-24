@@ -1,10 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ars.controllers.UserSearchEngine"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="605.0" prefWidth="1044.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.UserSearchEngine">
+   <children>
+      <VBox prefHeight="605.0" prefWidth="1044.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="913.0">
+               <children>
+                  <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="250.0" promptText="Department" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+                  <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="250.0" promptText="Destination" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                     <HBox.margin>
+                        <Insets left="100.0" right="50.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <TableView prefHeight="400.0" prefWidth="804.0">
+              <columns>
+                <TableColumn prefWidth="130.0" text="Department" />
+                <TableColumn prefWidth="130.0" text="Destination" />
+                  <TableColumn prefWidth="130.0" text="Airport" />
+                  <TableColumn prefWidth="140.0" text="Date and Time" />
+                  <TableColumn prefWidth="140.0" text="Available Seats" />
+                  <TableColumn prefWidth="130.0" text="Price" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="120.0" right="120.0" top="30.0" />
+               </VBox.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Reserve" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="120.0" right="120.0" top="30.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets top="40.0" />
+         </padding>
+      </VBox>
+   </children>
 </AnchorPane>

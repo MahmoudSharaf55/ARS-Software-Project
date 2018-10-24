@@ -10,26 +10,25 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="805.0" maxWidth="1139.0" minHeight="805.0" minWidth="1139.0" prefHeight="805.0" prefWidth="1139.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.UserController">
-    <children>
-        <JFXToolbar prefHeight="52.0" prefWidth="1138.0" style="-fx-background-color: #607D8B;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <center>
-                <Label text="Dashboard" textFill="#cfd8dc" BorderPane.alignment="CENTER">
-                    <font>
-                        <Font name="Century Gothic" size="21.0" />
-                    </font>
-                </Label>
-            </center>
-            <left>
-                <JFXHamburger fx:id="hamburger" stylesheets="@../Resources/stylesheets/master.css" BorderPane.alignment="CENTER">
-                    <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                    </padding>
-                </JFXHamburger>
-            </left>
-        </JFXToolbar>
-        <Pane fx:id="container" layoutX="1.0" layoutY="56.0" maxHeight="749.0" maxWidth="1138.0" minHeight="749.0" minWidth="1138.0" prefHeight="749.0" prefWidth="1138.0" />
-        <JFXDrawer fx:id="drawer" defaultDrawerSize="300.0" layoutX="20.0" layoutY="20.0" overLayVisible="false" prefHeight="782.0" prefWidth="292.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-    </children>
-
+<AnchorPane prefHeight="805.0" prefWidth="1139.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.UserController">
+   <children>
+      <JFXToolbar prefHeight="52.0" prefWidth="1138.0" style="-fx-background-color: #607D8B;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <Label fx:id="toolbarTitle" text="Dashboard" textFill="#cfd8dc" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Century Gothic" size="21.0" />
+               </font>
+            </Label>
+         </center>
+         <left>
+            <JFXHamburger fx:id="hamburger" stylesheets="@../Resources/stylesheets/master.css" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </JFXHamburger>
+         </left>
+      </JFXToolbar>
+      <Pane fx:id="container" layoutX="1.0" layoutY="56.0" maxHeight="749.0" maxWidth="1138.0" minHeight="749.0" minWidth="1138.0" prefHeight="749.0" prefWidth="1138.0" />
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="300.0" layoutX="20.0" layoutY="20.0" overLayVisible="false" prefHeight="782.0" prefWidth="292.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
 </AnchorPane>
