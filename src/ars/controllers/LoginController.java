@@ -55,7 +55,7 @@ public class LoginController implements Initializable {
                 Parent root;
                 root = (Parent) fxmlLoader.load();
                 Stage masterStage = new Stage();
-                masterStage.setScene(new Scene(root, 1113, 805));
+                masterStage.setScene(new Scene(root, 1044, 662));
                 root.setOnMousePressed(new EventHandler<MouseEvent>() {
                     @Override
                     public void handle(MouseEvent event) {

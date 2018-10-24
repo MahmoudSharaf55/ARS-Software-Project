@@ -52,7 +52,7 @@
                </children>
             </AnchorPane>
 
-            <AnchorPane prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #ffffff;">
+            <AnchorPane prefHeight="411.0" prefWidth="386.0" style="-fx-background-color: #ffffff;">
                <effect>
                   <DropShadow />
                </effect>

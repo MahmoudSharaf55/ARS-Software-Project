@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="693.0" maxWidth="1116.0" minHeight="655.0" minWidth="1044.0" prefHeight="655.0" prefWidth="1116.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.MasterController">
+<AnchorPane fx:id="anchorPane" maxHeight="662.0" maxWidth="1044.0" minHeight="662.0" minWidth="1044.0" prefHeight="662.0" prefWidth="1044.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.MasterController">
    <children>
       <JFXToolbar prefHeight="52.0" prefWidth="1138.0" style="-fx-background-color: #607D8B;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
@@ -28,7 +28,7 @@
             </JFXHamburger>
          </left>
       </JFXToolbar>
-      <Pane fx:id="container" layoutX="57.0" layoutY="56.0" prefHeight="600.0" prefWidth="1059.0" />
+      <Pane fx:id="container" layoutX="1.0" layoutY="56.0" maxHeight="605.0" maxWidth="1056.0" minHeight="603.0" minWidth="1044.0" prefHeight="605.0" prefWidth="1044.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <JFXDrawer fx:id="drawer" defaultDrawerSize="300.0" layoutX="20.0" layoutY="20.0" overLayVisible="false" prefHeight="782.0" prefWidth="292.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
 </AnchorPane>

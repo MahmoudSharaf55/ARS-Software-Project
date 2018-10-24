@@ -4,8 +4,9 @@
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXSpinner?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -54,14 +55,18 @@
                   <Insets left="90.0" right="90.0" top="20.0" />
                </VBox.margin>
             </JFXButton>
-            <JFXTreeTableView prefHeight="285.0" prefWidth="876.0">
+            <TableView prefHeight="301.0" prefWidth="1056.0" stylesheets="@../Resources/stylesheets/master.css">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
                <VBox.margin>
                   <Insets left="90.0" right="90.0" top="20.0" />
                </VBox.margin>
                <effect>
                   <DropShadow />
                </effect>
-            </JFXTreeTableView>
+            </TableView>
             <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Manage" textFill="WHITE">
                <VBox.margin>
                   <Insets left="90.0" right="90.0" top="20.0" />

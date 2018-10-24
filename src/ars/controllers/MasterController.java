@@ -37,7 +37,6 @@ public class MasterController implements Initializable {
     @FXML
     private Pane container;
 
-    private String current;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -110,6 +109,11 @@ public class MasterController implements Initializable {
                                 node.requestFocus();
                                 node.setFocusTraversable(false);
                                 openScene("../fxml/master_flight_add.fxml", "Add Flight");
+                                break;
+                            case "PASSENGERS":
+                                node.requestFocus();
+                                node.setFocusTraversable(false);
+                                openScene("../fxml/master_passengers.fxml", "Passengers");
                                 break;
                             default:
                                 System.out.println("Error Master");

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="604.0" prefWidth="1044.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.MasterPassengersController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXTextField focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Flight Number" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="150.0" right="150.0" top="40.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Search" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="150.0" right="150.0" />
+               </VBox.margin>
+            </JFXButton>
+            <HBox prefHeight="456.0" prefWidth="1044.0">
+               <children>
+                  <JFXListView prefHeight="445.0" prefWidth="256.0" style="-fx-background-color: transparent;" />
+                  <FlowPane alignment="TOP_CENTER" hgap="20.0" prefHeight="391.0" prefWidth="779.0" vgap="20.0">
+                     <children>
+                        <JFXTextField focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="360.0" promptText="Full Name" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                           <FlowPane.margin>
+                              <Insets />
+                           </FlowPane.margin>
+                        </JFXTextField>
+                        <JFXTextField focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="341.0" promptText="Email" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc" />
+                        <JFXDatePicker id="datePicker" defaultColor="#eeeeee" prefHeight="25.0" prefWidth="366.0" promptText="Date of birth" style="-jfx-default-color: #009688;" stylesheets="@../Resources/stylesheets/master.css" />
+                        <JFXComboBox fx:id="userGender" focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="338.0" promptText="Gender" style="-fx-prompt-text-fill: gray;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc" />
+                        <JFXTextField editable="false" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="591.0" promptText="Ticket Number" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc" />
+                        <JFXButton buttonType="RAISED" contentDisplay="CENTER" prefHeight="55.0" prefWidth="200.0" ripplerFill="#009688" style="-fx-background-color: #b71c1c;" text="Delete" textFill="WHITE">
+                           <FlowPane.margin>
+                              <Insets top="20.0" />
+                           </FlowPane.margin>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" contentDisplay="CENTER" prefHeight="55.0" prefWidth="200.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Edit" textFill="WHITE">
+                           <FlowPane.margin>
+                              <Insets top="20.0" />
+                           </FlowPane.margin>
+                        </JFXButton>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </FlowPane>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <JFXSpinner layoutY="145.0" prefHeight="107.0" prefWidth="168.0" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="200.0" />
+   </children>
+</AnchorPane>

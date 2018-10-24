@@ -17,8 +17,6 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class Main extends Application {
-    //We Use GitHub to manage our code
-
     private double xOffset = 0;
     private double yOffset = 0;
 
