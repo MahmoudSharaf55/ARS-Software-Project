@@ -38,6 +38,7 @@
         <JFXButton accessibleText="dashboard" prefHeight="100.0" prefWidth="294.0" text="Dashboard" textFill="WHITE" />
         <JFXButton accessibleText="search" prefHeight="100.0" prefWidth="294.0" text="Search Engine" textFill="WHITE" />
         <JFXButton accessibleText="booking" prefHeight="100.0" prefWidth="294.0" text="Booking Ticket" textFill="WHITE" />
+      <JFXButton accessibleText="editing_ticket" prefHeight="100.0" prefWidth="294.0" text="Edit Ticket" textFill="WHITE" />
         <JFXButton accessibleText="editing_profile" prefHeight="100.0" prefWidth="294.0" text="Edit Profile" textFill="WHITE" />
         <HBox accessibleText="hbox" alignment="CENTER" prefHeight="119.0" prefWidth="200.0">
             <children>

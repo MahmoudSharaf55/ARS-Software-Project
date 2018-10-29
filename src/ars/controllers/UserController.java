@@ -97,6 +97,10 @@ public class UserController implements Initializable {
                             node.setFocusTraversable(false);
                             setScene("../fxml/user_bookingTicket.fxml","Booking Ticket");
                             break;
+                        case "editing_ticket":
+                            node.setFocusTraversable(false);
+                            setScene("../fxml/user_editingTicket.fxml","Editing Ticket");
+                            break;
                     }
                 });
                 if (node.getAccessibleText().equals("hbox")){

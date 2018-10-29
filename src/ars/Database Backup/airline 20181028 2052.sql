@@ -51,7 +51,7 @@ CREATE TABLE `flight` (
   `flightNumber` int(10) unsigned NOT NULL auto_increment,
   `src` varchar(45) NOT NULL,
   `dest` varchar(45) NOT NULL,
-  `dateAndTime` datetime NOT NULL,
+  `dateAndTime` date NOT NULL,
   `price` int(10) unsigned NOT NULL,
   `seats` int(10) unsigned NOT NULL,
   `delay` tinyint(1) NOT NULL default '0',
@@ -123,7 +123,7 @@ DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `name` varchar(45) NOT NULL,
-  `date` datetime NOT NULL,
+  `date` date NOT NULL,
   `gender` varchar(10) NOT NULL,
   `email` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
