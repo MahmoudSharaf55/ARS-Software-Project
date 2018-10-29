@@ -38,7 +38,7 @@
         <JFXButton accessibleText="dashboard" prefHeight="84.0" prefWidth="294.0" text="Dashboard" textFill="WHITE" />
         <JFXButton accessibleText="search" prefHeight="84.0" prefWidth="294.0" text="Search Engine" textFill="WHITE" />
         <JFXButton accessibleText="ADDFLIGHTS" prefHeight="84.0" prefWidth="294.0" text="Add Flights" textFill="WHITE" />
-        <JFXButton prefHeight="84.0" prefWidth="294.0" text="Manage Flights" textFill="WHITE" />
+        <JFXButton accessibleText="Manage_Flights" prefHeight="84.0" prefWidth="294.0" text="Manage Flights" textFill="WHITE" />
         <JFXButton accessibleText="PASSENGERS" prefHeight="84.0" prefWidth="294.0" text="Passengers" textFill="WHITE" />
         <HBox accessibleText="hbox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <children>

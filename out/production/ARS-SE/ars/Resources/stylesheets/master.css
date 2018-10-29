@@ -30,7 +30,6 @@
     -fx-alignment: CENTER;
     -fx-text-alignment: center;
 
-
 }
 
 .table-row-cell:filled:hover {
@@ -54,4 +53,17 @@
     -fx-text-alignment: center;
     -fx-alignment: CENTER
 
+}
+
+.jfx-list-view .list-cell {
+    -fx-control-inner-background: #607D8B;
+
+}
+
+.jfx-list-view .scroll-bar:vertical {
+    -fx-scale-x: 0;
+}
+.jfx-list-view{
+    -fx-background-color: transparent;
+    -fx-expanded: true;
 }

@@ -11,6 +11,7 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="604.0" prefWidth="1044.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.MasterPassengersController">
    <children>
@@ -25,10 +26,16 @@
                <VBox.margin>
                   <Insets bottom="20.0" left="150.0" right="150.0" />
                </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
             </JFXButton>
             <HBox prefHeight="456.0" prefWidth="1044.0">
                <children>
-                  <JFXListView prefHeight="445.0" prefWidth="256.0" style="-fx-background-color: transparent;" />
+                  <JFXListView fx:id="passengersListView" depth="5" prefHeight="445.0" prefWidth="256.0" stylesheets="@../Resources/stylesheets/master.css">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="20.0" />
+                     </HBox.margin></JFXListView>
                   <FlowPane alignment="TOP_CENTER" hgap="20.0" prefHeight="391.0" prefWidth="779.0" vgap="20.0">
                      <children>
                         <JFXTextField focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="360.0" promptText="Full Name" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
@@ -39,7 +46,7 @@
                         <JFXTextField focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="341.0" promptText="Email" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc" />
                         <JFXDatePicker id="datePicker" defaultColor="#eeeeee" prefHeight="25.0" prefWidth="366.0" promptText="Date of birth" style="-jfx-default-color: #009688;" stylesheets="@../Resources/stylesheets/master.css" />
                         <JFXComboBox fx:id="userGender" focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="338.0" promptText="Gender" style="-fx-prompt-text-fill: gray;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc" />
-                        <JFXTextField editable="false" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="591.0" promptText="Ticket Number" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc" />
+                        <JFXTextField editable="false" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="724.0" promptText="Ticket Number" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc" />
                         <JFXButton buttonType="RAISED" contentDisplay="CENTER" prefHeight="55.0" prefWidth="200.0" ripplerFill="#009688" style="-fx-background-color: #b71c1c;" text="Delete" textFill="WHITE">
                            <FlowPane.margin>
                               <Insets top="20.0" />
@@ -52,7 +59,7 @@
                         </JFXButton>
                      </children>
                      <HBox.margin>
-                        <Insets left="20.0" />
+                        <Insets />
                      </HBox.margin>
                   </FlowPane>
                </children>
@@ -62,6 +69,6 @@
             </HBox>
          </children>
       </VBox>
-      <JFXSpinner layoutY="145.0" prefHeight="107.0" prefWidth="168.0" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="200.0" />
+      <JFXSpinner fx:id="spinner" layoutY="145.0" prefHeight="107.0" prefWidth="168.0" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="200.0" />
    </children>
 </AnchorPane>

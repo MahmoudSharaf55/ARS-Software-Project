@@ -115,6 +115,11 @@ public class MasterController implements Initializable {
                                 node.setFocusTraversable(false);
                                 openScene("../fxml/master_passengers.fxml", "Passengers");
                                 break;
+                            case "Manage_Flights":
+                                node.requestFocus();
+                                node.setFocusTraversable(false);
+                                openScene("../fxml/master_manage_flights.fxml", "Manage Flights");
+                                break;
                             default:
                                 System.out.println("Error Master");
                         }

@@ -11,49 +11,46 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="604.0" prefWidth="1056.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.MasterSearchController">
    <children>
       <VBox layoutY="-21.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox prefHeight="34.0" prefWidth="913.0">
-               <children>
-                  <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="932.0" promptText="Search By" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </JFXComboBox>
-               </children>
+            <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="932.0" promptText="Search By" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
                <VBox.margin>
-                  <Insets left="90.0" right="90.0" top="30.0" />
+                  <Insets left="250.0" right="250.0" top="20.0" />
                </VBox.margin>
-            </HBox>
+            </JFXComboBox>
             <JFXTextField editable="false" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Flight Number" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
                <VBox.margin>
-                  <Insets left="90.0" right="90.0" top="20.0" />
+                  <Insets left="250.0" right="250.0" top="20.0" />
                </VBox.margin>
             </JFXTextField>
             <HBox prefHeight="34.0" prefWidth="913.0">
                <children>
                   <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Depart" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
                      <HBox.margin>
-                        <Insets left="100.0" />
+                        <Insets right="20.0" />
                      </HBox.margin>
                   </JFXComboBox>
                   <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Destination" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
                      <HBox.margin>
-                        <Insets left="100.0" right="50.0" />
+                        <Insets />
                      </HBox.margin>
                   </JFXComboBox>
                </children>
                <VBox.margin>
-                  <Insets left="90.0" right="90.0" top="20.0" />
+                  <Insets left="250.0" right="250.0" top="20.0" />
                </VBox.margin>
             </HBox>
             <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Search" textFill="WHITE">
                <VBox.margin>
-                  <Insets left="90.0" right="90.0" top="20.0" />
+                  <Insets left="250.0" right="250.0" top="20.0" />
                </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
             </JFXButton>
             <TableView prefHeight="301.0" prefWidth="1056.0" stylesheets="@../Resources/stylesheets/master.css">
               <columns>
@@ -71,6 +68,9 @@
                <VBox.margin>
                   <Insets left="90.0" right="90.0" top="20.0" />
                </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
             </JFXButton>
          </children>
       </VBox>
