@@ -2,10 +2,19 @@ package ars.controllers;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import ars.utils.cipherEncryptionAndDecryption;
+import ars.utils.masterDBC;
+import ars.utils.userDBC;
+import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXToggleButton;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -19,6 +28,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 
+import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -34,6 +44,10 @@ public class LoginController implements Initializable {
 
     @FXML
     private JFXToggleButton toggleButton;
+    @FXML
+    JFXTextField emailTextField;
+    @FXML
+    JFXPasswordField passwordTextField;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -50,65 +64,127 @@ public class LoginController implements Initializable {
         Node source = (Node) actionEvent.getSource();
         loginStage = (Stage) source.getScene().getWindow();
         if (toggleButton.isSelected()) {
+            int flag = 0;
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/master.fxml"));
-                Parent root;
-                root = (Parent) fxmlLoader.load();
-                Stage masterStage = new Stage();
-                masterStage.setScene(new Scene(root, 1044, 662));
-                root.setOnMousePressed(new EventHandler<MouseEvent>() {
-                    @Override
-                    public void handle(MouseEvent event) {
-                        xOffset1 = event.getSceneX();
-                        yOffset1 = event.getSceneY();
+                Connection connection = masterDBC.getConnection();
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery("select email,password from master;");
+                while (resultSet.next()){
+                    if (emailTextField.getText().equals(resultSet.getString("email"))){
+                        emailTextField.setUnFocusColor(Paint.valueOf("#009688"));
+                        if (cipherEncryptionAndDecryption.encrypt(passwordTextField.getText(),"team").equals(resultSet.getString("password"))){
+                            flag = 1;
+                            passwordTextField.setUnFocusColor(Paint.valueOf("#009688"));
+                            break;
+                        }
+                        else{
+                            System.out.println("password is not correct");
+                            passwordTextField.setUnFocusColor(Paint.valueOf("#ab0529"));
+                            break;
+                        }
                     }
-                });
-                root.setOnMouseDragged(new EventHandler<MouseEvent>() {
-                    @Override
-                    public void handle(MouseEvent event) {
-                        masterStage.setX(event.getScreenX() - xOffset1);
-                        masterStage.setY(event.getScreenY() - yOffset1);
+                    else{
+                        emailTextField.setUnFocusColor(Paint.valueOf("#ab0529"));
+                        passwordTextField.setUnFocusColor(Paint.valueOf("#ab0529"));
                     }
-                });
-                masterStage.initStyle(StageStyle.UNDECORATED);
-                masterStage.setTitle("Master");
-                masterStage.getIcons().add(new Image("ars/Resources/iFlyIcon.png"));
-                masterStage.setResizable(false);
-                masterStage.show();
-                loginStage.close();
-            } catch (IOException ex) {
-                Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                if (flag == 1){
+                    try {
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/master.fxml"));
+                        Parent root;
+                        root = (Parent) fxmlLoader.load();
+                        Stage masterStage = new Stage();
+                        masterStage.setScene(new Scene(root, 1044, 662));
+                        root.setOnMousePressed(new EventHandler<MouseEvent>() {
+                            @Override
+                            public void handle(MouseEvent event) {
+                                xOffset1 = event.getSceneX();
+                                yOffset1 = event.getSceneY();
+                            }
+                        });
+                        root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+                            @Override
+                            public void handle(MouseEvent event) {
+                                masterStage.setX(event.getScreenX() - xOffset1);
+                                masterStage.setY(event.getScreenY() - yOffset1);
+                            }
+                        });
+                        masterStage.initStyle(StageStyle.UNDECORATED);
+                        masterStage.setTitle("Master");
+                        masterStage.getIcons().add(new Image("ars/Resources/iFlyIcon.png"));
+                        masterStage.setResizable(false);
+                        masterStage.show();
+                        loginStage.close();
+                    } catch (IOException ex) {
+                        Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+                connection.close();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
             }
+
         } else {
+            int flag = 0;
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/user.fxml"));
-                Parent root;
-                root = (Parent) fxmlLoader.load();
-                Stage userStage = new Stage();
-                userStage.setScene(new Scene(root, 1044, 662));
-                root.setOnMousePressed(new EventHandler<MouseEvent>() {
-                    @Override
-                    public void handle(MouseEvent event) {
-                        xOffset1 = event.getSceneX();
-                        yOffset1 = event.getSceneY();
+                Connection connection = userDBC.getConnection();
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery("select email,password from user;");
+                while (resultSet.next()){
+                    if (emailTextField.getText().equals(resultSet.getString("email"))){
+                        emailTextField.setUnFocusColor(Paint.valueOf("#009688"));
+                        if (cipherEncryptionAndDecryption.encrypt(passwordTextField.getText(),"team").equals(resultSet.getString("password"))){
+                            flag = 1;
+                            passwordTextField.setUnFocusColor(Paint.valueOf("#009688"));
+                            break;
+                        }
+                        else{
+                            System.out.println("password is not correct");
+                            passwordTextField.setUnFocusColor(Paint.valueOf("#ab0529"));
+                            break;
+                        }
                     }
-                });
-                root.setOnMouseDragged(new EventHandler<MouseEvent>() {
-                    @Override
-                    public void handle(MouseEvent event) {
-                        userStage.setX(event.getScreenX() - xOffset1);
-                        userStage.setY(event.getScreenY() - yOffset1);
+                    else{
+                        emailTextField.setUnFocusColor(Paint.valueOf("#ab0529"));
+                        passwordTextField.setUnFocusColor(Paint.valueOf("#ab0529"));
                     }
-                });
-                userStage.initStyle(StageStyle.UNDECORATED);
-                userStage.setTitle("User");
-                userStage.getIcons().add(new Image("ars/Resources/iFlyIcon.png"));
-                userStage.setResizable(false);
-                userStage.show();
-                loginStage.close();
-            } catch (IOException ex) {
-                Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                if (flag == 1){
+                    try {
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/user.fxml"));
+                        Parent root;
+                        root = (Parent) fxmlLoader.load();
+                        Stage userStage = new Stage();
+                        userStage.setScene(new Scene(root, 1044, 662));
+                        root.setOnMousePressed(new EventHandler<MouseEvent>() {
+                            @Override
+                            public void handle(MouseEvent event) {
+                                xOffset1 = event.getSceneX();
+                                yOffset1 = event.getSceneY();
+                            }
+                        });
+                        root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+                            @Override
+                            public void handle(MouseEvent event) {
+                                userStage.setX(event.getScreenX() - xOffset1);
+                                userStage.setY(event.getScreenY() - yOffset1);
+                            }
+                        });
+                        userStage.initStyle(StageStyle.UNDECORATED);
+                        userStage.setTitle("User");
+                        userStage.getIcons().add(new Image("ars/Resources/iFlyIcon.png"));
+                        userStage.setResizable(false);
+                        userStage.show();
+                        loginStage.close();
+                    } catch (IOException ex) {
+                        Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+                connection.close();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
             }
+
         }
 
     }

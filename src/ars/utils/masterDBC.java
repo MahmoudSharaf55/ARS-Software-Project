@@ -15,12 +15,12 @@ public class masterDBC {
         }
         return connection;
     }
-    public static void inserMaster(String name,String gender,String email,String password){
+    public static void inserMaster(String name,String phone,String email,String password){
         Connection connection = getConnection();
         try {
-            PreparedStatement st = connection.prepareStatement("insert into master (officeName,gender,email,password) values (?,?,?,?);");
+            PreparedStatement st = connection.prepareStatement("insert into master (officeName,phone,email,password) values (?,?,?,?);");
             st.setString(1,name);
-            st.setString(2,gender);
+            st.setString(2,phone);
             st.setString(3,email);
             st.setString(4,password);
             st.executeUpdate();

@@ -6,12 +6,17 @@
 package ars.controllers;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 
 import ars.utils.cipherEncryptionAndDecryption;
 import ars.utils.masterDBC;
 import ars.utils.userDBC;
 import com.jfoenix.controls.*;
+import com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException;
 import javafx.animation.FadeTransition;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -35,13 +40,13 @@ public class SignupController implements Initializable {
      * Sharaf
      */
     @FXML
-    JFXComboBox<Object> userGender,masterGender;
+    JFXComboBox<Object> userGender;
     @FXML
     Pane signupUserPane,signupMasterPane;
     @FXML
     JFXToggleButton toggleSwitch;
     @FXML
-    JFXTextField userName,userEmail,masterName,masterEmail;
+    JFXTextField userName,userEmail,masterName,masterEmail,masterPhone;
     @FXML
     JFXPasswordField userPassword,masterPassword;
     @FXML
@@ -75,8 +80,8 @@ public class SignupController implements Initializable {
             masterName.setUnFocusColor(Paint.valueOf("#ab0529"));
         }
 
-        if (masterGender.getSelectionModel().getSelectedItem() == null){
-            masterGender.setUnFocusColor(Paint.valueOf("#ab0529"));
+        if (masterPhone.getText().isEmpty()){
+            masterPhone.setUnFocusColor(Paint.valueOf("#ab0529"));
         }
         if (masterEmail.getText().isEmpty()){
             masterEmail.setUnFocusColor(Paint.valueOf("#ab0529"));
@@ -84,9 +89,30 @@ public class SignupController implements Initializable {
         if (masterPassword.getText().isEmpty()){
             masterPassword.setUnFocusColor(Paint.valueOf("#ab0529"));
         }
-        if (!masterName.getText().isEmpty()&&masterGender.getSelectionModel().getSelectedItem()!=null&&!masterEmail.getText().isEmpty()&&!masterPassword.getText().isEmpty()){
-            String encrypted = cipherEncryptionAndDecryption.encrypt(masterPassword.getText(),"team");
-            masterDBC.inserMaster(masterName.getText(), masterGender.getSelectionModel().getSelectedItem().toString(), masterEmail.getText(), encrypted);
+        if (!masterName.getText().isEmpty()&&!masterPhone.getText().isEmpty()&&!masterEmail.getText().isEmpty()&&!masterPassword.getText().isEmpty()){
+            int flag = 0;
+            try {
+                Connection connection = masterDBC.getConnection();
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery("select email from master;");
+                while (resultSet.next()){
+                    if (resultSet.getString("email").equals(masterEmail.getText())){
+                        flag = 1;
+                        break;
+                    }
+                }
+                if (flag == 0){
+                    masterEmail.setUnFocusColor(Paint.valueOf("#009688"));
+                    String encrypted = cipherEncryptionAndDecryption.encrypt(masterPassword.getText(),"team");
+                    masterDBC.inserMaster(masterName.getText(), masterPhone.getText(), masterEmail.getText(), encrypted);
+                }
+                else{
+                    masterEmail.setUnFocusColor(Paint.valueOf("#ab0529"));
+                }
+                connection.close();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
         }
 
         masterfieldFocusColorChanged();
@@ -109,8 +135,30 @@ public class SignupController implements Initializable {
             userPassword.setUnFocusColor(Paint.valueOf("#ab0529"));
         }
         if (!userName.getText().isEmpty()&&userDate.getValue()!=null&&userGender.getSelectionModel().getSelectedItem()!=null&&!userEmail.getText().isEmpty()&&!userPassword.getText().isEmpty()){
-            String encryoted = cipherEncryptionAndDecryption.encrypt(userPassword.getText(),"team");
-            userDBC.insertUser(userName.getText(),userDate.getValue().toString(),userGender.getSelectionModel().getSelectedItem().toString(),userEmail.getText(),encryoted);
+            int flag = 0;
+            try {
+                Connection connection = userDBC.getConnection();
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery("select email from user;");
+                while (resultSet.next()){
+                    if (resultSet.getString("email").equals(userEmail.getText())){
+                        flag = 1;
+                        break;
+                    }
+                }
+                if (flag == 0){
+                    userEmail.setUnFocusColor(Paint.valueOf("#009688"));
+                    String encryoted = cipherEncryptionAndDecryption.encrypt(userPassword.getText(),"team");
+                    userDBC.insertUser(userName.getText(),userDate.getValue().toString(),userGender.getSelectionModel().getSelectedItem().toString(),userEmail.getText(),encryoted);
+                }
+                else{
+                    userEmail.setUnFocusColor(Paint.valueOf("#ab0529"));
+                }
+                connection.close();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+
         }
         userfieldFocusColorChanged();
     }
@@ -128,11 +176,11 @@ public class SignupController implements Initializable {
                         masterName.setUnFocusColor(Paint.valueOf("#009688"));
                     }
 
-                    if (masterGender.getSelectionModel().getSelectedItem() == null){
-                        masterGender.setUnFocusColor(Paint.valueOf("#ab0529"));
+                    if (masterPhone.getText().isEmpty()){
+                        masterPhone.setUnFocusColor(Paint.valueOf("#ab0529"));
                     }
                     else {
-                        masterGender.setUnFocusColor(Paint.valueOf("#009688"));
+                        masterPhone.setUnFocusColor(Paint.valueOf("#009688"));
                     }
                     if (masterEmail.getText().isEmpty()){
                         masterEmail.setUnFocusColor(Paint.valueOf("#ab0529"));
@@ -152,7 +200,7 @@ public class SignupController implements Initializable {
         masterName.focusedProperty().addListener(fieldsFocus);
         masterPassword.focusedProperty().addListener(fieldsFocus);
         masterEmail.focusedProperty().addListener(fieldsFocus);
-        masterGender.focusedProperty().addListener(fieldsFocus);
+        masterPhone.focusedProperty().addListener(fieldsFocus);
 
     }
 
@@ -205,7 +253,6 @@ public class SignupController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         userGender.getItems().addAll("Male","Female");
-        masterGender.getItems().addAll("Male","Female");
         toggleSwitch.selectedProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue){
                 fadeTransitionOut(signupUserPane);
