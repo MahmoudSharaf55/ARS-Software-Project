@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cef4b685-fb84-476e-b0e9-304549f4ef0a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ars/Database Backup/airline 20181028 2052.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/Database Backup/airline 20181028 2052.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ars/Database Backup/airline 20181030 0558.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/Database Backup/airline 20181030 0558.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ars/models/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/models/Airport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ars/models/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/models/Ticket.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -44,6 +46,20 @@
         <item name="airline" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="airline: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="airports: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="airline" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="airline: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="master: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="airline" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="airline: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="user: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
@@ -55,15 +71,15 @@
         <counts>
           <entry key="project.closed" value="4" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="2" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="1" />
-          <entry key="java" value="27" />
+          <entry key="java" value="31" />
           <entry key="user" value="2" />
         </counts>
       </usages-collector>
@@ -71,20 +87,20 @@
         <counts>
           <entry key="Database Element" value="2" />
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="27" />
+          <entry key="JAVA" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="6" />
           <entry key="dummy" value="20" />
-          <entry key="java" value="738" />
+          <entry key="java" value="779" />
           <entry key="sql" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="738" />
+          <entry key="JAVA" value="779" />
           <entry key="PLAIN_TEXT" value="20" />
           <entry key="SQL" value="5" />
           <entry key="Scratch" value="6" />
@@ -97,7 +113,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ars/models/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
+            <state relative-caret-position="598">
               <caret line="26" column="32" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="32" />
               <folding>
                 <element signature="e#891#892#0" expanded="true" />
@@ -125,6 +141,42 @@
                 <element signature="e#1697#1698#0" expanded="true" />
                 <element signature="e#1733#1734#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ars/models/Master.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-455">
+              <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ars/models/Ticket.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-87">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ars/models/Airport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ars/models/Flight.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -166,9 +218,9 @@
         <option value="$PROJECT_DIR$/src/ars/controllers/LoginController.java" />
         <option value="$PROJECT_DIR$/src/ars/controllers/SignupController.java" />
         <option value="$PROJECT_DIR$/src/ars/models/Master.java" />
-        <option value="$PROJECT_DIR$/src/ars/models/Flight.java" />
-        <option value="$PROJECT_DIR$/src/ars/models/Airport.java" />
         <option value="$PROJECT_DIR$/src/ars/models/User.java" />
+        <option value="$PROJECT_DIR$/src/ars/models/Airport.java" />
+        <option value="$PROJECT_DIR$/src/ars/models/Flight.java" />
         <option value="$PROJECT_DIR$/src/ars/models/Ticket.java" />
       </list>
     </option>
@@ -191,7 +243,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -215,18 +266,29 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ars" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ARS-SE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ARS-SE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ars" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540924627224" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540936883778" />
     <property name="database.console.LAST_STATE" value="false" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
@@ -275,11 +337,12 @@
       <workItem from="1540928968795" duration="234000" />
       <workItem from="1540929653092" duration="1184000" />
       <workItem from="1540933796225" duration="484000" />
+      <workItem from="1540936341073" duration="538000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5682000" />
+    <option name="totallyTimeSpent" value="6220000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -292,8 +355,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2600536" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26340482" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -301,7 +365,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32947975" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32658958" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -392,27 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/models/Master.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/models/Flight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/models/Airport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/description.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -423,13 +466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterFlightAdd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ars/utils/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -437,16 +473,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterFlightAdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/models/Airport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/models/Flight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/models/Master.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-455">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ars/models/Ticket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        <state relative-caret-position="-87">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ars/models/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
+        <state relative-caret-position="598">
           <caret line="26" column="32" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="32" />
           <folding>
             <element signature="e#891#892#0" expanded="true" />
@@ -477,5 +541,80 @@
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ARS-SE</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

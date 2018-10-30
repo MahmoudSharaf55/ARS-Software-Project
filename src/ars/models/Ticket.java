@@ -12,7 +12,7 @@ public class Ticket {
      * complete all remaining classes
      *
      */
-<<<<<<< Updated upstream
+
     private int ticketID;
     private int userID;
     private int flightID;
@@ -35,7 +35,5 @@ public class Ticket {
     public int getFlightID() { return flightID;}
 
     public void setFlightID(int flightID) { this.flightID = flightID;}
-=======
 
->>>>>>> Stashed changes
 }

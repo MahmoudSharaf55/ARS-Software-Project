@@ -29,7 +29,7 @@ DROP TABLE IF EXISTS `airports`;
 CREATE TABLE `airports` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `name` varchar(45) NOT NULL,
-  `latidude` double NOT NULL,
+  `latitude` double NOT NULL,
   `longitude` double NOT NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -11,13 +11,13 @@ public class Airport {
      */
     private int airportID;
     private String name;
-    private double latidude;
-    private double longitude;
+    private float latitude;
+    private float longitude;
 
-    public Airport(int airportID,String name,double latidude,double longitude){
+    public Airport(int airportID, String name, float latitude, float longitude){
         this.airportID=airportID;
         this.name=name;
-        this.latidude=latidude;
+        this.latitude = latitude;
         this.longitude=longitude;
 
     }
@@ -30,11 +30,11 @@ public class Airport {
 
     public void setName(String name) {this.name = name;}
 
-    public double getLatidude() {return latidude;}
+    public float getLatitude() {return latitude;}
 
-    public void setLatidude(double latidude) {this.latidude = latidude;}
+    public void setLatitude(float latitude) {this.latitude = latitude;}
 
-    public double getLongitude() {return longitude;}
+    public float getLongitude() {return longitude;}
 
-    public void setLongitude(double longitude) {this.longitude = longitude;}
+    public void setLongitude(float longitude) {this.longitude = longitude;}
 }
