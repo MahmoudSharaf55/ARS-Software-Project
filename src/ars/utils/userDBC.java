@@ -8,7 +8,7 @@ public class userDBC {
         Connection connection = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/airline","root","root");
+            connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/airline","root","");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } catch (ClassNotFoundException e) {
