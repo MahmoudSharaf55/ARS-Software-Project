@@ -2,32 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cef4b685-fb84-476e-b0e9-304549f4ef0a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ars/models/Airport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ars/models/Ticket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ars/utils/MasterAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fea776ca-1168-4c52-9f8b-c752cb4c4f72.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fea776ca-1168-4c52-9f8b-c752cb4c4f72.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/LoginController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/LoginController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/LoginController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/LoginController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/LoginController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/LoginController$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/LoginController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/LoginController$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/LoginController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/LoginController$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/LoginController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/LoginController$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterFlightAdd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterFlightAdd.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/SignupController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/SignupController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/SignupController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/SignupController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/SignupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/SignupController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/utils/masterDBC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/utils/userDBC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/controllers/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/controllers/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/models/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/models/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/models/Master.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/models/Master.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/utils/masterDBC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/utils/userDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/utils/UserAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ars/models/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/models/Ticket.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,33 +53,38 @@
     <session id="-421461712">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="14" />
+          <entry key="html" value="1" />
+          <entry key="java" value="27" />
           <entry key="user" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="2" />
-          <entry key="JAVA" value="14" />
+          <entry key="HTML" value="1" />
+          <entry key="JAVA" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="6" />
           <entry key="dummy" value="20" />
-          <entry key="java" value="737" />
+          <entry key="java" value="738" />
           <entry key="sql" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="737" />
+          <entry key="JAVA" value="738" />
           <entry key="PLAIN_TEXT" value="20" />
           <entry key="SQL" value="5" />
           <entry key="Scratch" value="6" />
@@ -112,49 +93,14 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="23" column="62" lean-forward="true" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/utils/FlightDatabaseAPI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/utils/UserAPI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ars/controllers/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-178">
-              <caret line="43" column="35" lean-forward="true" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ars/models/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-478">
-              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+            <state relative-caret-position="258">
+              <caret line="26" column="32" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="32" />
               <folding>
+                <element signature="e#891#892#0" expanded="true" />
                 <element signature="e#920#921#0" expanded="true" />
                 <element signature="e#961#962#0" expanded="true" />
                 <element signature="e#997#998#0" expanded="true" />
@@ -184,46 +130,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/utils/cipherEncryptionAndDecryption.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/models/Flight.java">
+        <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterFlightAdd.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/models/Airport.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/models/Ticket.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="10" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/models/Master.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+              <caret line="13" column="7" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -255,11 +165,11 @@
         <option value="$PROJECT_DIR$/src/ars/utils/UserAPI.java" />
         <option value="$PROJECT_DIR$/src/ars/controllers/LoginController.java" />
         <option value="$PROJECT_DIR$/src/ars/controllers/SignupController.java" />
-        <option value="$PROJECT_DIR$/src/ars/models/Ticket.java" />
         <option value="$PROJECT_DIR$/src/ars/models/Master.java" />
         <option value="$PROJECT_DIR$/src/ars/models/Flight.java" />
         <option value="$PROJECT_DIR$/src/ars/models/Airport.java" />
         <option value="$PROJECT_DIR$/src/ars/models/User.java" />
+        <option value="$PROJECT_DIR$/src/ars/models/Ticket.java" />
       </list>
     </option>
   </component>
@@ -268,6 +178,12 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-15" />
+    <option name="y" value="15" />
+    <option name="width" value="1615" />
+    <option name="height" value="880" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -286,11 +202,6 @@
             <path>
               <item name="ARS-SE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ARS-SE" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ARS-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ARS-SE" type="462c0819:PsiDirectoryNode" />
               <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -304,27 +215,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ars" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ARS-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ARS-SE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ars" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ARS-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ARS-SE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ars" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ARS-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ARS-SE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ars" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -335,7 +225,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540923882606" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540924627224" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -381,12 +271,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540920930942</updated>
-      <workItem from="1540920934400" duration="2925000" />
+      <workItem from="1540920934400" duration="3780000" />
+      <workItem from="1540928968795" duration="234000" />
+      <workItem from="1540929653092" duration="1184000" />
+      <workItem from="1540933796225" duration="484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2925000" />
+    <option name="totallyTimeSpent" value="5682000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -399,37 +292,36 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2600536" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" weight="0.32803467" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Database Console" weight="0.32947975" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32658958" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32658958" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32947975" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" weight="0.3297587" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32658958" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.32947975" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32947975" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32803467" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" weight="0.3297587" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,13 +343,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/utils/DBConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ars/utils/FlightDatabaseAPI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -469,44 +354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1756">
           <caret line="116" column="17" lean-forward="true" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="23" column="62" lean-forward="true" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/models/Ticket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/models/Master.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/models/Flight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/models/Airport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -524,11 +371,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-385">
+          <caret line="43" column="35" lean-forward="true" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="23" column="62" lean-forward="true" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/utils/UserAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-41">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/models/Master.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/models/Flight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/models/Airport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/description.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterPassengersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterFlightAdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/utils/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/models/Ticket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ars/models/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-478">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        <state relative-caret-position="258">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="32" />
           <folding>
+            <element signature="e#891#892#0" expanded="true" />
             <element signature="e#920#921#0" expanded="true" />
             <element signature="e#961#962#0" expanded="true" />
             <element signature="e#997#998#0" expanded="true" />
@@ -553,20 +474,6 @@
             <element signature="e#1697#1698#0" expanded="true" />
             <element signature="e#1733#1734#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/utils/UserAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/controllers/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-178">
-          <caret line="43" column="35" lean-forward="true" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
         </state>
       </provider>
     </entry>
