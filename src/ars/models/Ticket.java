@@ -1,6 +1,6 @@
 package ars.models;
 
-public class Flight {
+public class Ticket {
     /**
      * TODO: Salma
      * Create data model for each class in model package

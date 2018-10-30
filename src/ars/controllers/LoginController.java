@@ -10,9 +10,10 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import ars.utils.DBConnection;
 import ars.utils.cipherEncryptionAndDecryption;
-import ars.utils.masterDBC;
-import ars.utils.userDBC;
+import ars.utils.MasterAPI;
+import ars.utils.UserAPI;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXToggleButton;
@@ -66,29 +67,27 @@ public class LoginController implements Initializable {
         if (toggleButton.isSelected()) {
             int flag = 0;
             try {
-                Connection connection = masterDBC.getConnection();
+                Connection connection = DBConnection.getConnection();
                 Statement statement = connection.createStatement();
                 ResultSet resultSet = statement.executeQuery("select email,password from master;");
-                while (resultSet.next()){
-                    if (emailTextField.getText().equals(resultSet.getString("email"))){
+                while (resultSet.next()) {
+                    if (emailTextField.getText().equals(resultSet.getString("email"))) {
                         emailTextField.setUnFocusColor(Paint.valueOf("#009688"));
-                        if (cipherEncryptionAndDecryption.encrypt(passwordTextField.getText(),"team").equals(resultSet.getString("password"))){
+                        if (cipherEncryptionAndDecryption.encrypt(passwordTextField.getText(), "team").equals(resultSet.getString("password"))) {
                             flag = 1;
                             passwordTextField.setUnFocusColor(Paint.valueOf("#009688"));
                             break;
-                        }
-                        else{
+                        } else {
                             System.out.println("password is not correct");
                             passwordTextField.setUnFocusColor(Paint.valueOf("#ab0529"));
                             break;
                         }
-                    }
-                    else{
+                    } else {
                         emailTextField.setUnFocusColor(Paint.valueOf("#ab0529"));
                         passwordTextField.setUnFocusColor(Paint.valueOf("#ab0529"));
                     }
                 }
-                if (flag == 1){
+                if (flag == 1) {
                     try {
                         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/master.fxml"));
                         Parent root;
@@ -119,7 +118,7 @@ public class LoginController implements Initializable {
                         Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
-                connection.close();
+
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
             }
@@ -127,29 +126,27 @@ public class LoginController implements Initializable {
         } else {
             int flag = 0;
             try {
-                Connection connection = userDBC.getConnection();
+                Connection connection = DBConnection.getConnection();
                 Statement statement = connection.createStatement();
                 ResultSet resultSet = statement.executeQuery("select email,password from user;");
-                while (resultSet.next()){
-                    if (emailTextField.getText().equals(resultSet.getString("email"))){
+                while (resultSet.next()) {
+                    if (emailTextField.getText().equals(resultSet.getString("email"))) {
                         emailTextField.setUnFocusColor(Paint.valueOf("#009688"));
-                        if (cipherEncryptionAndDecryption.encrypt(passwordTextField.getText(),"team").equals(resultSet.getString("password"))){
+                        if (cipherEncryptionAndDecryption.encrypt(passwordTextField.getText(), "team").equals(resultSet.getString("password"))) {
                             flag = 1;
                             passwordTextField.setUnFocusColor(Paint.valueOf("#009688"));
                             break;
-                        }
-                        else{
+                        } else {
                             System.out.println("password is not correct");
                             passwordTextField.setUnFocusColor(Paint.valueOf("#ab0529"));
                             break;
                         }
-                    }
-                    else{
+                    } else {
                         emailTextField.setUnFocusColor(Paint.valueOf("#ab0529"));
                         passwordTextField.setUnFocusColor(Paint.valueOf("#ab0529"));
                     }
                 }
-                if (flag == 1){
+                if (flag == 1) {
                     try {
                         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/user.fxml"));
                         Parent root;
@@ -180,7 +177,7 @@ public class LoginController implements Initializable {
                         Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
-                connection.close();
+
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
             }

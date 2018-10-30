@@ -1,6 +1,6 @@
 package ars.models;
 
-public class Flight {
+public class Airport {
     /**
      * TODO: Salma
      * Create data model for each class in model package
@@ -9,4 +9,5 @@ public class Flight {
      * provide constructor, setter and getter
      * complete all remaining classes
      */
+
 }

@@ -1178,7 +1178,7 @@
     </column>
     <column id="280" parent="247" name="date">
       <Position>3</Position>
-      <DataType>datetime|0s</DataType>
+      <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
