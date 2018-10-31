@@ -3,24 +3,17 @@ package ars.models;
 import java.sql.Date;
 
 public class User {
-    /**
-     * TODO: Salma
-     * Create data model for each class in model package
-     * all variables from the db columns ex: int userID, String name, Date dob ...
-     * all of these variables must be private
-     * provide constructor, setter and getter
-     * this class is example
-     * complete all remaining classes
-     */
+
     private int userID;
     private Date dateOfBirth;
     private String gender;
     private String email;
     private String password;
+    private String name;
     private int rating;
 
-    public User(int userID, Date dateOfBirth, String gender, String email, String password, int rating) {
-        this.userID = userID;
+    public User( String name, Date dateOfBirth, String gender, String email, String password, int rating) {
+        this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;
         this.email = email;
@@ -74,5 +67,13 @@ public class User {
 
     public void setRating(int rating) {
         this.rating = rating;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

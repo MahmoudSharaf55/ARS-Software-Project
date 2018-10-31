@@ -7,18 +7,14 @@ package ars.controllers;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import ars.utils.DBConnection;
-import ars.utils.cipherEncryptionAndDecryption;
-import ars.utils.MasterAPI;
-import ars.utils.UserAPI;
+import ars.models.Master;
+import ars.models.User;
+import ars.utils.*;
 import com.jfoenix.controls.*;
 
 import javafx.animation.FadeTransition;
@@ -117,8 +113,9 @@ public class SignupController implements Initializable {
                 }
                 if (flag == 0) {
                     masterEmail.setUnFocusColor(Paint.valueOf("#009688"));
-                    String encrypted = cipherEncryptionAndDecryption.encrypt(masterPassword.getText(), "team");
-                    MasterAPI.signupMaster(masterName.getText(), masterPhone.getText(), masterEmail.getText(), encrypted);
+                    String encrypted = CipherEncryptionAndDecryption.encrypt(masterPassword.getText(), "team");
+                    Master master = new Master(masterName.getText(), masterPhone.getText(), masterEmail.getText(), encrypted);
+                    AuthMaster.signupMaster(master);
                     openUserOrMaster("../fxml/master.fxml");
 
                 } else {
@@ -164,8 +161,9 @@ public class SignupController implements Initializable {
                 }
                 if (flag == 0) {
                     userEmail.setUnFocusColor(Paint.valueOf("#009688"));
-                    String encrypted = cipherEncryptionAndDecryption.encrypt(userPassword.getText(), "team");
-                    UserAPI.signupUser(userName.getText(), userDate.getValue().toString(), userGender.getSelectionModel().getSelectedItem().toString(), userEmail.getText(), encrypted);
+                    String encrypted = CipherEncryptionAndDecryption.encrypt(userPassword.getText(), "team");
+                    User user = new User(userName.getText(), Date.valueOf(userDate.getValue()), userGender.getSelectionModel().getSelectedItem().toString(), userEmail.getText(), encrypted, 0);
+                    AuthUser.signupUser(user);
                     openUserOrMaster("../fxml/user.fxml");
                 } else {
                     userEmail.setUnFocusColor(Paint.valueOf("#ab0529"));

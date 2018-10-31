@@ -133,7 +133,7 @@ CREATE TABLE `user` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `name` varchar(45) NOT NULL,
   `date` date NOT NULL,
-  `gender` varchar(10) NOT NULL,
+  `phone` varchar(10) NOT NULL,
   `email` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   `rating` int(10) unsigned NOT NULL default '0',
@@ -146,7 +146,7 @@ CREATE TABLE `user` (
 --
 
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` (`id`,`name`,`date`,`gender`,`email`,`password`,`rating`) VALUES 
+INSERT INTO `user` (`id`,`name`,`date`,`phone`,`email`,`password`,`rating`) VALUES
  (11,'asdasd','2018-10-22','Male','asdasd','wucI��V5',0),
  (15,'Mohammed Sedky','1998-02-03','Male','mohammedsedky01147226634@gmail.com','�-{�$$�ը8��_',0),
  (17,'sdfsdf','2018-10-22','Male','mohammed','$a9,��1��/��e1',0),

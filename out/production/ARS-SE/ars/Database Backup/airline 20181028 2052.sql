@@ -29,7 +29,7 @@ DROP TABLE IF EXISTS `airports`;
 CREATE TABLE `airports` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `name` varchar(45) NOT NULL,
-  `latidude` double NOT NULL,
+  `latitude` double NOT NULL,
   `longitude` double NOT NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -77,7 +77,7 @@ DROP TABLE IF EXISTS `master`;
 CREATE TABLE `master` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `officeName` varchar(45) NOT NULL,
-  `gender` varchar(10) NOT NULL,
+  `phone` varchar(10) NOT NULL,
   `email` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   PRIMARY KEY  (`id`)
@@ -124,7 +124,7 @@ CREATE TABLE `user` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `name` varchar(45) NOT NULL,
   `date` date NOT NULL,
-  `gender` varchar(10) NOT NULL,
+  `phone` varchar(10) NOT NULL,
   `email` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   `rating` int(10) unsigned NOT NULL default '0',

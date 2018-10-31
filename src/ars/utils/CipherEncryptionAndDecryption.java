@@ -3,7 +3,7 @@ package ars.utils;
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
-public class cipherEncryptionAndDecryption {
+public class CipherEncryptionAndDecryption {
     public static String encrypt(String strClearText , String strKey){
         String strData="";
             try {

@@ -1,45 +1,57 @@
 package ars.models;
 
 public class Master {
-    /**
-     * TODO: Salma
-     * Create data model for each class in model package
-     * all variables from the db columns ex: int userID, String name, Date dob ...
-     * all of these variables must be private
-     * provide constructor, setter and getter
-     * complete all remaining classes
-     */
+    
     private int masterID;
     private String officeName;
-    private String gender;
+    private String phone;
     private String email;
     private String password;
 
-    public Master(int masterID,String officeName,String gender,String email,String password){
-        this.masterID=masterID;
-        this.officeName=officeName;
-        this.gender=gender;
-        this.email=email;
-        this.password=password;
+    public Master(String officeName, String phone, String email, String password) {
+        this.officeName = officeName;
+        this.phone = phone;
+        this.email = email;
+        this.password = password;
     }
 
-    public int getMasterID() {return masterID;}
+    public int getMasterID() {
+        return masterID;
+    }
 
-    public void setMasterID(int masterID) {this.masterID = masterID;}
+    public void setMasterID(int masterID) {
+        this.masterID = masterID;
+    }
 
-    public String getOfficeName() {return officeName;}
+    public String getOfficeName() {
+        return officeName;
+    }
 
-    public void setOfficeName(String officeName) {this.officeName = officeName;}
+    public void setOfficeName(String officeName) {
+        this.officeName = officeName;
+    }
 
-    public String getGender() {return gender;}
+    public String getPhone() {
+        return phone;
+    }
 
-    public void setGender(String gender) {this.gender = gender;}
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
-    public String getEmail() {return email;}
+    public String getEmail() {
+        return email;
+    }
 
-    public void setEmail(String email) {this.email = email;}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-    public String getPassword() {return password;}
+    public String getPassword() {
+        return password;
+    }
 
-    public void setPassword(String password) {this.password = password;}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

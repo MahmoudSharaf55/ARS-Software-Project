@@ -2,18 +2,12 @@ package ars.controllers;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import ars.utils.DBConnection;
-import ars.utils.cipherEncryptionAndDecryption;
-import ars.utils.MasterAPI;
-import ars.utils.UserAPI;
+import ars.utils.*;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXToggleButton;
@@ -35,7 +29,10 @@ import javafx.stage.StageStyle;
 
 
 public class LoginController implements Initializable {
-
+    /**
+     * TODO: Sedky
+     * Fix Login issues
+     */
     private double xOffset = 0;
     private double yOffset = 0;
     private double xOffset1 = 0;
@@ -73,7 +70,7 @@ public class LoginController implements Initializable {
                 while (resultSet.next()) {
                     if (emailTextField.getText().equals(resultSet.getString("email"))) {
                         emailTextField.setUnFocusColor(Paint.valueOf("#009688"));
-                        if (cipherEncryptionAndDecryption.encrypt(passwordTextField.getText(), "team").equals(resultSet.getString("password"))) {
+                        if (CipherEncryptionAndDecryption.encrypt(passwordTextField.getText(), "team").equals(resultSet.getString("password"))) {
                             flag = 1;
                             passwordTextField.setUnFocusColor(Paint.valueOf("#009688"));
                             break;
@@ -127,12 +124,15 @@ public class LoginController implements Initializable {
             int flag = 0;
             try {
                 Connection connection = DBConnection.getConnection();
-                Statement statement = connection.createStatement();
-                ResultSet resultSet = statement.executeQuery("select email,password from user;");
+                PreparedStatement statement = connection.prepareStatement("select email,password from user;");
+                ResultSet resultSet = statement.executeQuery();
                 while (resultSet.next()) {
                     if (emailTextField.getText().equals(resultSet.getString("email"))) {
                         emailTextField.setUnFocusColor(Paint.valueOf("#009688"));
-                        if (cipherEncryptionAndDecryption.encrypt(passwordTextField.getText(), "team").equals(resultSet.getString("password"))) {
+                        System.out.println(resultSet.getString("password"));
+                        String encryptedPass = CipherEncryptionAndDecryption.encrypt(passwordTextField.getText(), "team");
+                        System.out.println();
+                        if (encryptedPass.equals(resultSet.getString("password"))) {
                             flag = 1;
                             passwordTextField.setUnFocusColor(Paint.valueOf("#009688"));
                             break;
@@ -147,6 +147,7 @@ public class LoginController implements Initializable {
                     }
                 }
                 if (flag == 1) {
+
                     try {
                         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/user.fxml"));
                         Parent root;

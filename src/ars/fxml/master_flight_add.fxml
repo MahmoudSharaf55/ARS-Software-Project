@@ -17,12 +17,12 @@
          <children>
             <HBox prefHeight="34.0" prefWidth="913.0">
                <children>
-                  <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Depart" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                  <JFXComboBox fx:id="departComboBox" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Depart" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </JFXComboBox>
-                  <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Destination" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                  <JFXComboBox fx:id="destComboBox" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Destination" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>
@@ -32,22 +32,22 @@
                   <Insets bottom="30.0" left="250.0" right="250.0" top="40.0" />
                </VBox.margin>
             </HBox>
-            <JFXTextField focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Number Of Seats" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+            <JFXTextField fx:id="numOfSeats" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Number Of Seats" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
                <VBox.margin>
                   <Insets bottom="30.0" left="250.0" right="250.0" />
                </VBox.margin>
             </JFXTextField>
-            <JFXDatePicker id="datePicker" defaultColor="#eeeeee" prefHeight="31.0" prefWidth="589.0" promptText="Flight Date" style="-jfx-default-color: #009688;" stylesheets="@../Resources/stylesheets/master.css">
+            <JFXDatePicker id="datePicker" fx:id="flightDate" defaultColor="#eeeeee" prefHeight="31.0" prefWidth="589.0" promptText="Flight Date" style="-jfx-default-color: #009688;" stylesheets="@../Resources/stylesheets/master.css">
                <VBox.margin>
                   <Insets bottom="30.0" left="250.0" right="250.0" />
                </VBox.margin>
             </JFXDatePicker>
-            <JFXTimePicker prefHeight="31.0" prefWidth="614.0" promptText="Flight Time" style="-jfx-default-color: #009688;" stylesheets="@../Resources/stylesheets/master.css">
+            <JFXTimePicker fx:id="timePicker" prefHeight="31.0" prefWidth="614.0" promptText="Flight Time" style="-jfx-default-color: #009688;" stylesheets="@../Resources/stylesheets/master.css">
                <VBox.margin>
                   <Insets bottom="30.0" left="250.0" right="250.0" />
                </VBox.margin>
             </JFXTimePicker>
-            <JFXTextField focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Price" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+            <JFXTextField fx:id="price" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Price" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
                <VBox.margin>
                   <Insets bottom="30.0" left="250.0" right="250.0" />
                </VBox.margin>

@@ -24,6 +24,7 @@ import java.util.ResourceBundle;
 import java.util.function.Consumer;
 
 public class UserController implements Initializable {
+
     @FXML
     JFXDrawer drawer;
     @FXML
