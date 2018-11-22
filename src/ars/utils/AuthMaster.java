@@ -21,7 +21,7 @@ public class AuthMaster {
     public static void signupMaster(Master master) {
         Connection connection = DBConnection.getConnection();
         try {
-            PreparedStatement st = connection.prepareStatement("insert into master (officeName,phone,email,password) values (?,?,?,?);");
+            PreparedStatement st = connection.prepareStatement("insert into master (office_name,phone,email,password) values (?,?,?,?);");
             st.setString(1, master.getOfficeName());
             st.setString(2, master.getPhone());
             st.setString(3, master.getEmail());

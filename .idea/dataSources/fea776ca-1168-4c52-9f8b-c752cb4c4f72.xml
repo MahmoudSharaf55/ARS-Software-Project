@@ -11,7 +11,7 @@
     <schema id="2" parent="1" name="airline">
       <Current>1</Current>
       <Visible>1</Visible>
-      <Collation>latin1_swedish_ci</Collation>
+      <Collation>utf16_general_ci</Collation>
     </schema>
     <schema id="3" parent="1" name="ars">
       <Collation>utf8_general_ci</Collation>
@@ -967,21 +967,11 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="243" parent="2" name="airports">
-      <Collation>utf8_general_ci</Collation>
-    </table>
-    <table id="244" parent="2" name="flight">
-      <Collation>utf8_general_ci</Collation>
-    </table>
-    <table id="245" parent="2" name="master">
-      <Collation>utf8_general_ci</Collation>
-    </table>
-    <table id="246" parent="2" name="ticket">
-      <Collation>utf8_general_ci</Collation>
-    </table>
-    <table id="247" parent="2" name="user">
-      <Collation>utf8_general_ci</Collation>
-    </table>
+    <table id="243" parent="2" name="airports"/>
+    <table id="244" parent="2" name="flight"/>
+    <table id="245" parent="2" name="master"/>
+    <table id="246" parent="2" name="ticket"/>
+    <table id="247" parent="2" name="user"/>
     <column id="248" parent="243" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
@@ -1086,13 +1076,13 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="245" name="officeName">
+    <column id="265" parent="245" name="office_name">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="245" name="gender">
+    <column id="266" parent="245" name="phone">
       <Position>3</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>

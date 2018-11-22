@@ -1,5 +1,6 @@
 package ars.controllers;
 
+import ars.utils.AuthMaster;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
@@ -12,10 +13,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -73,6 +72,10 @@ public class MasterController implements Initializable {
     }
 
 
+    /**
+     * @param vBox
+     */
+
     private void setAnchorPaneListeners(VBox vBox) {
         for (Node node : vBox.getChildren()) {
             if (node.getAccessibleText() != null) {
@@ -86,10 +89,28 @@ public class MasterController implements Initializable {
                                         drawer.close();
                                         Platform.exit();
                                         break;
+                                    case "logout":
+                                        drawer.close();
+                                        LoginController.loginStage.show();
+                                        ((Stage) node.getScene().getWindow()).close();
+
                                     default:
                                         System.out.println("Error Master");
                                 }
                             });
+                        }
+                    }
+                } else if (node instanceof BorderPane) {
+                    for (Node borderPaneChild : ((BorderPane) node).getChildren()) {
+                        if (borderPaneChild.getAccessibleText() != null) {
+                            switch (borderPaneChild.getAccessibleText()) {
+                                case "name":
+                                    System.out.println(AuthMaster.currentMaster.getOfficeName());
+                                    ((Label) borderPaneChild).setText(AuthMaster.currentMaster.getOfficeName().toUpperCase());
+                                    break;
+                                default:
+                                    System.out.println("Error Master");
+                            }
                         }
                     }
                 } else {
@@ -123,11 +144,13 @@ public class MasterController implements Initializable {
                             default:
                                 System.out.println("Error Master");
                         }
+
                     });
                 }
             }
         }
     }
+
 
     /**
      * Function for loading nodes into the container :)

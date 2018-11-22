@@ -7,6 +7,8 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import ars.models.Master;
+import ars.models.User;
 import ars.utils.*;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -65,17 +67,21 @@ public class LoginController implements Initializable {
             int flag = 0;
             try {
                 Connection connection = DBConnection.getConnection();
-                Statement statement = connection.createStatement();
-                ResultSet resultSet = statement.executeQuery("select email,password from master;");
+                ResultSet resultSet = connection.prepareStatement("select * from master;").executeQuery();
                 while (resultSet.next()) {
                     if (emailTextField.getText().equals(resultSet.getString("email"))) {
                         emailTextField.setUnFocusColor(Paint.valueOf("#009688"));
-                        if (CipherEncryptionAndDecryption.encrypt(passwordTextField.getText(), "team").equals(resultSet.getString("password"))) {
+                        String encryptedPass = CipherEncryptionAndDecryption.encrypt(passwordTextField.getText(), "team");
+                        if (encryptedPass.equals(resultSet.getString("password"))) {
                             flag = 1;
                             passwordTextField.setUnFocusColor(Paint.valueOf("#009688"));
+                            Master master = new Master(resultSet.getString("office_name"), resultSet.getString("phone"), resultSet.getString("email"), resultSet.getString("password"));
+                            AuthMaster.setCurrentMaster(master);
                             break;
                         } else {
                             System.out.println("password is not correct");
+                            System.out.println(resultSet.getString("password"));
+                            System.out.println(encryptedPass);
                             passwordTextField.setUnFocusColor(Paint.valueOf("#ab0529"));
                             break;
                         }
@@ -124,16 +130,16 @@ public class LoginController implements Initializable {
             int flag = 0;
             try {
                 Connection connection = DBConnection.getConnection();
-                PreparedStatement statement = connection.prepareStatement("select email,password from user;");
+                PreparedStatement statement = connection.prepareStatement("select * from user;");
                 ResultSet resultSet = statement.executeQuery();
                 while (resultSet.next()) {
                     if (emailTextField.getText().equals(resultSet.getString("email"))) {
                         emailTextField.setUnFocusColor(Paint.valueOf("#009688"));
-                        System.out.println(resultSet.getString("password"));
                         String encryptedPass = CipherEncryptionAndDecryption.encrypt(passwordTextField.getText(), "team");
-                        System.out.println();
                         if (encryptedPass.equals(resultSet.getString("password"))) {
                             flag = 1;
+                            User user = new User(resultSet.getString("name"), resultSet.getDate("date"), resultSet.getString("gender"), resultSet.getString("email"), resultSet.getString("password"), resultSet.getInt("rating"));
+                            AuthUser.setCurrentUser(user);
                             passwordTextField.setUnFocusColor(Paint.valueOf("#009688"));
                             break;
                         } else {

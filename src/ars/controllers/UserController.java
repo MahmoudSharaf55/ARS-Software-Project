@@ -1,5 +1,6 @@
 package ars.controllers;
 
+import ars.models.User;
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.controls.events.JFXDrawerEvent;

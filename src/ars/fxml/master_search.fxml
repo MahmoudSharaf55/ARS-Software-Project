@@ -2,8 +2,10 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXSpinner?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -44,6 +46,15 @@
                   <Insets left="250.0" right="250.0" top="20.0" />
                </VBox.margin>
             </HBox>
+            <HBox prefHeight="42.0" prefWidth="556.0">
+               <VBox.margin>
+                  <Insets left="250.0" right="250.0" top="20.0" />
+               </VBox.margin>
+               <children>
+                  <JFXDatePicker prefHeight="31.0" prefWidth="300.0" stylesheets="@../Resources/stylesheets/master.css" />
+                  <JFXTimePicker prefHeight="31.0" prefWidth="300.0" stylesheets="@../Resources/stylesheets/master.css" />
+               </children>
+            </HBox>
             <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Search" textFill="WHITE">
                <VBox.margin>
                   <Insets left="250.0" right="250.0" top="20.0" />
@@ -52,7 +63,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <TableView prefHeight="301.0" prefWidth="1056.0" stylesheets="@../Resources/stylesheets/master.css">
+            <TableView prefHeight="244.0" prefWidth="862.0" stylesheets="@../Resources/stylesheets/master.css">
               <columns>
                 <TableColumn prefWidth="75.0" text="C1" />
                 <TableColumn prefWidth="75.0" text="C2" />

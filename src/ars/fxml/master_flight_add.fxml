@@ -17,12 +17,12 @@
          <children>
             <HBox prefHeight="34.0" prefWidth="913.0">
                <children>
-                  <JFXComboBox fx:id="departComboBox" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Depart" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                  <JFXComboBox fx:id="departComboBox" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Depart" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </JFXComboBox>
-                  <JFXComboBox fx:id="destComboBox" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Destination" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                  <JFXComboBox fx:id="destComboBox" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Destination" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>
@@ -52,7 +52,7 @@
                   <Insets bottom="30.0" left="250.0" right="250.0" />
                </VBox.margin>
             </JFXTextField>
-            <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="ADD" textFill="WHITE">
+            <JFXButton buttonType="RAISED" onAction="#addFlight" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="ADD" textFill="WHITE">
                <VBox.margin>
                   <Insets bottom="30.0" left="250.0" right="250.0" />
                </VBox.margin>

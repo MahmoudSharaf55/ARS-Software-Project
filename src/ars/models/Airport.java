@@ -28,4 +28,5 @@ public class Airport {
     public float getLongitude() {return longitude;}
 
     public void setLongitude(float longitude) {this.longitude = longitude;}
+
 }

@@ -13,7 +13,7 @@
 
 <VBox prefHeight="772.0" prefWidth="292.0" style="-fx-background-color: #607D8B;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url('ars/Resources/sidepane_background.jpg');">
+        <BorderPane accessibleText="borderPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url('ars/Resources/sidepane_background.jpg');">
             <left>
                 <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                     <image>
@@ -25,7 +25,7 @@
                 </ImageView>
             </left>
             <bottom>
-                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="199.0" text="Egypt Air" textAlignment="CENTER" textFill="#cfd8dc" BorderPane.alignment="CENTER">
+                <Label accessibleText="name" alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="199.0" text="Egypt Air" textAlignment="CENTER" textFill="#cfd8dc" BorderPane.alignment="CENTER">
                     <font>
                         <Font name="Century Gothic Bold" size="21.0" />
                     </font>
@@ -42,7 +42,7 @@
         <JFXButton accessibleText="PASSENGERS" prefHeight="84.0" prefWidth="294.0" text="Passengers" textFill="WHITE" />
         <HBox accessibleText="hbox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <children>
-                <JFXButton prefHeight="100.0" prefWidth="150.0" text="  Logout" textFill="WHITE">
+                <JFXButton accessibleText="logout" prefHeight="100.0" prefWidth="150.0" text="  Logout" textFill="WHITE">
                     <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                             <image>
