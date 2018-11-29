@@ -22,22 +22,22 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </ImageView>
-            <Label text="Ma7MOoOD A.SHaRaF" textFill="WHITE">
+            <Label fx:id="nameLbl" text="Ma7MOoOD A.SHaRaF" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label text="mahmoudsharf55@gmail.com" textFill="WHITE">
+            <Label fx:id="emailLbl" text="mahmoudsharf55@gmail.com" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label text="1/10/1998" textFill="WHITE">
+            <Label fx:id="dateLbl" text="1/10/1998" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label text="Male" textFill="WHITE">
+            <Label fx:id="genderLbl" text="Male" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -54,7 +54,7 @@
                   <Insets left="10.0" right="10.0" />
                </VBox.margin>
             </HBox>
-            <Rating rating="5.0" />
+            <Rating fx:id="ratingBar" rating="0.0" />
          </children>
       </VBox>
    </children>

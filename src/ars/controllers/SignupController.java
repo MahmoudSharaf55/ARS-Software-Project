@@ -116,7 +116,7 @@ public class SignupController implements Initializable {
                     String encrypted = CipherEncryptionAndDecryption.encrypt(masterPassword.getText(), "team");
                     Master master = new Master(masterName.getText(), masterPhone.getText(), masterEmail.getText(), encrypted);
                     AuthMaster.signupMaster(master);
-                    openUserOrMaster("../fxml/master.fxml");
+                    openUserOrMaster("../fxml/master.fxml","Master");
 
                 } else {
                     masterEmail.setUnFocusColor(Paint.valueOf("#ab0529"));
@@ -164,7 +164,7 @@ public class SignupController implements Initializable {
                     String encrypted = CipherEncryptionAndDecryption.encrypt(userPassword.getText(), "team");
                     User user = new User(userName.getText(), Date.valueOf(userDate.getValue()), userGender.getSelectionModel().getSelectedItem().toString(), userEmail.getText(), encrypted, 0);
                     AuthUser.signupUser(user);
-                    openUserOrMaster("../fxml/user.fxml");
+                    openUserOrMaster("../fxml/user.fxml","User");
                 } else {
                     userEmail.setUnFocusColor(Paint.valueOf("#ab0529"));
                 }
@@ -182,7 +182,7 @@ public class SignupController implements Initializable {
      *
      * @param path the path of the fxml file to load
      */
-    public void openUserOrMaster(String path) {
+    public void openUserOrMaster(String path ,String title) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(path));
             Parent root;
@@ -204,7 +204,7 @@ public class SignupController implements Initializable {
                 }
             });
             userStage.initStyle(StageStyle.UNDECORATED);
-            userStage.setTitle("User");
+            userStage.setTitle(title);
             userStage.getIcons().add(new Image("ars/Resources/iFlyIcon.png"));
             userStage.setResizable(false);
             userStage.show();

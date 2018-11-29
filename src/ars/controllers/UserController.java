@@ -1,6 +1,7 @@
 package ars.controllers;
 
 import ars.models.User;
+import ars.utils.AuthUser;
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.controls.events.JFXDrawerEvent;
@@ -13,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -35,6 +37,7 @@ public class UserController implements Initializable {
     @FXML
     Label toolbarTitle;
     Node containerFXML;
+    Node sideNameLbl;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         drawer.setVisible(false);
@@ -81,6 +84,18 @@ public class UserController implements Initializable {
     private void setAnchorPaneListeners(VBox vBox) {
         vBox.getChildren().forEach(node -> {
             if (node.getAccessibleText() != null){
+                if (node instanceof BorderPane){
+                    ((BorderPane) node).getChildren().forEach(node1 -> {
+                        if (node1.getAccessibleText() != null){
+                            switch (node1.getAccessibleText()){
+                                case "sideNameLbl":
+                                    ((Label) node1).setText(AuthUser.currentUser.getName());
+                                    break;
+                            }
+                        }
+                    });
+
+                }
                 node.addEventHandler(MouseEvent.MOUSE_CLICKED,event -> {
                     switch (node.getAccessibleText()){
                         case "dashboard":

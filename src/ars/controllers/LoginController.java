@@ -6,7 +6,6 @@ import java.sql.*;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import ars.models.Master;
 import ars.models.User;
 import ars.utils.*;
@@ -138,7 +137,7 @@ public class LoginController implements Initializable {
                         String encryptedPass = CipherEncryptionAndDecryption.encrypt(passwordTextField.getText(), "team");
                         if (encryptedPass.equals(resultSet.getString("password"))) {
                             flag = 1;
-                            User user = new User(resultSet.getString("name"), resultSet.getDate("date"), resultSet.getString("gender"), resultSet.getString("email"), resultSet.getString("password"), resultSet.getInt("rating"));
+                            User user = new User(resultSet.getString("name"),Date.valueOf(resultSet.getString("date")),resultSet.getString("gender"),resultSet.getString("email"),resultSet.getString("password"),resultSet.getInt("rating"));
                             AuthUser.setCurrentUser(user);
                             passwordTextField.setUnFocusColor(Paint.valueOf("#009688"));
                             break;

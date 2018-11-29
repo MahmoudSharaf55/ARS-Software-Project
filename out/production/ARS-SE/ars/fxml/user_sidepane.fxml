@@ -13,7 +13,7 @@
 
 <VBox prefHeight="719.0" prefWidth="294.0" style="-fx-background-color: #607D8B;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url('ars/Resources/UserFlatWallpaper.jpg');">
+      <BorderPane accessibleText="boderPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url('ars/Resources/UserFlatWallpaper.jpg');">
          <left>
             <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                <image>
@@ -25,7 +25,7 @@
             </ImageView>
          </left>
          <bottom>
-            <Label contentDisplay="CENTER" prefHeight="32.0" prefWidth="199.0" text="Mahmoud Sharaf" textAlignment="CENTER" textFill="#cfd8dc" BorderPane.alignment="CENTER">
+            <Label accessibleText="sideNameLbl" contentDisplay="CENTER" prefHeight="32.0" prefWidth="199.0" text="Mahmoud Sharaf" textAlignment="CENTER" textFill="#cfd8dc" BorderPane.alignment="CENTER">
                <font>
                   <Font name="Century Gothic Bold" size="21.0" />
                </font>
