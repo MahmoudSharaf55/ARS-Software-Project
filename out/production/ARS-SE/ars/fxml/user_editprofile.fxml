@@ -28,37 +28,37 @@
                   </ImageView>
                </children>
             </HBox>
-            <JFXTextField focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="338.0" promptText="Full Name" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+            <JFXTextField fx:id="editUserName" focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="338.0" promptText="Full Name" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
                <VBox.margin>
                   <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
                </VBox.margin>
             </JFXTextField>
-            <JFXDatePicker id="datePicker" defaultColor="#eeeeee" prefHeight="25.0" prefWidth="530.0" promptText="Date of birth" style="-jfx-default-color: #009688;" stylesheets="@../Resources/stylesheets/master.css">
+            <JFXDatePicker id="datePicker" fx:id="editUserDOB" defaultColor="#eeeeee" prefHeight="25.0" prefWidth="530.0" promptText="Date of birth" style="-jfx-default-color: #009688;" stylesheets="@../Resources/stylesheets/master.css">
                <VBox.margin>
                   <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
                </VBox.margin>
             </JFXDatePicker>
-            <JFXComboBox fx:id="userGender" focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="493.0" promptText="Gender" style="-fx-prompt-text-fill: gray;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
+            <JFXComboBox fx:id="editUserGender" focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="493.0" promptText="Gender" style="-fx-prompt-text-fill: gray;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
                <VBox.margin>
                   <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
                </VBox.margin>
             </JFXComboBox>
-            <JFXTextField focusColor="#009688" labelFloat="true" promptText="Email" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+            <JFXTextField fx:id="editUserMail" focusColor="#009688" labelFloat="true" promptText="Email" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
                <VBox.margin>
                   <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
                </VBox.margin>
             </JFXTextField>
-            <JFXPasswordField focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="523.0" promptText="New Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+            <JFXPasswordField fx:id="oldPassword" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="523.0" promptText="Old Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
                <VBox.margin>
                   <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
                </VBox.margin>
             </JFXPasswordField>
-            <JFXPasswordField focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="523.0" promptText="Confirm Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+            <JFXPasswordField fx:id="newPassword" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="523.0" promptText="New Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
                <VBox.margin>
                   <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
                </VBox.margin>
             </JFXPasswordField>
-            <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="690.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Submit" textFill="WHITE">
+            <JFXButton fx:id="submit" buttonType="RAISED" onAction="#onUserEditProfile" prefHeight="31.0" prefWidth="690.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Submit" textFill="WHITE">
                <VBox.margin>
                   <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
                </VBox.margin>

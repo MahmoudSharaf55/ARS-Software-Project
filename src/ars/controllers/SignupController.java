@@ -93,13 +93,15 @@ public class SignupController implements Initializable {
         if (masterPhone.getText().isEmpty()) {
             masterPhone.setUnFocusColor(Paint.valueOf("#ab0529"));
         }
-        if (masterEmail.getText().isEmpty()) {
+        String mailMuster=masterEmail.getText();
+        if (masterEmail.getText().isEmpty()|| !mailMuster.contains("@")) {
             masterEmail.setUnFocusColor(Paint.valueOf("#ab0529"));
         }
         if (masterPassword.getText().isEmpty()) {
             masterPassword.setUnFocusColor(Paint.valueOf("#ab0529"));
         }
-        if (!masterName.getText().isEmpty() && !masterPhone.getText().isEmpty() && !masterEmail.getText().isEmpty() && !masterPassword.getText().isEmpty()) {
+
+        if (!masterName.getText().isEmpty() && !masterPhone.getText().isEmpty() && mailMuster.contains("@") && !masterPassword.getText().isEmpty()) {
             int flag = 0;
             try {
                 Connection connection = DBConnection.getConnection();
@@ -141,13 +143,17 @@ public class SignupController implements Initializable {
         if (userGender.getSelectionModel().getSelectedItem() == null) {
             userGender.setUnFocusColor(Paint.valueOf("#ab0529"));
         }
-        if (userEmail.getText().isEmpty()) {
+        String emailUser =userEmail.getText();
+        if (userEmail.getText().isEmpty()||!emailUser.contains("@")) {
             userEmail.setUnFocusColor(Paint.valueOf("#ab0529"));
         }
         if (userPassword.getText().isEmpty()) {
             userPassword.setUnFocusColor(Paint.valueOf("#ab0529"));
         }
-        if (!userName.getText().isEmpty() && userDate.getValue() != null && userGender.getSelectionModel().getSelectedItem() != null && !userEmail.getText().isEmpty() && !userPassword.getText().isEmpty()) {
+
+
+
+        if (!userName.getText().isEmpty() && userDate.getValue() != null && userGender.getSelectionModel().getSelectedItem() != null && emailUser.contains("@") && !userPassword.getText().isEmpty()) {
             int flag = 0;
             try {
                 Connection connection = DBConnection.getConnection();

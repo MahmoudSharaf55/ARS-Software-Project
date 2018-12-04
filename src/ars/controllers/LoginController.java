@@ -138,6 +138,7 @@ public class LoginController implements Initializable {
                         if (encryptedPass.equals(resultSet.getString("password"))) {
                             flag = 1;
                             User user = new User(resultSet.getString("name"),Date.valueOf(resultSet.getString("date")),resultSet.getString("gender"),resultSet.getString("email"),resultSet.getString("password"),resultSet.getInt("rating"));
+                            user.setUserID(resultSet.getInt("id"));
                             AuthUser.setCurrentUser(user);
                             passwordTextField.setUnFocusColor(Paint.valueOf("#009688"));
                             break;
