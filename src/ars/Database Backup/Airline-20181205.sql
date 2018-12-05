@@ -29,7 +29,7 @@ DROP TABLE IF EXISTS `airports`;
 CREATE TABLE `airports` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `name` varchar(45) NOT NULL,
-  `latitude` double NOT NULL,
+  `latidude` double NOT NULL,
   `longitude` double NOT NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -48,7 +48,7 @@ CREATE TABLE `airports` (
 
 DROP TABLE IF EXISTS `flight`;
 CREATE TABLE `flight` (
-  `flightNumber` int(10) unsigned NOT NULL auto_increment,
+  `flightNumber` varchar(10) NOT NULL,
   `src` varchar(45) NOT NULL,
   `dest` varchar(45) NOT NULL,
   `dateAndTime` date NOT NULL default '0000-00-00',
@@ -82,7 +82,7 @@ CREATE TABLE `master` (
   `password` varchar(45) NOT NULL,
   PRIMARY KEY  (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `master`
@@ -96,7 +96,8 @@ INSERT INTO `master` (`id`,`officeName`,`phone`,`email`,`password`) VALUES
  (4,'sdfsdf','Male','mohammeed','�qYaT��'),
  (5,'sdfsdf','Male','mohammyed','���ڤ�'),
  (6,'ewrwer','34345345','ertert','g�%$����'),
- (7,'ewrwer','34345345','ertert4','g�%$����');
+ (7,'ewrwer','34345345','ertert4','g�%$����'),
+ (9,'Mahmoud','0565545','sharaf','Bmx7rH7lfa4=');
 /*!40000 ALTER TABLE `master` ENABLE KEYS */;
 
 
@@ -108,12 +109,12 @@ DROP TABLE IF EXISTS `ticket`;
 CREATE TABLE `ticket` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `user_id` int(10) unsigned NOT NULL,
-  `flight_id` int(10) unsigned NOT NULL,
+  `flight_number` varchar(10) NOT NULL,
   PRIMARY KEY  (`id`),
   KEY `user_id` (`user_id`),
-  KEY `flight_id` (`flight_id`),
-  CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `flight_id` FOREIGN KEY (`flight_id`) REFERENCES `flight` (`flightNumber`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `flight_id` USING BTREE (`flight_number`),
+  CONSTRAINT `flight_number` FOREIGN KEY (`flight_number`) REFERENCES `flight` (`flightNumber`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -133,20 +134,20 @@ CREATE TABLE `user` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `name` varchar(45) NOT NULL,
   `date` date NOT NULL,
-  `phone` varchar(10) NOT NULL,
+  `gender` varchar(10) NOT NULL,
   `email` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   `rating` int(10) unsigned NOT NULL default '0',
   PRIMARY KEY  USING BTREE (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
 --
 
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` (`id`,`name`,`date`,`phone`,`email`,`password`,`rating`) VALUES
+INSERT INTO `user` (`id`,`name`,`date`,`gender`,`email`,`password`,`rating`) VALUES 
  (11,'asdasd','2018-10-22','Male','asdasd','wucI��V5',0),
  (15,'Mohammed Sedky','1998-02-03','Male','mohammedsedky01147226634@gmail.com','�-{�$$�ը8��_',0),
  (17,'sdfsdf','2018-10-22','Male','mohammed','$a9,��1��/��e1',0),
@@ -154,7 +155,12 @@ INSERT INTO `user` (`id`,`name`,`date`,`phone`,`email`,`password`,`rating`) VALU
  (19,'mohaned','1998-10-07','Male','mo','�~���e^�',0),
  (20,'asdasds','2018-10-26','Male','mohammmed','�-{�$$�ը8��_',0),
  (21,'asdasdasd','2018-10-30','Male','mohammedd','揇��\0��',0),
- (22,'erwerwe','2018-10-26','Male','erwerwer','��:�N���ը8��_',0);
+ (22,'erwerwe','2018-10-26','Male','erwerwer','��:�N���ը8��_',0),
+ (23,'hjgh','2018-10-27','Male','kjkloppoi','��1�i�>\n�ը8��_',0),
+ (27,'asd','2018-11-30','Male','asd','�vvE��',0),
+ (28,'mahmoud','2018-11-24','Male','mahmoudsharaf','l{�~�}�',0),
+ (29,'asd','2018-11-30','Male','sharaf','Bmx7rH7lfa4=',0),
+ (30,'Mahmoud Sharaf','2018-12-18','Male','mahmoud','d3VjSauUVjU=',0);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
 

@@ -37,7 +37,7 @@ public class UserController implements Initializable {
     @FXML
     Label toolbarTitle;
     Node containerFXML;
-    Node sideNameLbl;
+    static Label sideNameLbl;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         drawer.setVisible(false);
@@ -89,7 +89,8 @@ public class UserController implements Initializable {
                         if (node1.getAccessibleText() != null){
                             switch (node1.getAccessibleText()){
                                 case "sideNameLbl":
-                                    ((Label) node1).setText(AuthUser.currentUser.getName());
+                                    sideNameLbl = ((Label) node1);
+                                    sideNameLbl.setText(AuthUser.currentUser.getName());
                                     break;
                             }
                         }
