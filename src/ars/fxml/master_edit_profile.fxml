@@ -22,32 +22,32 @@
                   <Insets top="40.0" />
                </VBox.margin>
             </ImageView>
-            <JFXTextField fx:id="masterName" focusColor="#009688" labelFloat="true" prefHeight="35.0" prefWidth="444.0" promptText="Office name" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+            <JFXTextField fx:id="editMasterName" focusColor="#009688" labelFloat="true" prefHeight="35.0" prefWidth="444.0" promptText="Office name" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
                <VBox.margin>
                   <Insets left="300.0" right="300.0" top="20.0" />
                </VBox.margin>
             </JFXTextField>
-            <JFXTextField fx:id="masterPhone" focusColor="#009688" labelFloat="true" prefHeight="35.0" prefWidth="444.0" promptText="Phone" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+            <JFXTextField fx:id="editMasterPhone" focusColor="#009688" labelFloat="true" prefHeight="35.0" prefWidth="444.0" promptText="Phone" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
                <VBox.margin>
                   <Insets left="300.0" right="300.0" top="25.0" />
                </VBox.margin>
             </JFXTextField>
-            <JFXTextField fx:id="masterEmail" focusColor="#009688" labelFloat="true" prefHeight="35.0" promptText="Email" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+            <JFXTextField fx:id="editMasterEmail" focusColor="#009688" labelFloat="true" prefHeight="35.0" promptText="Email" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
                <VBox.margin>
                   <Insets left="300.0" right="300.0" top="25.0" />
                </VBox.margin>
             </JFXTextField>
-            <JFXPasswordField fx:id="masterPassword" focusColor="#009688" labelFloat="true" prefHeight="35.0" prefWidth="523.0" promptText="Old Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+            <JFXPasswordField fx:id="oldMasterPassword" focusColor="#009688" labelFloat="true" prefHeight="35.0" prefWidth="523.0" promptText="Old Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
                <VBox.margin>
                   <Insets left="300.0" right="300.0" top="25.0" />
                </VBox.margin>
             </JFXPasswordField>
-            <JFXPasswordField fx:id="masterPassword1" focusColor="#009688" labelFloat="true" prefHeight="35.0" prefWidth="523.0" promptText="New Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+            <JFXPasswordField fx:id="newMasterPassword" focusColor="#009688" labelFloat="true" prefHeight="35.0" prefWidth="523.0" promptText="New Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
                <VBox.margin>
                   <Insets left="300.0" right="300.0" top="25.0" />
                </VBox.margin>
             </JFXPasswordField>
-            <JFXButton buttonType="RAISED" prefHeight="47.0" prefWidth="444.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Submit" textFill="WHITE">
+            <JFXButton fx:id="submitMaster" buttonType="RAISED" onAction="#onMasterEditProfile" prefHeight="47.0" prefWidth="444.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Submit" textFill="WHITE">
                <VBox.margin>
                   <Insets left="300.0" right="300.0" top="20.0" />
                </VBox.margin>

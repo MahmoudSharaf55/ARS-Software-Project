@@ -1,111 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c11fc389-cb9c-41bc-ab21-edd52858aa94" name="Default Changelist" comment="">
+    <list default="true" id="401b7c3c-3bdf-4721-aa37-79ad1f77a4cd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterEditProfileController$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ars/Database Backup/airline-20181206-1635.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/Database Backup/airline 20181030 0558.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterFlightAdd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterFlightAdd.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/models/Flight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/models/Flight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/utils/FlightDatabaseAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/utils/FlightDatabaseAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/utils/UtilityServices$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/utils/UtilityServices$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/utils/UtilityServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/utils/UtilityServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/controllers/MasterFlightAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/controllers/MasterFlightAdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/models/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/models/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/utils/AuthMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/utils/AuthMaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/Database Backup/Airline-20181205-1958 (1).sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterEditProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterEditProfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/master_edit_profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/master_edit_profile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/utils/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/utils/DBConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ars/controllers/MasterEditProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/controllers/MasterEditProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ars/fxml/master_edit_profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/fxml/master_edit_profile.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ars/utils/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/utils/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/utils/FlightDatabaseAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/utils/FlightDatabaseAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/utils/MasterAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/utils/MasterAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/utils/UtilityServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/utils/UtilityServices.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="airline" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="airline" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="airline" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="airline: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="airline" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="airline: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="airports: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="airline" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="airline: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="flight: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="airline" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="airline: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="master: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="airline" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="airline: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="user: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="-421461712">
+    <session id="-1008097949">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="flight" value="2" />
-          <entry key="java" value="21" />
-          <entry key="master" value="1" />
-          <entry key="sql" value="2" />
+          <entry key="java" value="7" />
+          <entry key="sql" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="3" />
-          <entry key="JAVA" value="21" />
-          <entry key="SQL" value="2" />
+          <entry key="JAVA" value="7" />
+          <entry key="SQL" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="950" />
+          <entry key="java" value="157" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="950" />
+          <entry key="JAVA" value="157" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -113,10 +56,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterFlightAdd.java">
+        <entry file="file://$PROJECT_DIR$/src/ars/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="111" column="44" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
+            <state relative-caret-position="272">
+              <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ars/controllers/UserEditProfile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="803">
+              <caret line="139" column="40" lean-forward="true" selection-start-line="139" selection-start-column="40" selection-end-line="139" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,28 +86,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/utils/MasterAPI.java">
+        <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterEditProfileController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://fea776ca-1168-4c52-9f8b-c752cb4c4f72/schema/airline/table/flight">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/utils/FlightDatabaseAPI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="33" column="42" lean-forward="true" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+            <state relative-caret-position="221">
+              <caret line="51" column="137" selection-start-line="51" selection-start-column="137" selection-end-line="51" selection-end-column="137" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -155,35 +98,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ars/utils/AuthMaster.java">
+        <entry file="file://$PROJECT_DIR$/src/ars/Database Backup/airline-20181206-1635.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="30" column="70" lean-forward="true" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/utils/UtilityServices.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-23">
-              <caret line="13" column="84" selection-start-line="13" selection-start-column="84" selection-end-line="13" selection-end-column="84" />
-              <folding>
-                <element signature="e#1181#1182#0" expanded="true" />
-                <element signature="e#1227#1228#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="289">
+              <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -192,35 +115,33 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/ars/utils/DBConnection.java" />
-        <option value="$PROJECT_DIR$/src/ars/utils/AuthUser.java" />
-        <option value="$PROJECT_DIR$/src/ars/models/Flight.java" />
-        <option value="$PROJECT_DIR$/src/ars/controllers/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/ars/utils/MasterAPI.java" />
-        <option value="$PROJECT_DIR$/src/ars/utils/FlightDatabaseAPI.java" />
-        <option value="$PROJECT_DIR$/src/ars/utils/UtilityServices.java" />
-        <option value="$PROJECT_DIR$/src/ars/controllers/MasterFlightAdd.java" />
-        <option value="$PROJECT_DIR$/src/ars/utils/AuthMaster.java" />
+        <option value="$PROJECT_DIR$/src/ars/controllers/MasterEditProfileController.java" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="730" />
+    <option name="y" value="-30" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ARS-SE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ARS-SE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ARS-SE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ARS-SE" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ARS-SE" type="b2602c69:ProjectViewProjectNode" />
@@ -266,34 +187,22 @@
               <item name="ARS-SE" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ars" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ARS-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ARS-SE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ars" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ARS-SE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ARS-SE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ars" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544105189822" />
-    <property name="database.console.LAST_STATE" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544104951032" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\M.$edky\Desktop\ARS-SE\src\ars\Database Backup" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -332,342 +241,145 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cef4b685-fb84-476e-b0e9-304549f4ef0a" name="Default Changelist" comment="" />
-      <created>1540920930942</created>
+      <changelist id="401b7c3c-3bdf-4721-aa37-79ad1f77a4cd" name="Default Changelist" comment="" />
+      <created>1544091140244</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1540920930942</updated>
-      <workItem from="1540920934400" duration="3780000" />
-      <workItem from="1540928968795" duration="234000" />
-      <workItem from="1540929653092" duration="1184000" />
-      <workItem from="1540933796225" duration="484000" />
-      <workItem from="1540936341073" duration="1127000" />
-      <workItem from="1540982680032" duration="268000" />
-      <workItem from="1540983149378" duration="496000" />
-      <workItem from="1541001766922" duration="5075000" />
-      <workItem from="1541142856613" duration="1846000" />
-      <workItem from="1541240592901" duration="443000" />
-      <workItem from="1541241243360" duration="733000" />
-      <workItem from="1541242149779" duration="289000" />
-      <workItem from="1541247281912" duration="4800000" />
-      <workItem from="1541286422397" duration="29000" />
-      <workItem from="1542549955509" duration="1638000" />
-      <workItem from="1542609346863" duration="115000" />
-      <workItem from="1542912763096" duration="8885000" />
-      <workItem from="1542966006697" duration="357000" />
-      <workItem from="1542969920451" duration="410000" />
-      <workItem from="1542970648576" duration="15000" />
-      <workItem from="1542974517664" duration="59000" />
-      <workItem from="1543229926709" duration="2733000" />
-      <workItem from="1543233258719" duration="3164000" />
-      <workItem from="1543241579192" duration="875000" />
-      <workItem from="1543343211194" duration="80000" />
-      <workItem from="1543432027139" duration="307000" />
-      <workItem from="1543489847519" duration="1084000" />
-      <workItem from="1543606950590" duration="5000" />
-      <workItem from="1543736409067" duration="1305000" />
-      <workItem from="1543739902956" duration="556000" />
-      <workItem from="1543831261209" duration="3663000" />
-      <workItem from="1543918873660" duration="4046000" />
-      <workItem from="1543943960991" duration="882000" />
-      <workItem from="1543945466960" duration="88000" />
-      <workItem from="1543949324628" duration="3877000" />
-      <workItem from="1543991576627" duration="111000" />
-      <workItem from="1544095354110" duration="8023000" />
+      <updated>1544091140244</updated>
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6962000" />
-  </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49855492" visible="true" weight="0.20710456" />
-      <window_info id="Structure" order="1" sideWeight="0.5014451" side_tool="true" weight="0.17895442" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32803467" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.3251445" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39884394" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29384616" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32658958" />
-      <window_info anchor="bottom" id="Database Console" order="7" weight="0.32658958" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32658958" />
-      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32658958" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32947975" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067025" side_tool="true" weight="0.3251445" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32658958" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32923076" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" weight="0.21849866" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/ARS-SE" />
-    </ignored-roots>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ars/Database Backup/Airline-20181205.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-345" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/Database Backup/Airline-20181205-1958 (1).sql" />
     <entry file="file://$PROJECT_DIR$/src/ars/Database Backup/airline.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/utils/DBConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ars/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="31" column="44" lean-forward="true" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/utils/AuthUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/models/Ticket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/models/Master.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterEditProfileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/controllers/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1239">
-          <caret line="77" column="69" lean-forward="true" selection-start-line="77" selection-start-column="69" selection-end-line="77" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://fea776ca-1168-4c52-9f8b-c752cb4c4f72/schema/airline/table/master">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://fea776ca-1168-4c52-9f8b-c752cb4c4f72/schema/airline/table/master">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://fea776ca-1168-4c52-9f8b-c752cb4c4f72/schema/airline/table/master">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://fea776ca-1168-4c52-9f8b-c752cb4c4f72/schema/airline/table/master">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/models/Flight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding>
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#735#736#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-            <element signature="e#869#870#0" expanded="true" />
-            <element signature="e#895#896#0" expanded="true" />
-            <element signature="e#933#934#0" expanded="true" />
-            <element signature="e#963#964#0" expanded="true" />
-            <element signature="e#994#995#0" expanded="true" />
-            <element signature="e#1021#1022#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1093#1094#0" expanded="true" />
-            <element signature="e#1129#1130#0" expanded="true" />
-            <element signature="e#1163#1164#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-            <element signature="e#1261#1262#0" expanded="true" />
-            <element signature="e#1290#1291#0" expanded="true" />
-            <element signature="e#1318#1319#0" expanded="true" />
-            <element signature="e#1357#1358#0" expanded="true" />
-            <element signature="e#1391#1392#0" expanded="true" />
-            <element signature="e#1420#1421#0" expanded="true" />
-            <element signature="e#1448#1449#0" expanded="true" />
-            <element signature="e#1487#1488#0" expanded="true" />
-            <element signature="e#1521#1522#0" expanded="true" />
-            <element signature="e#1550#1551#0" expanded="true" />
-            <element signature="e#1578#1579#0" expanded="true" />
-            <element signature="e#1617#1618#0" expanded="true" />
-            <element signature="e#1651#1652#0" expanded="true" />
-            <element signature="e#1683#1684#0" expanded="true" />
-            <element signature="e#1714#1715#0" expanded="true" />
-            <element signature="e#1759#1760#0" expanded="true" />
-            <element signature="e#1799#1800#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/controllers/SignupController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="194" selection-start-line="194" selection-end-line="194" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/sql/PreparedStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/utils/UtilityServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="13" column="84" selection-start-line="13" selection-start-column="84" selection-end-line="13" selection-end-column="84" />
-          <folding>
-            <element signature="e#1181#1182#0" expanded="true" />
-            <element signature="e#1227#1228#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://fea776ca-1168-4c52-9f8b-c752cb4c4f72/schema/airline/table/flight">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://fea776ca-1168-4c52-9f8b-c752cb4c4f72/schema/airline/table/flight">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://fea776ca-1168-4c52-9f8b-c752cb4c4f72/schema/airline/table/flight">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://fea776ca-1168-4c52-9f8b-c752cb4c4f72/schema/airline/table/flight">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://fea776ca-1168-4c52-9f8b-c752cb4c4f72/schema/airline/table/flight">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://fea776ca-1168-4c52-9f8b-c752cb4c4f72/schema/airline/table/flight">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://fea776ca-1168-4c52-9f8b-c752cb4c4f72/schema/airline/table/flight">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterFlightAdd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="111" column="44" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/utils/FlightDatabaseAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="33" column="42" lean-forward="true" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ars/utils/MasterAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="68">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ars/utils/AuthMaster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="30" column="70" lean-forward="true" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
+        <state relative-caret-position="68">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="159" column="31" lean-forward="true" selection-start-line="159" selection-start-column="31" selection-end-line="159" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/SignupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="159" selection-start-line="159" selection-end-line="159" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/utils/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="52" lean-forward="true" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/models/Master.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterPassengersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/UserEditProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="803">
+          <caret line="139" column="40" lean-forward="true" selection-start-line="139" selection-start-column="40" selection-end-line="139" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterEditProfileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="51" column="137" selection-start-line="51" selection-start-column="137" selection-end-line="51" selection-end-column="137" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/Database Backup/airline-20181206-1635.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
         </state>
       </provider>
     </entry>

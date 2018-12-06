@@ -82,7 +82,7 @@ CREATE TABLE `master` (
   `password` varchar(45) NOT NULL,
   PRIMARY KEY  (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `master`
@@ -97,7 +97,8 @@ INSERT INTO `master` (`id`,`officeName`,`phone`,`email`,`password`) VALUES
  (5,'sdfsdf','Male','mohammyed','���ڤ�'),
  (6,'ewrwer','34345345','ertert','g�%$����'),
  (7,'ewrwer','34345345','ertert4','g�%$����'),
- (9,'Mahmoud','0565545','sharaf','Bmx7rH7lfa4=');
+ (9,'Mahmoud','0565545','sharaf','Bmx7rH7lfa4='),
+ (10,'fa','02','d@','t/gv+axlMQY=');
 /*!40000 ALTER TABLE `master` ENABLE KEYS */;
 
 
