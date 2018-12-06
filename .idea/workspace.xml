@@ -5,6 +5,7 @@
       <change afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterEditProfileController$1.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/ars/Database Backup/airline-20181206-1635.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/Database Backup/Airline-20181205-1958 (1).sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterEditProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterEditProfileController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/master_edit_profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/master_edit_profile.fxml" afterDir="false" />
@@ -12,6 +13,8 @@
       <change beforePath="$PROJECT_DIR$/src/ars/controllers/MasterEditProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/controllers/MasterEditProfileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ars/fxml/master_edit_profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/fxml/master_edit_profile.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ars/utils/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/utils/DBConnection.java" afterDir="false" />
+=======
+>>>>>>> Stashed changes
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,31 +27,59 @@
     <session id="-1008097949">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+<<<<<<< Updated upstream
           <entry key="java" value="7" />
           <entry key="sql" value="3" />
+=======
+          <entry key="flight" value="2" />
+          <entry key="java" value="22" />
+          <entry key="master" value="1" />
+          <entry key="sql" value="2" />
+>>>>>>> Stashed changes
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+<<<<<<< Updated upstream
           <entry key="JAVA" value="7" />
           <entry key="SQL" value="3" />
+=======
+          <entry key="Database Element" value="3" />
+          <entry key="JAVA" value="22" />
+          <entry key="SQL" value="2" />
+>>>>>>> Stashed changes
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< Updated upstream
           <entry key="java" value="157" />
+=======
+          <entry key="java" value="960" />
+>>>>>>> Stashed changes
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< Updated upstream
           <entry key="JAVA" value="157" />
+=======
+          <entry key="JAVA" value="960" />
+>>>>>>> Stashed changes
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+<<<<<<< Updated upstream
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.opened" value="1" />
+=======
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="2" />
+>>>>>>> Stashed changes
         </counts>
       </usages-collector>
     </session>
@@ -58,8 +89,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ars/Main.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="272">
               <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+=======
+            <state relative-caret-position="1932">
+              <caret line="111" column="44" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -67,8 +106,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterController.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="68">
               <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+=======
+            <state relative-caret-position="322">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -88,8 +132,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterEditProfileController.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="221">
               <caret line="51" column="137" selection-start-line="51" selection-start-column="137" selection-end-line="51" selection-end-column="137" />
+=======
+            <state relative-caret-position="621">
+              <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,11 +146,37 @@
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ars/Database Backup/airline-20181206-1635.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
               <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ars/utils/AuthMaster.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="529">
+              <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ars/controllers/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="511">
+              <caret line="86" column="25" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ars/utils/UtilityServices.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="13" column="84" selection-start-line="13" selection-start-column="84" selection-end-line="13" selection-end-column="84" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -115,7 +190,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/ars/utils/DBConnection.java" />
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/src/ars/controllers/MasterEditProfileController.java" />
+=======
+        <option value="$PROJECT_DIR$/src/ars/utils/AuthUser.java" />
+        <option value="$PROJECT_DIR$/src/ars/models/Flight.java" />
+        <option value="$PROJECT_DIR$/src/ars/utils/MasterAPI.java" />
+        <option value="$PROJECT_DIR$/src/ars/utils/FlightDatabaseAPI.java" />
+        <option value="$PROJECT_DIR$/src/ars/utils/UtilityServices.java" />
+        <option value="$PROJECT_DIR$/src/ars/controllers/MasterFlightAdd.java" />
+        <option value="$PROJECT_DIR$/src/ars/utils/AuthMaster.java" />
+        <option value="$PROJECT_DIR$/src/ars/controllers/LoginController.java" />
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -125,6 +211,15 @@
     <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
+<<<<<<< Updated upstream
+=======
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> Stashed changes
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -197,12 +292,19 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< Updated upstream
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544104951032" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\M.$edky\Desktop\ARS-SE\src\ars\Database Backup" />
     </key>
+=======
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544105968294" />
+    <property name="database.console.LAST_STATE" value="false" />
+>>>>>>> Stashed changes
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -241,6 +343,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< Updated upstream
       <changelist id="401b7c3c-3bdf-4721-aa37-79ad1f77a4cd" name="Default Changelist" comment="" />
       <created>1544091140244</created>
       <option name="number" value="Default" />
@@ -255,15 +358,79 @@
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+=======
+      <changelist id="c11fc389-cb9c-41bc-ab21-edd52858aa94" name="Default Changelist" comment="" />
+      <created>1540920930942</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1540920930942</updated>
+      <workItem from="1540920934400" duration="3780000" />
+      <workItem from="1540928968795" duration="234000" />
+      <workItem from="1540929653092" duration="1184000" />
+      <workItem from="1540933796225" duration="484000" />
+      <workItem from="1540936341073" duration="1127000" />
+      <workItem from="1540982680032" duration="268000" />
+      <workItem from="1540983149378" duration="496000" />
+      <workItem from="1541001766922" duration="5075000" />
+      <workItem from="1541142856613" duration="1846000" />
+      <workItem from="1541240592901" duration="443000" />
+      <workItem from="1541241243360" duration="733000" />
+      <workItem from="1541242149779" duration="289000" />
+      <workItem from="1541247281912" duration="4800000" />
+      <workItem from="1541286422397" duration="29000" />
+      <workItem from="1542549955509" duration="1638000" />
+      <workItem from="1542609346863" duration="115000" />
+      <workItem from="1542912763096" duration="8885000" />
+      <workItem from="1542966006697" duration="357000" />
+      <workItem from="1542969920451" duration="410000" />
+      <workItem from="1542970648576" duration="15000" />
+      <workItem from="1542974517664" duration="59000" />
+      <workItem from="1543229926709" duration="2733000" />
+      <workItem from="1543233258719" duration="3164000" />
+      <workItem from="1543241579192" duration="875000" />
+      <workItem from="1543343211194" duration="80000" />
+      <workItem from="1543432027139" duration="307000" />
+      <workItem from="1543489847519" duration="1084000" />
+      <workItem from="1543606950590" duration="5000" />
+      <workItem from="1543736409067" duration="1305000" />
+      <workItem from="1543739902956" duration="556000" />
+      <workItem from="1543831261209" duration="3663000" />
+      <workItem from="1543918873660" duration="4046000" />
+      <workItem from="1543943960991" duration="882000" />
+      <workItem from="1543945466960" duration="88000" />
+      <workItem from="1543949324628" duration="3877000" />
+      <workItem from="1543991576627" duration="111000" />
+      <workItem from="1544095354110" duration="9259000" />
+      <workItem from="1544108833623" duration="601000" />
+      <workItem from="1544116587850" duration="599000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="9398000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49855492" visible="true" weight="0.2124665" />
+      <window_info id="Structure" order="1" sideWeight="0.5014451" side_tool="true" weight="0.17895442" />
+>>>>>>> Stashed changes
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
+<<<<<<< Updated upstream
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29384616" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+=======
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32803467" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.3251445" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39884394" />
+>>>>>>> Stashed changes
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -281,6 +448,9 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -296,6 +466,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -304,6 +475,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ars/utils/AuthMaster.java">
+=======
+    <entry file="das://fea776ca-1168-4c52-9f8b-c752cb4c4f72/schema/airline/table/master">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/models/Flight.java">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
@@ -335,6 +516,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/ars/models/Master.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -346,6 +528,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterFlightAdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1932">
+          <caret line="111" column="44" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/utils/MasterAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -356,16 +554,24 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/ars/controllers/UserEditProfile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="803">
           <caret line="139" column="40" lean-forward="true" selection-start-line="139" selection-start-column="40" selection-end-line="139" selection-end-column="40" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/ars/utils/FlightDatabaseAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterEditProfileController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -380,6 +586,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/ars/utils/AuthMaster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/utils/UtilityServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="13" column="84" selection-start-line="13" selection-start-column="84" selection-end-line="13" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="86" column="25" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
