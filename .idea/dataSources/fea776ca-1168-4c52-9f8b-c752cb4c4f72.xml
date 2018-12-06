@@ -11,7 +11,7 @@
     <schema id="2" parent="1" name="airline">
       <Current>1</Current>
       <Visible>1</Visible>
-      <Collation>utf16_general_ci</Collation>
+      <Collation>utf8_general_ci</Collation>
     </schema>
     <schema id="3" parent="1" name="bank"/>
     <schema id="4" parent="1" name="information_schema">
@@ -960,11 +960,29 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <table id="243" parent="2" name="airports"/>
     <table id="244" parent="2" name="flight"/>
     <table id="245" parent="2" name="master"/>
     <table id="246" parent="2" name="ticket"/>
     <table id="247" parent="2" name="user"/>
+=======
+    <table id="243" parent="2" name="airports">
+      <Collation>utf16_general_ci</Collation>
+    </table>
+    <table id="244" parent="2" name="flight">
+      <Collation>utf16_general_ci</Collation>
+    </table>
+    <table id="245" parent="2" name="master">
+      <Collation>utf16_general_ci</Collation>
+    </table>
+    <table id="246" parent="2" name="ticket">
+      <Collation>utf16_general_ci</Collation>
+    </table>
+    <table id="247" parent="2" name="user">
+      <Collation>utf16_general_ci</Collation>
+    </table>
+>>>>>>> Stashed changes
     <column id="248" parent="243" name="id">
 =======
     <table id="241" parent="2" name="airports">

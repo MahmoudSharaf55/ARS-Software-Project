@@ -1,8 +1,11 @@
 package ars.controllers;
 
 import ars.models.Airport;
+import ars.models.Flight;
 import ars.utils.AuthMaster;
 import ars.utils.DBConnection;
+import ars.utils.FlightDatabaseAPI;
+import ars.utils.UtilityServices;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
@@ -12,11 +15,16 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Paint;
+import javafx.scene.text.Text;
 
 import java.net.URL;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -43,50 +51,72 @@ public class MasterFlightAdd implements Initializable {
     JFXDatePicker flightDate;
     @FXML
     JFXTimePicker timePicker;
+    @FXML
+    StackPane sp;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         airportsList = new ArrayList<>();
 
+
+        ResultSet resultSet = FlightDatabaseAPI.getAllAirports();
+
         try {
-            ResultSet resultSet = DBConnection.getConnection().prepareStatement("select name from airports;").executeQuery();
             while (resultSet.next()) {
                 airportsList.add(resultSet.getString("name"));
             }
-
-            departComboBox.getItems().setAll(FXCollections.observableArrayList(airportsList));
-            destComboBox.getItems().setAll(FXCollections.observableArrayList(airportsList));
-
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        departComboBox.getItems().setAll(FXCollections.observableArrayList(airportsList));
 
 
     }
 
     @FXML
     public void addFlight(ActionEvent event) {
-        while (true) {
-            try {
-
-                String rand = "48498e";
-                PreparedStatement prepareStatement = DBConnection.getConnection().prepareStatement("select flightNumber from  flight where  flightNumber = ?;");
-                prepareStatement.setString(1, rand);
-                ResultSet resultSet = prepareStatement.executeQuery();
-                if (resultSet.next()) {
-
-                } else {
-                    break;
-                }
-
-
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
+//        Date date = new Date(java.util.Date.from(flightDate.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()).getTime());
+//        System.out.println(date.toString());
+//        System.out.println();
+//        System.out.println(date.toString());
+//        if (!destComboBox.getSelectionModel().isEmpty() && !departComboBox.getSelectionModel().isEmpty()
+//                && flightDate.getValue() != null && timePicker.getValue() != null
+//                && !price.getText().isEmpty() && !numOfSeats.getText().isEmpty()) {
+//            int randomPIN = (int) (Math.random() * 9000) + 1000;
+//            String twoLetter = AuthMaster.currentMaster.getOfficeName().substring(0, 2);
+//            String flightNumber = twoLetter + randomPIN;
+//            while (true) {
+//                if (FlightDatabaseAPI.searchByFlightNumber(flightNumber) == null) {
+//                    break;
+//                } else {
+//                    randomPIN = (int) (Math.random() * 9000) + 1000;
+//                    flightNumber = twoLetter + randomPIN;
+//                }
+//            }
+//
+////            Flight flight = new Flight(flightNumber,departComboBox.getSelectionModel().getSelectedItem(),destComboBox.getSelectionModel().getSelectedItem(),)
+//
+//        } else {
+        UtilityServices.displayDialog(new Text("Error Check your inputs"), new Text("Make sure that you entered all required field's correctly"), sp);
+//        }
 
     }
 
+
+    @FXML
+    public void onDepartureAirportSelected(ActionEvent event) {
+        destComboBox.getItems().setAll(FXCollections.observableArrayList(airportsList));
+        destComboBox.getItems().remove(departComboBox.getSelectionModel().getSelectedIndex());
+        destComboBox.setDisable(false);
+
+    }
+
+    @FXML
+    public void onDestAirportSelected(ActionEvent event) {
+        numOfSeats.setDisable(false);
+        price.setDisable(false);
+        timePicker.setDisable(false);
+        flightDate.setDisable(false);
+    }
 
 }

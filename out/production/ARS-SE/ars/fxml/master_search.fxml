@@ -19,24 +19,24 @@
    <children>
       <VBox layoutY="-21.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="932.0" promptText="Search By" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+            <JFXComboBox fx:id="searchComboBox" focusColor="#009688" labelFloat="true" onAction="#onTypeSelected" prefHeight="29.0" prefWidth="932.0" promptText="Search By" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
                <VBox.margin>
                   <Insets left="250.0" right="250.0" top="20.0" />
                </VBox.margin>
             </JFXComboBox>
-            <JFXTextField editable="false" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Flight Number" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+            <JFXTextField fx:id="flightNum" disable="true" editable="false" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Flight Number" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
                <VBox.margin>
                   <Insets left="250.0" right="250.0" top="20.0" />
                </VBox.margin>
             </JFXTextField>
             <HBox prefHeight="34.0" prefWidth="913.0">
                <children>
-                  <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Depart" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                  <JFXComboBox fx:id="departComboBox" disable="true" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Depart" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
                      <HBox.margin>
                         <Insets right="20.0" />
                      </HBox.margin>
                   </JFXComboBox>
-                  <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Destination" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                  <JFXComboBox fx:id="destComboBox" disable="true" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Destination" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -51,11 +51,11 @@
                   <Insets left="250.0" right="250.0" top="20.0" />
                </VBox.margin>
                <children>
-                  <JFXDatePicker prefHeight="31.0" prefWidth="300.0" stylesheets="@../Resources/stylesheets/master.css" />
-                  <JFXTimePicker prefHeight="31.0" prefWidth="300.0" stylesheets="@../Resources/stylesheets/master.css" />
+                  <JFXDatePicker fx:id="datePicker" disable="true" prefHeight="31.0" prefWidth="300.0" stylesheets="@../Resources/stylesheets/master.css" />
+                  <JFXTimePicker fx:id="timePicker" disable="true" prefHeight="31.0" prefWidth="300.0" stylesheets="@../Resources/stylesheets/master.css" />
                </children>
             </HBox>
-            <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Search" textFill="WHITE">
+            <JFXButton buttonType="RAISED" onAction="#searchClicked" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Search" textFill="WHITE">
                <VBox.margin>
                   <Insets left="250.0" right="250.0" top="20.0" />
                </VBox.margin>
@@ -63,7 +63,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <TableView prefHeight="244.0" prefWidth="862.0" stylesheets="@../Resources/stylesheets/master.css">
+            <TableView fx:id="dataTable" prefHeight="244.0" prefWidth="862.0" stylesheets="@../Resources/stylesheets/master.css">
               <columns>
                 <TableColumn prefWidth="75.0" text="C1" />
                 <TableColumn prefWidth="75.0" text="C2" />
@@ -75,7 +75,7 @@
                   <DropShadow />
                </effect>
             </TableView>
-            <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Manage" textFill="WHITE">
+            <JFXButton buttonType="RAISED" onAction="#manageFlight" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Manage" textFill="WHITE">
                <VBox.margin>
                   <Insets left="90.0" right="90.0" top="20.0" />
                </VBox.margin>
@@ -85,6 +85,6 @@
             </JFXButton>
          </children>
       </VBox>
-      <JFXSpinner prefHeight="0.0" prefWidth="456.0" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="300.0" />
+      <JFXSpinner fx:id="loadingSpinner" prefHeight="0.0" prefWidth="456.0" visible="false" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="400.0" />
    </children>
 </AnchorPane>

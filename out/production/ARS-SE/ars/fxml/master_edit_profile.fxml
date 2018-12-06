@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="604.0" prefWidth="1044.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.MasterEditProfileController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="472.0" layoutY="140.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="203.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/airplane.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </ImageView>
+            <JFXTextField fx:id="masterName" focusColor="#009688" labelFloat="true" prefHeight="35.0" prefWidth="444.0" promptText="Office name" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+               <VBox.margin>
+                  <Insets left="300.0" right="300.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="masterPhone" focusColor="#009688" labelFloat="true" prefHeight="35.0" prefWidth="444.0" promptText="Phone" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+               <VBox.margin>
+                  <Insets left="300.0" right="300.0" top="25.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="masterEmail" focusColor="#009688" labelFloat="true" prefHeight="35.0" promptText="Email" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+               <VBox.margin>
+                  <Insets left="300.0" right="300.0" top="25.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXPasswordField fx:id="masterPassword" focusColor="#009688" labelFloat="true" prefHeight="35.0" prefWidth="523.0" promptText="Old Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+               <VBox.margin>
+                  <Insets left="300.0" right="300.0" top="25.0" />
+               </VBox.margin>
+            </JFXPasswordField>
+            <JFXPasswordField fx:id="masterPassword1" focusColor="#009688" labelFloat="true" prefHeight="35.0" prefWidth="523.0" promptText="New Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+               <VBox.margin>
+                  <Insets left="300.0" right="300.0" top="25.0" />
+               </VBox.margin>
+            </JFXPasswordField>
+            <JFXButton buttonType="RAISED" prefHeight="47.0" prefWidth="444.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Submit" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="300.0" right="300.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

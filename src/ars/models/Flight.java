@@ -2,7 +2,7 @@ package ars.models;
 
 import java.sql.Date;
 public class Flight {
-    private int flightNumber;
+    private String flightNumber;
     private String src;
     private String dest;
     private Date dateAndTime;
@@ -11,7 +11,7 @@ public class Flight {
     private int delay;
     private int masterID;
 
-    public Flight(int flightNumber,String src,String dest,Date dateAndTime,int price,int seats,int delay,int masterID){
+    public Flight(String flightNumber,String src,String dest,Date dateAndTime,int price,int seats,int delay,int masterID){
         this.flightNumber=flightNumber;
         this.src=src;
         this.dest=dest;
@@ -22,9 +22,9 @@ public class Flight {
         this.masterID=masterID;
     }
 
-    public int getFlightNumber() {return flightNumber;}
+    public String getFlightNumber() {return flightNumber;}
 
-    public void setFlightNumber(int flightNumber) {this.flightNumber = flightNumber;}
+    public void setFlightNumber(String flightNumber) {this.flightNumber = flightNumber;}
 
     public String getSrc() {return src;}
 
