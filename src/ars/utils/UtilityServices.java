@@ -21,6 +21,7 @@ public class UtilityServices {
         JFXDialog dialog = new JFXDialog(myController, content, JFXDialog.DialogTransition.CENTER);
         JFXButton button = new JFXButton("OK");
         button.setStyle("-fx-background-color:  #006064 ; -jfx-button-type: FLAT ; -fx-text-fill: white ");
+
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {

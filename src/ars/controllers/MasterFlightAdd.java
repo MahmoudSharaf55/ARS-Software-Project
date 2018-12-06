@@ -20,12 +20,13 @@ import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
 
 import java.net.URL;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class MasterFlightAdd implements Initializable {
@@ -75,30 +76,49 @@ public class MasterFlightAdd implements Initializable {
 
     @FXML
     public void addFlight(ActionEvent event) {
-//        Date date = new Date(java.util.Date.from(flightDate.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()).getTime());
-//        System.out.println(date.toString());
-//        System.out.println();
-//        System.out.println(date.toString());
-//        if (!destComboBox.getSelectionModel().isEmpty() && !departComboBox.getSelectionModel().isEmpty()
-//                && flightDate.getValue() != null && timePicker.getValue() != null
-//                && !price.getText().isEmpty() && !numOfSeats.getText().isEmpty()) {
-//            int randomPIN = (int) (Math.random() * 9000) + 1000;
-//            String twoLetter = AuthMaster.currentMaster.getOfficeName().substring(0, 2);
-//            String flightNumber = twoLetter + randomPIN;
-//            while (true) {
-//                if (FlightDatabaseAPI.searchByFlightNumber(flightNumber) == null) {
-//                    break;
-//                } else {
-//                    randomPIN = (int) (Math.random() * 9000) + 1000;
-//                    flightNumber = twoLetter + randomPIN;
-//                }
-//            }
-//
-////            Flight flight = new Flight(flightNumber,departComboBox.getSelectionModel().getSelectedItem(),destComboBox.getSelectionModel().getSelectedItem(),)
-//
-//        } else {
-        UtilityServices.displayDialog(new Text("Error Check your inputs"), new Text("Make sure that you entered all required field's correctly"), sp);
-//        }
+
+
+        if (!destComboBox.getSelectionModel().isEmpty() && !departComboBox.getSelectionModel().isEmpty()
+                && flightDate.getValue() != null && timePicker.getValue() != null
+                && !price.getText().isEmpty() && !numOfSeats.getText().isEmpty()) {
+            int randomPIN = (int) (Math.random() * 9000) + 1000;
+            String twoLetter = AuthMaster.currentMaster.getOfficeName().substring(0, 2);
+            String flightNumber = twoLetter + randomPIN;
+            while (true) {
+                try {
+                    if (!FlightDatabaseAPI.searchByFlightNumber(flightNumber).next()) {
+                        break;
+                    } else {
+                        randomPIN = (int) (Math.random() * 9000) + 1000;
+                        flightNumber = twoLetter + randomPIN;
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            LocalDateTime localDateTime = LocalDateTime.of(flightDate.getValue(), timePicker.getValue());
+            Date date = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+            Flight flight = new Flight(flightNumber, departComboBox.getSelectionModel().getSelectedItem().toString(), destComboBox.getSelectionModel().getSelectedItem().toString(), date, Integer.parseInt(price.getText()), Integer.parseInt(numOfSeats.getText()), 0, AuthMaster.currentMaster.getMasterID());
+            if (FlightDatabaseAPI.addFlight(flight) > 0) {
+                UtilityServices.displayDialog(new Text("Your flight is available Now !"), new Text("The flight is saved into the Database with \nGenerated flight number : " + flightNumber), sp);
+                timePicker.setValue(null);
+                flightDate.setValue(null);
+                numOfSeats.setText("");
+                price.setText("");
+                destComboBox.setDisable(true);
+                numOfSeats.setDisable(true);
+                price.setDisable(true);
+                timePicker.setDisable(true);
+                flightDate.setDisable(true);
+
+            } else {
+                UtilityServices.displayDialog(new Text("Error Check your inputs"), new Text("Make sure that you entered all required field's correctly"), sp);
+
+            }
+
+        } else {
+            UtilityServices.displayDialog(new Text("Error Check your inputs"), new Text("Make sure that you entered all required field's correctly"), sp);
+        }
 
     }
 

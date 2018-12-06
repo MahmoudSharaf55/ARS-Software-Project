@@ -74,7 +74,8 @@ public class LoginController implements Initializable {
                         if (encryptedPass.equals(resultSet.getString("password"))) {
                             flag = 1;
                             passwordTextField.setUnFocusColor(Paint.valueOf("#009688"));
-                            Master master = new Master(resultSet.getString("office_name"), resultSet.getString("phone"), resultSet.getString("email"), resultSet.getString("password"));
+                            Master master = new Master(resultSet.getString("officeName"), resultSet.getString("phone"), resultSet.getString("email"), resultSet.getString("password"));
+                            master.setMasterID(resultSet.getInt("id"));
                             AuthMaster.setCurrentMaster(master);
                             break;
                         } else {

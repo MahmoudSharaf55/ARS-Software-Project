@@ -4,6 +4,7 @@ import ars.models.Master;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class AuthMaster {
@@ -27,6 +28,12 @@ public class AuthMaster {
             st.setString(3, master.getEmail());
             st.setString(4, master.getPassword());
             st.executeUpdate();
+            ResultSet resultSet = MasterAPI.searchUsingMasterName(master.getEmail());
+            if (resultSet != null) {
+                if (resultSet.next()) {
+                    master.setMasterID(resultSet.getInt("id"));
+                }
+            }
             currentMaster = master;
         } catch (SQLException e) {
             e.printStackTrace();

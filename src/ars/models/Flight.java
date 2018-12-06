@@ -1,6 +1,8 @@
 package ars.models;
 
-import java.sql.Date;
+
+import java.util.Date;
+
 public class Flight {
     private String flightNumber;
     private String src;
@@ -11,46 +13,78 @@ public class Flight {
     private int delay;
     private int masterID;
 
-    public Flight(String flightNumber,String src,String dest,Date dateAndTime,int price,int seats,int delay,int masterID){
-        this.flightNumber=flightNumber;
-        this.src=src;
-        this.dest=dest;
-        this.dateAndTime=dateAndTime;
-        this.price=price;
-        this.seats=seats;
-        this.delay=delay;
-        this.masterID=masterID;
+    public Flight(String flightNumber, String src, String dest, Date dateAndTime, int price, int seats, int delay, int masterID) {
+        this.flightNumber = flightNumber;
+        this.src = src;
+        this.dest = dest;
+        this.dateAndTime = dateAndTime;
+        this.price = price;
+        this.seats = seats;
+        this.delay = delay;
+        this.masterID = masterID;
     }
 
-    public String getFlightNumber() {return flightNumber;}
+    public String getFlightNumber() {
+        return flightNumber;
+    }
 
-    public void setFlightNumber(String flightNumber) {this.flightNumber = flightNumber;}
+    public void setFlightNumber(String flightNumber) {
+        this.flightNumber = flightNumber;
+    }
 
-    public String getSrc() {return src;}
+    public String getSrc() {
+        return src;
+    }
 
-    public void setSrc(String src) {this.src = src;}
+    public void setSrc(String src) {
+        this.src = src;
+    }
 
-    public String getDest() {return dest;}
+    public String getDest() {
+        return dest;
+    }
 
-    public void setDest(String dest) {this.dest = dest;}
+    public void setDest(String dest) {
+        this.dest = dest;
+    }
 
-    public Date getDateAndTime() {return dateAndTime;}
+    public Date getDateAndTime() {
+        return dateAndTime;
+    }
 
-    public void setDateAndTime(Date dateAndTime) {this.dateAndTime = dateAndTime;}
+    public void setDateAndTime(Date dateAndTime) {
+        this.dateAndTime = dateAndTime;
+    }
 
-    public int getPrice() {return price;}
+    public int getPrice() {
+        return price;
+    }
 
-    public void setPrice(int price) {this.price = price;}
+    public void setPrice(int price) {
+        this.price = price;
+    }
 
-    public int getSeats() {return seats;}
+    public int getSeats() {
+        return seats;
+    }
 
-    public void setSeats(int seats) {this.seats = seats;}
+    public void setSeats(int seats) {
+        this.seats = seats;
+    }
 
-    public int getDelay() {return delay;}
+    public int getDelay() {
+        return delay;
+    }
 
-    public void setDelay(int delay) {this.delay = delay;}
+    public void setDelay(int delay) {
+        this.delay = delay;
+    }
 
-    public int getMasterID() {return masterID;}
+    public int getMasterID() {
+        return masterID;
+    }
 
-    public void setMasterID(int masterID) {this.masterID = masterID;}
+    public void setMasterID(int masterID) {
+        this.masterID = masterID;
+    }
 }
