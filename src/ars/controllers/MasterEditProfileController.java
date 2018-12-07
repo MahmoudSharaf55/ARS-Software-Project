@@ -20,11 +20,12 @@ import java.util.ResourceBundle;
 
 public class MasterEditProfileController implements Initializable {
     @FXML
-    JFXTextField editMasterName,editMasterPhone,editMasterEmail;
+    JFXTextField editMasterName, editMasterPhone, editMasterEmail;
     @FXML
-    JFXPasswordField oldMasterPassword,newMasterPassword;
+    JFXPasswordField oldMasterPassword, newMasterPassword;
     @FXML
     JFXButton submitMaster;
+
     @FXML
     public void onMasterEditProfile() {
         if (editMasterName.getText().isEmpty()) {
@@ -43,27 +44,27 @@ public class MasterEditProfileController implements Initializable {
         }*/
 
 
-        if (!editMasterName.getText().isEmpty() &&! editMasterPhone.getText().isEmpty()&& !editMasterEmail.getText().contains("@")) {
+        if (!editMasterName.getText().isEmpty() && !editMasterPhone.getText().isEmpty() && !editMasterEmail.getText().contains("@")) {
             int passFlag = 0;
             if (editMasterEmail.getText().equals(AuthMaster.currentMaster.getEmail())) {
                 editMasterEmail.setUnFocusColor(Paint.valueOf("#009688"));
                 Connection connection = DBConnection.getConnection();
                 try {
-                    PreparedStatement preparedStatement = connection.prepareStatement("update master set  officeName=?, phone=?, email=?, password=?,where id=?");
+                    PreparedStatement preparedStatement = connection.prepareStatement("update master set  officeName=?, phone=?, email=?, password=? where id=?");
                     preparedStatement.setString(1, editMasterName.getText());
                     preparedStatement.setString(2, editMasterPhone.getText());
-                    preparedStatement.setString(3,editMasterEmail.getText());
-                    preparedStatement.setString(4,oldMasterPassword.getText());
+                    preparedStatement.setString(3, editMasterEmail.getText());
+                    preparedStatement.setString(4, oldMasterPassword.getText());
                     preparedStatement.setInt(5, AuthMaster.currentMaster.getMasterID());
                     preparedStatement.executeUpdate();
                     AuthMaster.currentMaster.setOfficeName(editMasterName.getText());
                     AuthMaster.currentMaster.setPhone(editMasterPhone.getText());
                     AuthMaster.currentMaster.setEmail(editMasterEmail.getText());
-                  //  MasterController..setText(AuthUser.currentUser.getName());
+                    //  MasterController..setText(AuthUser.currentUser.getName());
                 } catch (SQLException e) {
                     System.out.println(e.getMessage());
                 }
-                if (!oldMasterPassword.getText().isEmpty()){
+                if (!oldMasterPassword.getText().isEmpty()) {
                     passFlag = 1;
                 }
             } else if (!editMasterEmail.getText().equals(AuthMaster.currentMaster.getEmail())) {
@@ -81,55 +82,54 @@ public class MasterEditProfileController implements Initializable {
                     if (flag == 0) {
                         editMasterEmail.setUnFocusColor(Paint.valueOf("#009688"));
                         try {
-                            PreparedStatement preparedStatement = connection.prepareStatement("update master set  officeName=?, phone=?, email=?, password=?,where id=?");
+                            PreparedStatement preparedStatement = connection.prepareStatement("update master set  officeName=?, phone=?, email=?, password=? where id=?");
                             preparedStatement.setString(1, editMasterName.getText());
                             preparedStatement.setString(2, editMasterPhone.getText());
-                            preparedStatement.setString(3,editMasterEmail.getText());
-                            preparedStatement.setString(4,oldMasterPassword.getText());
+                            preparedStatement.setString(3, editMasterEmail.getText());
+                            preparedStatement.setString(4, oldMasterPassword.getText());
                             preparedStatement.setInt(5, AuthMaster.currentMaster.getMasterID());
                             preparedStatement.executeUpdate();
                             AuthMaster.currentMaster.setOfficeName(editMasterName.getText());
                             AuthMaster.currentMaster.setPhone(editMasterPhone.getText());
                             AuthMaster.currentMaster.setEmail(editMasterEmail.getText());
-                          //  UserController.sideNameLbl.setText(AuthUser.currentUser.getName());
+                            //  UserController.sideNameLbl.setText(AuthUser.currentUser.getName());
                         } catch (SQLException e) {
                             System.out.println(e.getMessage());
                         }
-                    }else {
+                    } else {
                         editMasterEmail.setUnFocusColor(Paint.valueOf("#ab0529"));
                     }
-                    if (!oldMasterPassword.getText().isEmpty()){
+                    if (!oldMasterPassword.getText().isEmpty()) {
                         passFlag = 1;
                     }
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
             }
-            if (passFlag == 1 && CipherEncryptionAndDecryption.encrypt(oldMasterPassword.getText(),"team").equals(AuthMaster.currentMaster.getPassword())){
+            if (passFlag == 1 && CipherEncryptionAndDecryption.encrypt(oldMasterPassword.getText(), "team").equals(AuthMaster.currentMaster.getPassword())) {
                 oldMasterPassword.setUnFocusColor(Paint.valueOf("#009688"));
-                if (!newMasterPassword.getText().isEmpty()){
+                if (!newMasterPassword.getText().isEmpty()) {
                     newMasterPassword.setUnFocusColor(Paint.valueOf("#009688"));
-                    try{
+                    try {
                         Connection connection = DBConnection.getConnection();
                         PreparedStatement preparedStatement = connection.prepareStatement("update master set password = ? where id=?");
-                        preparedStatement.setString(1, CipherEncryptionAndDecryption.encrypt(newMasterPassword.getText(),"team"));
+                        preparedStatement.setString(1, CipherEncryptionAndDecryption.encrypt(newMasterPassword.getText(), "team"));
                         preparedStatement.setInt(2, AuthMaster.currentMaster.getMasterID());
                         preparedStatement.executeUpdate();
-                        AuthMaster.currentMaster.setPassword(CipherEncryptionAndDecryption.encrypt(newMasterPassword.getText(),"team"));
-                    }catch (SQLException e){
+                        AuthMaster.currentMaster.setPassword(CipherEncryptionAndDecryption.encrypt(newMasterPassword.getText(), "team"));
+                    } catch (SQLException e) {
                         System.out.println(e.getMessage());
                     }
+                } else {
+                    newMasterPassword.setUnFocusColor(Paint.valueOf("#ab0529"));
                 }
-                else{
-                   newMasterPassword.setUnFocusColor(Paint.valueOf("#ab0529"));
-                }
-            }
-            else {
+            } else {
                 oldMasterPassword.setUnFocusColor(Paint.valueOf("#ab0529"));
             }
 
         }
     }
+
     @FXML
     public void editmasterFieldFocusColorChanged() {
         ChangeListener<Boolean> fieldsFocus = new ChangeListener<Boolean>() {
@@ -175,7 +175,6 @@ public class MasterEditProfileController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
 
 
     }

@@ -1,6 +1,9 @@
 package ars.models;
 
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Flight {
@@ -12,6 +15,7 @@ public class Flight {
     private int seats;
     private int delay;
     private int masterID;
+    private Master master;
 
     public Flight(String flightNumber, String src, String dest, Date dateAndTime, int price, int seats, int delay, int masterID) {
         this.flightNumber = flightNumber;
@@ -87,4 +91,13 @@ public class Flight {
     public void setMasterID(int masterID) {
         this.masterID = masterID;
     }
+
+    public Master getMaster() {
+        return master;
+    }
+
+    public void setMaster(Master master) {
+        this.master = master;
+    }
+
 }

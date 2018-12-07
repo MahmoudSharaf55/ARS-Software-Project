@@ -12,79 +12,90 @@
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="604.0" prefWidth="1056.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.MasterSearchController">
+<StackPane fx:id="sp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="1056.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.MasterSearchController">
    <children>
-      <VBox layoutY="-21.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="604.0" prefWidth="1056.0" style="-fx-background-color: #455A64;">
          <children>
-            <JFXComboBox fx:id="searchComboBox" focusColor="#009688" labelFloat="true" onAction="#onTypeSelected" prefHeight="29.0" prefWidth="932.0" promptText="Search By" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
-               <VBox.margin>
-                  <Insets left="250.0" right="250.0" top="20.0" />
-               </VBox.margin>
-            </JFXComboBox>
-            <JFXTextField fx:id="flightNum" disable="true" editable="false" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Flight Number" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
-               <VBox.margin>
-                  <Insets left="250.0" right="250.0" top="20.0" />
-               </VBox.margin>
-            </JFXTextField>
-            <HBox prefHeight="34.0" prefWidth="913.0">
+            <VBox layoutY="-21.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <JFXComboBox fx:id="departComboBox" disable="true" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Depart" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
-                     <HBox.margin>
-                        <Insets right="20.0" />
-                     </HBox.margin>
+                  <JFXComboBox fx:id="searchComboBox" focusColor="#009688" labelFloat="true" onAction="#onTypeSelected" prefHeight="29.0" prefWidth="932.0" promptText="Search By" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
+                     <VBox.margin>
+                        <Insets left="250.0" right="250.0" top="20.0" />
+                     </VBox.margin>
                   </JFXComboBox>
-                  <JFXComboBox fx:id="destComboBox" disable="true" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Destination" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </JFXComboBox>
+                  <JFXTextField fx:id="flightNum" disable="true" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Flight Number" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                     <VBox.margin>
+                        <Insets left="250.0" right="250.0" top="20.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <HBox prefHeight="34.0" prefWidth="913.0">
+                     <children>
+                        <JFXComboBox fx:id="departComboBox" disable="true" focusColor="#009688" labelFloat="true" onAction="#onDepartureAirportSelected" prefHeight="29.0" prefWidth="268.0" promptText="Departure Airport" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </JFXComboBox>
+                        <JFXComboBox fx:id="destComboBox" disable="true" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Destination Airport" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXComboBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="250.0" right="250.0" top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="42.0" prefWidth="556.0">
+                     <VBox.margin>
+                        <Insets left="250.0" right="250.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <JFXDatePicker fx:id="datePicker" disable="true" prefHeight="31.0" prefWidth="300.0" stylesheets="@../Resources/stylesheets/master.css" />
+                        <JFXTimePicker fx:id="timePicker" disable="true" editable="true" prefHeight="31.0" prefWidth="300.0" stylesheets="@../Resources/stylesheets/master.css" />
+                     </children>
+                  </HBox>
+                  <JFXButton buttonType="RAISED" onAction="#searchClicked" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Search" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="250.0" right="250.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <TableView fx:id="dataTable" prefHeight="244.0" prefWidth="862.0" stylesheets="@../Resources/stylesheets/master.css">
+                     <columns>
+                        <TableColumn fx:id="flightNumber" editable="false" prefWidth="117.0" text="Flight Number" />
+                        <TableColumn fx:id="departure" prefWidth="105.0" text="Departure" />
+                        <TableColumn fx:id="destination" prefWidth="118.0" text="Destination" />
+                        <TableColumn fx:id="availableSeats" prefWidth="144.0" text="Available Seats" />
+                        <TableColumn fx:id="dateTimeRow" minWidth="0.0" prefWidth="125.0" text="Date And Time" />
+                        <TableColumn fx:id="price" minWidth="0.0" prefWidth="67.0" text="Price" />
+                        <TableColumn fx:id="delayed" minWidth="0.0" prefWidth="79.0" text="Delayed" />
+                        <TableColumn id="officeName" fx:id="officeName" minWidth="0.0" prefWidth="99.0" text="Offered By" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets left="90.0" right="90.0" top="20.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </TableView>
+                  <JFXButton buttonType="RAISED" onAction="#manageFlight" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Manage" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="90.0" right="90.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
                </children>
-               <VBox.margin>
-                  <Insets left="250.0" right="250.0" top="20.0" />
-               </VBox.margin>
-            </HBox>
-            <HBox prefHeight="42.0" prefWidth="556.0">
-               <VBox.margin>
-                  <Insets left="250.0" right="250.0" top="20.0" />
-               </VBox.margin>
-               <children>
-                  <JFXDatePicker fx:id="datePicker" disable="true" prefHeight="31.0" prefWidth="300.0" stylesheets="@../Resources/stylesheets/master.css" />
-                  <JFXTimePicker fx:id="timePicker" disable="true" prefHeight="31.0" prefWidth="300.0" stylesheets="@../Resources/stylesheets/master.css" />
-               </children>
-            </HBox>
-            <JFXButton buttonType="RAISED" onAction="#searchClicked" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Search" textFill="WHITE">
-               <VBox.margin>
-                  <Insets left="250.0" right="250.0" top="20.0" />
-               </VBox.margin>
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </JFXButton>
-            <TableView fx:id="dataTable" prefHeight="244.0" prefWidth="862.0" stylesheets="@../Resources/stylesheets/master.css">
-              <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
-              </columns>
-               <VBox.margin>
-                  <Insets left="90.0" right="90.0" top="20.0" />
-               </VBox.margin>
-               <effect>
-                  <DropShadow />
-               </effect>
-            </TableView>
-            <JFXButton buttonType="RAISED" onAction="#manageFlight" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Manage" textFill="WHITE">
-               <VBox.margin>
-                  <Insets left="90.0" right="90.0" top="20.0" />
-               </VBox.margin>
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </JFXButton>
+            </VBox>
+            <JFXSpinner fx:id="loadingSpinner" prefHeight="0.0" prefWidth="456.0" visible="false" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="400.0" />
          </children>
-      </VBox>
-      <JFXSpinner fx:id="loadingSpinner" prefHeight="0.0" prefWidth="456.0" visible="false" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="400.0" />
+      </AnchorPane>
    </children>
-</AnchorPane>
+</StackPane>
