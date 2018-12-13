@@ -1,10 +1,7 @@
 package ars.controllers;
 
 
-import ars.utils.AuthMaster;
-import ars.utils.AuthUser;
-import ars.utils.CipherEncryptionAndDecryption;
-import ars.utils.DBConnection;
+import ars.utils.*;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -12,7 +9,9 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Paint;
+import javafx.scene.text.Text;
 
 import java.net.URL;
 import java.sql.*;
@@ -27,40 +26,52 @@ public class MasterEditProfileController implements Initializable {
     JFXButton submitMaster;
 
     @FXML
+    StackPane spMaster;
+    @FXML
     public void onMasterEditProfile() {
+        //System.out.println("moomdfnj");
         if (editMasterName.getText().isEmpty()) {
+            UtilityServices.displayDialog(new Text("Error Check your inputs"), new Text("Please inter your name.. "), spMaster);
             editMasterName.setUnFocusColor(Paint.valueOf("#ab0529"));
         }
 
 
         if (editMasterEmail.getText().isEmpty() || !editMasterEmail.getText().contains("@")) {
+            UtilityServices.displayDialog(new Text("Error Check your inputs"), new Text("Please inter your email.. "), spMaster);
             editMasterEmail.setUnFocusColor(Paint.valueOf("#ab0529"));
         }
         if (editMasterPhone.getText().isEmpty()) {
+            UtilityServices.displayDialog(new Text("Error Check your inputs"), new Text("Please inter your phone.. "), spMaster);
             editMasterPhone.setUnFocusColor(Paint.valueOf("#ab0529"));
         }
-        /*if (newPassword.getText().isEmpty()) {
-            newPassword.setUnFocusColor(Paint.valueOf("#ab0529"));
-        }*/
 
 
-        if (!editMasterName.getText().isEmpty() && !editMasterPhone.getText().isEmpty() && !editMasterEmail.getText().contains("@")) {
+
+
+
+        //System.out.println("oooooooo");
+        if (!editMasterName.getText().isEmpty() &&!editMasterPhone.getText().isEmpty()&& editMasterEmail.getText().contains("@")) {
+            //System.out.println("ffgggffffffrr");
+
             int passFlag = 0;
             if (editMasterEmail.getText().equals(AuthMaster.currentMaster.getEmail())) {
                 editMasterEmail.setUnFocusColor(Paint.valueOf("#009688"));
                 Connection connection = DBConnection.getConnection();
                 try {
-                    PreparedStatement preparedStatement = connection.prepareStatement("update master set  officeName=?, phone=?, email=?, password=? where id=?");
+
+                    PreparedStatement preparedStatement = connection.prepareStatement("update master set  officeName=?, phone=?, email=? where id=?");
                     preparedStatement.setString(1, editMasterName.getText());
                     preparedStatement.setString(2, editMasterPhone.getText());
-                    preparedStatement.setString(3, editMasterEmail.getText());
-                    preparedStatement.setString(4, oldMasterPassword.getText());
-                    preparedStatement.setInt(5, AuthMaster.currentMaster.getMasterID());
+                    preparedStatement.setString(3,editMasterEmail.getText());
+                    preparedStatement.setInt(4, AuthMaster.currentMaster.getMasterID());
                     preparedStatement.executeUpdate();
                     AuthMaster.currentMaster.setOfficeName(editMasterName.getText());
                     AuthMaster.currentMaster.setPhone(editMasterPhone.getText());
                     AuthMaster.currentMaster.setEmail(editMasterEmail.getText());
-                    //  MasterController..setText(AuthUser.currentUser.getName());
+
+                    UtilityServices.displayDialog(new Text("Confirm Update"), new Text("You are update Successfully...  "), spMaster);
+
+
                 } catch (SQLException e) {
                     System.out.println(e.getMessage());
                 }
@@ -68,6 +79,7 @@ public class MasterEditProfileController implements Initializable {
                     passFlag = 1;
                 }
             } else if (!editMasterEmail.getText().equals(AuthMaster.currentMaster.getEmail())) {
+               // System.out.println("emali equal mali");
                 int flag = 0;
                 try {
                     Connection connection = DBConnection.getConnection();
@@ -82,17 +94,19 @@ public class MasterEditProfileController implements Initializable {
                     if (flag == 0) {
                         editMasterEmail.setUnFocusColor(Paint.valueOf("#009688"));
                         try {
-                            PreparedStatement preparedStatement = connection.prepareStatement("update master set  officeName=?, phone=?, email=?, password=? where id=?");
+                            PreparedStatement preparedStatement = connection.prepareStatement("update master set  officeName=?, phone=?, email=? where id=?");
                             preparedStatement.setString(1, editMasterName.getText());
                             preparedStatement.setString(2, editMasterPhone.getText());
-                            preparedStatement.setString(3, editMasterEmail.getText());
-                            preparedStatement.setString(4, oldMasterPassword.getText());
-                            preparedStatement.setInt(5, AuthMaster.currentMaster.getMasterID());
+                            preparedStatement.setString(3,editMasterEmail.getText());
+                            preparedStatement.setInt(4, AuthMaster.currentMaster.getMasterID());
                             preparedStatement.executeUpdate();
                             AuthMaster.currentMaster.setOfficeName(editMasterName.getText());
                             AuthMaster.currentMaster.setPhone(editMasterPhone.getText());
                             AuthMaster.currentMaster.setEmail(editMasterEmail.getText());
-                            //  UserController.sideNameLbl.setText(AuthUser.currentUser.getName());
+
+                            UtilityServices.displayDialog(new Text("Confirm Update"), new Text("You are update Successfully...  "), spMaster);
+
+
                         } catch (SQLException e) {
                             System.out.println(e.getMessage());
                         }
@@ -152,30 +166,22 @@ public class MasterEditProfileController implements Initializable {
                     } else {
                         editMasterPhone.setUnFocusColor(Paint.valueOf("#009688"));
                     }
-                    /*if (oldPassword.getText().isEmpty()) {
-                        oldPassword.setUnFocusColor(Paint.valueOf("#ab0529"));
-                    } else {
-                        oldPassword.setUnFocusColor(Paint.valueOf("#009688"));
-                    }
-                    if (newPassword.getText().isEmpty()){
-                        newPassword.setUnFocusColor(Paint.valueOf("#ab0529"));
-                    } else{
-                        newPassword.setUnFocusColor(Paint.valueOf("#009688"));
-                    }*/
+
 
                 }
             }
         };
         editMasterName.focusedProperty().addListener(fieldsFocus);
-        //oldPassword.focusedProperty().addListener(fieldsFocus);
-        //newPassword.focusedProperty().addListener(fieldsFocus);
+
         editMasterEmail.focusedProperty().addListener(fieldsFocus);
         editMasterPhone.focusedProperty().addListener(fieldsFocus);
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        editMasterName.setText(AuthMaster.currentMaster.getOfficeName());
+        editMasterPhone.setText(AuthMaster.currentMaster.getPhone());
+        editMasterEmail.setText(AuthMaster.currentMaster.getEmail());
 
     }
 

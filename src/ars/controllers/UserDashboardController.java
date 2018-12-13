@@ -49,6 +49,7 @@ public class UserDashboardController implements Initializable {
                 PreparedStatement statement = connection.prepareStatement("update user set rating = ? where id = ?");
                 statement.setInt(1,newValue.intValue());
                 statement.setInt(2,AuthUser.currentUser.getUserID());
+                System.out.println(newValue);
                 statement.executeUpdate();
             } catch (SQLException e) {
                 System.out.println(e.getMessage());

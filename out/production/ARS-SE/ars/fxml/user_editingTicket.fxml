@@ -6,87 +6,137 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="605.0" prefWidth="1044.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.UserEditingTicket">
+
+<StackPane fx:id="spTicket" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="1053.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.UserEditingTicket">
    <children>
-      <VBox prefHeight="605.0" prefWidth="1044.0">
+      <AnchorPane prefHeight="629.0" prefWidth="1084.0" style="-fx-background-color: #455A64;">
          <children>
-            <HBox prefHeight="437.0" prefWidth="1044.0">
+            <VBox prefHeight="605.0" prefWidth="1044.0">
                <children>
-                  <Pane prefHeight="437.0" prefWidth="436.0" style="-fx-border-color: white; -fx-border-radius: 10;">
-                     <HBox.margin>
-                        <Insets left="20.0" />
-                     </HBox.margin>
-                  </Pane>
-                  <VBox alignment="CENTER" prefHeight="437.0" prefWidth="585.0">
+                  <HBox prefHeight="437.0" prefWidth="1044.0">
                      <children>
-                        <Label prefWidth="42.0" text="Cairo" textFill="WHITE">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets bottom="10.0" top="10.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label text="London" textFill="WHITE">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets bottom="10.0" top="10.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label text="Cairo Airport" textFill="WHITE">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets bottom="10.0" top="10.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label text="40000 LE" textFill="WHITE">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets bottom="10.0" top="10.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label text="1/11/2018" textFill="WHITE">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets bottom="10.0" top="10.0" />
-                           </VBox.margin>
-                        </Label>
+                        <Pane prefHeight="437.0" prefWidth="403.0" style="-fx-border-color: white; -fx-border-radius: 10;">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Pane>
+                        <VBox alignment="CENTER" prefHeight="437.0" prefWidth="260.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="89.0" text="Source" textFill="#eeff00">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="27.0" prefWidth="111.0" text="Destination" textFill="#eeff00">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Flight Number" textFill="#eeff00">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="27.0" prefWidth="79.0" text="Price" textFill="#eeff00">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="27.0" prefWidth="82.0" text="Date" textFill="#eeff00">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="437.0" prefWidth="260.0">
+                           <children>
+                              <Label fx:id="source" prefHeight="27.0" prefWidth="89.0" text="Cairo" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="dect" prefHeight="27.0" prefWidth="77.0" text="London" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="numFlight" text="Cairo Airport" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="price" text="40000 LE" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="date" text="1/11/2018" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
                      </children>
-                  </VBox>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="121.0" prefWidth="1044.0">
+                     <children>
+                        <JFXButton fx:id="cancel" buttonType="RAISED" contentDisplay="CENTER" onAction="#deleteTicket" prefHeight="55.0" prefWidth="200.0" ripplerFill="#009688" style="-fx-background-color: #b71c1c;" text="Cancel" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" contentDisplay="CENTER" prefHeight="55.0" prefWidth="200.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Delay" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
                </children>
-               <VBox.margin>
+               <padding>
                   <Insets top="20.0" />
-               </VBox.margin>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="121.0" prefWidth="1044.0">
-               <children>
-                  <JFXButton buttonType="RAISED" contentDisplay="CENTER" prefHeight="55.0" prefWidth="200.0" ripplerFill="#009688" style="-fx-background-color: #b71c1c;" text="Cancel" textFill="WHITE">
-                     <HBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                     </HBox.margin>
-                  </JFXButton>
-                  <JFXButton buttonType="RAISED" contentDisplay="CENTER" prefHeight="55.0" prefWidth="200.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Delay" textFill="WHITE">
-                     <HBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                     </HBox.margin>
-                  </JFXButton>
-               </children>
-            </HBox>
+               </padding>
+            </VBox>
          </children>
-         <padding>
-            <Insets top="20.0" />
-         </padding>
-      </VBox>
+      </AnchorPane>
    </children>
-</AnchorPane>
+</StackPane>

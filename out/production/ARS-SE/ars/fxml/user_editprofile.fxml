@@ -10,60 +10,66 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="605.0" prefWidth="1044.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.UserEditProfile">
+
+<StackPane fx:id="spUser" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="1062.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.UserEditProfile">
    <children>
-      <VBox alignment="TOP_CENTER" prefHeight="605.0" prefWidth="1044.0">
-         <padding>
-            <Insets top="20.0" />
-         </padding>
+      <AnchorPane prefHeight="605.0" prefWidth="1044.0" style="-fx-background-color: #455A64;">
          <children>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <VBox alignment="TOP_CENTER" prefHeight="605.0" prefWidth="1044.0">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
                <children>
-                  <ImageView fitHeight="145.0" fitWidth="143.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Resources/avatar.png" />
-                     </image>
-                  </ImageView>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="145.0" fitWidth="143.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Resources/avatar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <JFXTextField fx:id="editUserName" focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="338.0" promptText="Full Name" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXDatePicker id="datePicker" fx:id="editUserDOB" defaultColor="#eeeeee" prefHeight="25.0" prefWidth="530.0" promptText="Date of birth" style="-jfx-default-color: #009688;" stylesheets="@../Resources/stylesheets/master.css">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
+                     </VBox.margin>
+                  </JFXDatePicker>
+                  <JFXComboBox fx:id="editUserGender" focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="493.0" promptText="Gender" style="-fx-prompt-text-fill: gray;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
+                     </VBox.margin>
+                  </JFXComboBox>
+                  <JFXTextField fx:id="editUserMail" focusColor="#009688" labelFloat="true" promptText="Email" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="oldPassword" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="523.0" promptText="Old Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
+                     </VBox.margin>
+                  </JFXPasswordField>
+                  <JFXPasswordField fx:id="newPassword" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="523.0" promptText="New Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
+                     </VBox.margin>
+                  </JFXPasswordField>
+                  <JFXButton fx:id="submit" buttonType="RAISED" onAction="#onUserEditProfile" prefHeight="31.0" prefWidth="690.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Submit" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
+                     </VBox.margin>
+                  </JFXButton>
                </children>
-            </HBox>
-            <JFXTextField fx:id="editUserName" focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="338.0" promptText="Full Name" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
-               </VBox.margin>
-            </JFXTextField>
-            <JFXDatePicker id="datePicker" fx:id="editUserDOB" defaultColor="#eeeeee" prefHeight="25.0" prefWidth="530.0" promptText="Date of birth" style="-jfx-default-color: #009688;" stylesheets="@../Resources/stylesheets/master.css">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
-               </VBox.margin>
-            </JFXDatePicker>
-            <JFXComboBox fx:id="editUserGender" focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="493.0" promptText="Gender" style="-fx-prompt-text-fill: gray;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
-               </VBox.margin>
-            </JFXComboBox>
-            <JFXTextField fx:id="editUserMail" focusColor="#009688" labelFloat="true" promptText="Email" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
-               </VBox.margin>
-            </JFXTextField>
-            <JFXPasswordField fx:id="oldPassword" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="523.0" promptText="Old Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
-               </VBox.margin>
-            </JFXPasswordField>
-            <JFXPasswordField fx:id="newPassword" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="523.0" promptText="New Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
-               </VBox.margin>
-            </JFXPasswordField>
-            <JFXButton fx:id="submit" buttonType="RAISED" onAction="#onUserEditProfile" prefHeight="31.0" prefWidth="690.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Submit" textFill="WHITE">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="320.0" right="320.0" top="20.0" />
-               </VBox.margin>
-            </JFXButton>
+            </VBox>
          </children>
-      </VBox>
+      </AnchorPane>
    </children>
-</AnchorPane>
+</StackPane>
