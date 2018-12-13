@@ -4,11 +4,10 @@ package ars.models;
 
 public class Ticket {
 
-
     private int ticketID;
     private int userID;
     private String flightID;
-
+    public static Ticket currentTicket;
 
     public Ticket(int ticketID,int userID,String flightID){
         this.ticketID=ticketID;

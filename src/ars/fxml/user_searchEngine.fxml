@@ -9,60 +9,66 @@
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="605.0" prefWidth="1044.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.UserSearchEngine">
+<StackPane fx:id="stackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.UserSearchEngine">
    <children>
-      <VBox alignment="TOP_CENTER" prefHeight="605.0" prefWidth="1044.0" spacing="20.0">
+      <AnchorPane prefHeight="605.0" prefWidth="1044.0" style="-fx-background-color: #455A64;">
          <children>
-            <JFXComboBox fx:id="searchBy" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="250.0" promptText="Search By" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc" />
-            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="913.0">
+            <VBox alignment="TOP_CENTER" prefHeight="605.0" prefWidth="1044.0" spacing="20.0">
                <children>
-                  <JFXComboBox fx:id="departure" disable="true" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="250.0" promptText="Departure" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
-                     <HBox.margin>
-                        <Insets left="50.0" />
-                     </HBox.margin>
-                  </JFXComboBox>
-                  <JFXComboBox fx:id="destination" disable="true" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="250.0" promptText="Destination" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
-                     <HBox.margin>
-                        <Insets left="100.0" right="50.0" />
-                     </HBox.margin>
-                  </JFXComboBox>
+                  <JFXComboBox fx:id="searchBy" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="605.0" promptText="Search By" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="913.0">
+                     <children>
+                        <JFXComboBox fx:id="departure" disable="true" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="250.0" promptText="Departure" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </JFXComboBox>
+                        <JFXComboBox fx:id="destination" disable="true" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="250.0" promptText="Destination" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
+                           <HBox.margin>
+                              <Insets left="100.0" right="50.0" />
+                           </HBox.margin>
+                        </JFXComboBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <JFXTextField fx:id="flightNumberField" disable="true" focusColor="#009688" labelFloat="true" maxWidth="600.0" prefHeight="25.0" prefWidth="605.0" promptText="Flight Number" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc" />
+                  <JFXButton fx:id="displayFlightsBtn" buttonType="RAISED" onAction="#displayFlights" prefHeight="31.0" prefWidth="605.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Display Flights" textFill="WHITE" />
+                  <TableView fx:id="flightTable" prefHeight="315.0" prefWidth="804.0" stylesheets="@../Resources/stylesheets/master.css">
+                     <columns>
+                        <TableColumn fx:id="flightNumber" prefWidth="130.0" text="Flight Number" />
+                        <TableColumn fx:id="departureCol" prefWidth="130.0" text="Departure" />
+                        <TableColumn fx:id="destinationCol" prefWidth="130.0" text="Destination" />
+                        <TableColumn fx:id="dateCol" prefWidth="186.0" text="Date and Time" />
+                        <TableColumn fx:id="seatsCol" prefWidth="81.0" text="Available Seats" />
+                        <TableColumn fx:id="priceCol" prefWidth="157.0" text="Price" />
+                        <TableColumn fx:id="companyCol" prefWidth="130.0" text="Company Name" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets left="120.0" right="120.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <JFXButton buttonType="RAISED" onAction="#reserveTicket" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Reserve" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="120.0" right="120.0" />
+                     </VBox.margin>
+                  </JFXButton>
                </children>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-            </HBox>
-            <JFXTextField fx:id="flightNumberField" disable="true" focusColor="#009688" labelFloat="true" maxWidth="600.0" prefHeight="25.0" prefWidth="605.0" promptText="Flight Number" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc" />
-            <JFXButton fx:id="displayAllFlights" buttonType="RAISED" prefHeight="31.0" prefWidth="250.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Display All Flights" textFill="WHITE" />
-            <TableView prefHeight="315.0" prefWidth="804.0">
-              <columns>
-                <TableColumn prefWidth="130.0" text="Departure" />
-                <TableColumn prefWidth="130.0" text="Destination" />
-                  <TableColumn prefWidth="130.0" text="Airport" />
-                  <TableColumn prefWidth="186.0" text="Date and Time" />
-                  <TableColumn prefWidth="81.0" text="Available Seats" />
-                  <TableColumn prefWidth="157.0" text="Price" />
-              </columns>
-               <VBox.margin>
-                  <Insets left="120.0" right="120.0" />
-               </VBox.margin>
-               <effect>
-                  <DropShadow />
-               </effect>
-               <columnResizePolicy>
-                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-               </columnResizePolicy>
-            </TableView>
-            <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Reserve" textFill="WHITE">
-               <VBox.margin>
-                  <Insets left="120.0" right="120.0" />
-               </VBox.margin>
-            </JFXButton>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
          </children>
-         <padding>
-            <Insets top="10.0" />
-         </padding>
-      </VBox>
+      </AnchorPane>
    </children>
-</AnchorPane>
+</StackPane>

@@ -57,7 +57,7 @@ public class UserDashboardController implements Initializable {
 
         try {
             Connection c = DBConnection.getConnection();
-            PreparedStatement statement = c.prepareStatement("select id,flight_number from ticket where user_id = ?");
+            PreparedStatement statement = c.prepareStatement("select ticket_number,flight_number from ticket where user_id = ?");
             PreparedStatement statement1 = c.prepareStatement("select src,dest,dateAndTime,price from flight where flightNumber = ?");
             statement.setInt(1,AuthUser.currentUser.getUserID());
             ResultSet resultSet = statement.executeQuery();
@@ -73,7 +73,8 @@ public class UserDashboardController implements Initializable {
                     flightDateLbl.setText(dateFormat.format(flightResultSet.getDate("dateAndTime")));
                     flightPriceLbl.setText(String.valueOf(flightResultSet.getInt("price")));
                 }
-                Ticket ticket = new Ticket(resultSet.getInt("id"),AuthUser.currentUser.getUserID(),flightNumber);
+                Ticket ticket = new Ticket(resultSet.getInt("ticket_number"),AuthUser.currentUser.getUserID(),flightNumber);
+                Ticket.currentTicket = ticket;
             }
             else {
                 flightNumberLbl.setText("N/A");

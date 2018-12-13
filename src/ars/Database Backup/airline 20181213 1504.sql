@@ -32,13 +32,17 @@ CREATE TABLE `airports` (
   `latidude` double NOT NULL,
   `longitude` double NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `airports`
 --
 
 /*!40000 ALTER TABLE `airports` DISABLE KEYS */;
+INSERT INTO `airports` (`id`,`name`,`latidude`,`longitude`) VALUES 
+ (1,'Cairo',12.45,0.12),
+ (2,'Luxor',12.45,0.12),
+ (3,'London',123.45,13.2);
 /*!40000 ALTER TABLE `airports` ENABLE KEYS */;
 
 
@@ -66,6 +70,12 @@ CREATE TABLE `flight` (
 --
 
 /*!40000 ALTER TABLE `flight` DISABLE KEYS */;
+INSERT INTO `flight` (`flightNumber`,`src`,`dest`,`dateAndTime`,`price`,`seats`,`delay`,`master_id`) VALUES 
+ ('AP250','Alexandria','Paris','2018-12-18',7000,190,0,9),
+ ('EG115','Cairo','London','2018-12-15',5000,200,0,10),
+ ('LS143','Luxor','Sharm El-shikh','2019-01-01',3000,250,0,9),
+ ('TS140','tanta','Sharm El-shikh','2018-12-19',2000,150,0,10),
+ ('TS150','tanta','Sharm El-shikh','2018-12-19',2000,150,0,9);
 /*!40000 ALTER TABLE `flight` ENABLE KEYS */;
 
 
@@ -90,13 +100,6 @@ CREATE TABLE `master` (
 
 /*!40000 ALTER TABLE `master` DISABLE KEYS */;
 INSERT INTO `master` (`id`,`officeName`,`phone`,`email`,`password`) VALUES 
- (1,'egypt air','Female','mohammed','�-{�$$�ը8��_'),
- (2,'efjsd','Female','mohammmed','�-{�$$�ը8��_'),
- (3,'werwer','Male','mohamed','�-{�$$�ը8��_'),
- (4,'sdfsdf','Male','mohammeed','�qYaT��'),
- (5,'sdfsdf','Male','mohammyed','���ڤ�'),
- (6,'ewrwer','34345345','ertert','g�%$����'),
- (7,'ewrwer','34345345','ertert4','g�%$����'),
  (9,'Mahmoud','0565545','sharaf','Bmx7rH7lfa4='),
  (10,'fa','02','d@','t/gv+axlMQY=');
 /*!40000 ALTER TABLE `master` ENABLE KEYS */;
@@ -108,10 +111,10 @@ INSERT INTO `master` (`id`,`officeName`,`phone`,`email`,`password`) VALUES
 
 DROP TABLE IF EXISTS `ticket`;
 CREATE TABLE `ticket` (
-  `id` int(10) unsigned NOT NULL auto_increment,
+  `ticket_number` int(10) unsigned NOT NULL default '0',
   `user_id` int(10) unsigned NOT NULL,
   `flight_number` varchar(10) NOT NULL,
-  PRIMARY KEY  (`id`),
+  PRIMARY KEY  USING BTREE (`ticket_number`),
   KEY `user_id` (`user_id`),
   KEY `flight_id` USING BTREE (`flight_number`),
   CONSTRAINT `flight_number` FOREIGN KEY (`flight_number`) REFERENCES `flight` (`flightNumber`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -123,6 +126,9 @@ CREATE TABLE `ticket` (
 --
 
 /*!40000 ALTER TABLE `ticket` DISABLE KEYS */;
+INSERT INTO `ticket` (`ticket_number`,`user_id`,`flight_number`) VALUES 
+ (1,31,'EG115'),
+ (2,30,'AP250');
 /*!40000 ALTER TABLE `ticket` ENABLE KEYS */;
 
 
@@ -141,7 +147,7 @@ CREATE TABLE `user` (
   `rating` int(10) unsigned NOT NULL default '0',
   PRIMARY KEY  USING BTREE (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
@@ -161,7 +167,10 @@ INSERT INTO `user` (`id`,`name`,`date`,`gender`,`email`,`password`,`rating`) VAL
  (27,'asd','2018-11-30','Male','asd','�vvE��',0),
  (28,'mahmoud','2018-11-24','Male','mahmoudsharaf','l{�~�}�',0),
  (29,'asd','2018-11-30','Male','sharaf','Bmx7rH7lfa4=',0),
- (30,'Mahmoud Sharaf','2018-12-18','Male','mahmoud','d3VjSauUVjU=',0);
+ (30,'Mahmoud Sharaf','2018-12-18','Male','mahmoud','d3VjSauUVjU=',0),
+ (31,'asdasd','2018-12-22','Male','d@','t/gv+axlMQY=',4);
+INSERT INTO `user` (`id`,`name`,`date`,`gender`,`email`,`password`,`rating`) VALUES 
+ (32,'Mahmoud','2018-12-28','Male','m@','fAlGh+jTloE=',0);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
 
