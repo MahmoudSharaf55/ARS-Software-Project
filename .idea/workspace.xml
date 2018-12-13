@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="401b7c3c-3bdf-4721-aa37-79ad1f77a4cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ARS_SE_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/Database Backup/airline-20181206-1635.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterEditProfileController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterEditProfileController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterEditProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/MasterEditProfileController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/UserDashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/UserDashboardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/UserEditProfile$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/UserEditProfile$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/UserEditProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/UserEditProfile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/UserEditingTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/controllers/UserEditingTicket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/user_editingTicket.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/user_editingTicket.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/user_editprofile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/fxml/user_editprofile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ARS-SE/ars/models/Ticket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ARS-SE/ars/models/Ticket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/controllers/MasterEditProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/controllers/MasterEditProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/controllers/UserDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/controllers/UserDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/controllers/UserEditProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/controllers/UserEditProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ars/controllers/UserEditingTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/controllers/UserEditingTicket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ars/fxml/user_editingTicket.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/fxml/user_editingTicket.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ars/fxml/user_editprofile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ars/fxml/user_editprofile.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,12 +17,22 @@
     <session id="-1008097949">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="11" />
+          <entry key="java" value="103" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11" />
+          <entry key="JAVA" value="103" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -56,7 +51,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ars/controllers/UserEditProfile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="-310">
               <caret line="88" column="132" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="132" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -65,66 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/utils/DBConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/controllers/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="169" column="27" lean-forward="true" selection-end-line="233" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/controllers/UserDashboardController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="84" column="46" lean-forward="true" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ars/controllers/UserEditingTicket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterFlightAdd.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="111" column="44" lean-forward="true" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/fxml/user_dashboard.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ars/utils/UtilityServices.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+            <state relative-caret-position="129">
+              <caret line="85" column="44" lean-forward="true" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -208,7 +148,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544708966497" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544713484549" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -259,7 +199,7 @@
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2677761" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2677761" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -268,7 +208,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29384616" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29384616" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -289,5 +229,67 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/ars/utils/UtilityServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/UserDashboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="84" column="46" lean-forward="true" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/MasterFlightAdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="111" column="44" lean-forward="true" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="158" column="60" lean-forward="true" selection-start-line="158" selection-start-column="60" selection-end-line="158" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/utils/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/fxml/user_dashboard.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/UserEditProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-310">
+          <caret line="88" column="132" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="132" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ars/controllers/UserEditingTicket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="85" column="44" lean-forward="true" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
