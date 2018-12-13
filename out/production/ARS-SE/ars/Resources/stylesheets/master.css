@@ -31,6 +31,50 @@
 
 }
 
+.chart-title {
+    -fx-text-fill: #FFFF;
+}
+
+.axis-label {
+    -fx-text-fill: #FFFF;
+}
+
+.chart-pie-label-line {
+    -fx-stroke: #FFF;
+    -fx-fill: #FFF;
+}
+
+.default-color0.chart-pie {
+    -fx-pie-color: #ffd700;
+}
+
+.default-color1.chart-pie {
+    -fx-pie-color: #ffa500;
+}
+
+.default-color2.chart-pie {
+    -fx-pie-color: #860061;
+}
+
+.default-color3.chart-pie {
+    -fx-pie-color: #adff2f;
+}
+
+.default-color4.chart-pie {
+    -fx-pie-color: #ff5700;
+}
+
+.chart-pie-label {
+    -fx-fill: #FFF;
+    -fx-font-size: 1em;
+}
+
+#tileStyle {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-width: 5;
+}
+
 .table-row-cell:filled:hover {
 
     -fx-size: 50;
@@ -62,7 +106,8 @@
 .jfx-list-view .scroll-bar:vertical {
     -fx-scale-x: 0;
 }
-.jfx-list-view{
+
+.jfx-list-view {
     -fx-background-color: transparent;
     -fx-expanded: true;
 }

@@ -59,7 +59,6 @@ public class MasterFlightAdd implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         airportsList = new ArrayList<>();
 
-
         ResultSet resultSet = FlightDatabaseAPI.getAllAirports();
 
         try {

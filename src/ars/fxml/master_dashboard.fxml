@@ -1,129 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
-<?import javafx.scene.chart.StackedBarChart?>
-<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.TilePane?>
 
-<AnchorPane prefHeight="604.0" prefWidth="1056.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.DashboardController">
+<AnchorPane prefHeight="604.0" prefWidth="1052.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.DashboardController">
    <children>
-      <FlowPane prefHeight="604.0" prefWidth="1044.0" style="-fx-background-color: #455A64;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <FlowPane prefHeight="604.0" prefWidth="1064.0" style="-fx-background-color: #455A64;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane prefHeight="250.0" prefWidth="250.0" style="-fx-background-color: #ffffff;">
-               <effect>
-                  <DropShadow />
-               </effect>
+            <AnchorPane id="tileStyle" prefHeight="330.0" prefWidth="276.0" style="-fx-background-color: #455A64;">
                <FlowPane.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
                </FlowPane.margin>
                <children>
-                  <AreaChart prefHeight="289.0" prefWidth="319.0" style="-fx-background-color: #607D8B;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <xAxis>
-                        <CategoryAxis side="BOTTOM" />
-                     </xAxis>
-                     <yAxis>
-                        <NumberAxis side="LEFT" tickLabelFill="WHITE" />
-                     </yAxis>
-                  </AreaChart>
+                  <PieChart id="tileStyle" fx:id="piechartDestination" layoutX="-178.0" layoutY="-43.0" prefHeight="330.0" prefWidth="351.0" style="-fx-background-color: #607D8B;" stylesheets="@../Resources/stylesheets/master.css" title="Most Booked Destination" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children>
             </AnchorPane>
+            <TilePane fx:id="tilePane" alignment="CENTER" prefHeight="330.0" prefWidth="340.0" style="-fx-background-color: #455A64;" styleClass="tileStyle">
+               <FlowPane.margin>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </FlowPane.margin>
+            </TilePane>
 
-            <AnchorPane prefHeight="330.0" prefWidth="250.0" style="-fx-background-color: #ffffff;">
-               <effect>
-                  <DropShadow />
-               </effect>
+            <AnchorPane id="tileStyle" prefHeight="330.0" prefWidth="380.0" style="-fx-background-color: #455A64;" stylesheets="@../Resources/stylesheets/master.css">
                <FlowPane.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </FlowPane.margin>
                <children>
-                  <LineChart prefHeight="330.0" prefWidth="250.0" style="-fx-background-color: #607D8B;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <BarChart id="tileStyle" fx:id="priceChart" barGap="2.0" categoryGap="2.0" prefHeight="330.0" prefWidth="371.0" style="-fx-background-color: #607D8B;" stylesheets="@../Resources/stylesheets/master.css" title="Most Expensive Flights" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <xAxis>
-                      <CategoryAxis side="BOTTOM" />
+                      <CategoryAxis side="BOTTOM" tickLabelFill="WHITE" fx:id="xAxisPrice" />
                     </xAxis>
                     <yAxis>
-                      <NumberAxis side="LEFT" tickLabelFill="WHITE" />
+                      <NumberAxis fx:id="yAxisPrice" side="LEFT" stylesheets="@../Resources/stylesheets/master.css" tickLabelFill="WHITE" />
                     </yAxis>
-                  </LineChart>
+                  </BarChart>
                </children>
             </AnchorPane>
-
-            <AnchorPane prefHeight="250.0" prefWidth="450.0" style="-fx-background-color: #ffffff;">
-               <effect>
-                  <DropShadow />
-               </effect>
+            <TilePane id="tileStyle" fx:id="tilePane2" alignment="CENTER" prefHeight="235.0" prefWidth="290.0" style="-fx-background-color: #455A64;">
                <FlowPane.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </FlowPane.margin>
-               <children>
-                  <StackedBarChart style="-fx-background-color: #607D8B;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <xAxis>
-                      <CategoryAxis side="BOTTOM" />
-                    </xAxis>
-                    <yAxis>
-                      <NumberAxis side="LEFT" tickLabelFill="WHITE" />
-                    </yAxis>
-                  </StackedBarChart>
-               </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="172.0" prefWidth="250.0" style="-fx-background-color: #ffffff;">
-               <effect>
-                  <DropShadow />
-               </effect>
-               <children>
-                  <AreaChart prefHeight="289.0" prefWidth="319.0" style="-fx-background-color: #607D8B;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <xAxis>
-                        <CategoryAxis side="BOTTOM" />
-                     </xAxis>
-                     <yAxis>
-                        <NumberAxis side="LEFT" tickLabelFill="WHITE" />
-                     </yAxis>
-                  </AreaChart>
-               </children>
+            </TilePane>
+            <TilePane id="tileStyle" fx:id="tilePane3" alignment="CENTER" prefHeight="235.0" prefWidth="374.0" style="-fx-background-color: #455A64;">
                <FlowPane.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
                </FlowPane.margin>
-            </AnchorPane>
-            <AnchorPane prefHeight="172.0" prefWidth="250.0" style="-fx-background-color: #ffffff;">
-               <effect>
-                  <DropShadow />
-               </effect>
-               <children>
-                  <AreaChart prefHeight="289.0" prefWidth="319.0" style="-fx-background-color: #607D8B;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <xAxis>
-                        <CategoryAxis side="BOTTOM" />
-                     </xAxis>
-                     <yAxis>
-                        <NumberAxis side="LEFT" tickLabelFill="WHITE" />
-                     </yAxis>
-                  </AreaChart>
-               </children>
+            </TilePane>
+            <TilePane id="tileStyle" fx:id="tilePane4" alignment="CENTER" prefHeight="235.0" prefWidth="330.0" style="-fx-background-color: #455A64;">
                <FlowPane.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </FlowPane.margin>
-            </AnchorPane>
-            <AnchorPane prefHeight="225.0" prefWidth="250.0" style="-fx-background-color: #ffffff;">
-               <effect>
-                  <DropShadow />
-               </effect>
-               <children>
-                  <AreaChart prefHeight="289.0" prefWidth="319.0" style="-fx-background-color: #607D8B;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <xAxis>
-                        <CategoryAxis side="BOTTOM" />
-                     </xAxis>
-                     <yAxis>
-                        <NumberAxis side="LEFT" tickLabelFill="WHITE" />
-                     </yAxis>
-                  </AreaChart>
-               </children>
-               <FlowPane.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </FlowPane.margin>
-            </AnchorPane>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </FlowPane.margin></TilePane>
          </children>
       </FlowPane>
    </children>

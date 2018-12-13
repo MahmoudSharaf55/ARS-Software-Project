@@ -1,5 +1,6 @@
 package ars.controllers;
 
+import ars.models.Flight;
 import ars.utils.AuthMaster;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDrawer;
@@ -23,7 +24,7 @@ import java.util.ResourceBundle;
 public class MasterController implements Initializable {
 
     @FXML
-    private Label toolbarTitle;
+    private   Label toolbarTitle;
     @FXML
     private AnchorPane anchorPane;
 
@@ -164,7 +165,7 @@ public class MasterController implements Initializable {
      * @param title the title for the toolbar
      */
 
-    private void openScene(String path, String title) {
+      public void openScene(String path, String title) {
         try {
             Node node = FXMLLoader.load(getClass().getResource(path));
             container.getChildren().setAll(node);

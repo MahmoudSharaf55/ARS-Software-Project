@@ -1,12 +1,14 @@
 package ars.utils;
 
 import ars.models.Flight;
+import ars.models.User;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class FlightDatabaseAPI {
@@ -109,4 +111,98 @@ public class FlightDatabaseAPI {
         return null;
     }
 
+    public static int updateFlight(Flight flight) {
+        try {
+            PreparedStatement preparedStatement = DBConnection.getConnection().prepareStatement("update  flight SET src = ? , dest = ?, delay =? , seats =?,dateAndTime = ?,price=? where flightNumber =?");
+            preparedStatement.setString(7, flight.getFlightNumber());
+            preparedStatement.setString(1, flight.getSrc());
+            preparedStatement.setString(2, flight.getDest());
+            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm");
+            Calendar c = Calendar.getInstance();
+            c.setTime(flight.getDateAndTime());
+            c.add(Calendar.DATE, flight.getDelay());
+            preparedStatement.setString(5, dateFormat.format(c.getTime()));
+            preparedStatement.setInt(6, flight.getPrice());
+            preparedStatement.setInt(4, flight.getSeats());
+            preparedStatement.setInt(3, flight.getDelay());
+
+            return preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return 0;
+    }
+
+    public static int updateUser(User user) {
+
+        try {
+            PreparedStatement preparedStatement = DBConnection.getConnection().prepareStatement("update user set name = ?, date = ? , email = ?, gender = ? where id = ?");
+            System.out.println(user.getUserID());
+            System.out.println(user.getGender());
+            preparedStatement.setString(1, user.getName());
+            preparedStatement.setString(2, user.getDateOfBirth().toString());
+            preparedStatement.setString(3, user.getEmail());
+            preparedStatement.setString(4, user.getGender());
+            preparedStatement.setInt(5, user.getUserID());
+            return preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return 0;
+    }
+
+    public static int deleteFlight(Flight flight) {
+        try {
+            PreparedStatement preparedStatement = DBConnection.getConnection().prepareStatement("delete from flight where flightNumber = ?");
+            preparedStatement.setString(1, flight.getFlightNumber());
+            return preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return 0;
+    }
+
+    public static ResultSet getPassengersUsingFlightNumber(String flightNum) {
+        try {
+            PreparedStatement preparedStatement = DBConnection.getConnection().prepareStatement("select  t.ticket_number, f.flightNumber,f.master_id,u.* from flight f inner join ticket t on f.flightNumber = t.flightNumber inner  join user u on t.user_id = u.id where f.flightNumber = ? ");
+            preparedStatement.setString(1, flightNum);
+            return preparedStatement.executeQuery();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        return null;
+    }
+
+    public static ResultSet getFlightsAssociatedWithAllTickets(int masterID) {
+        try {
+            PreparedStatement preparedStatement = DBConnection.getConnection().prepareStatement("select f.dest, count(*) as count from ticket inner join flight f on ticket.flightNumber = f.flightNumber where master_id=? group by f.dest ; ");
+            preparedStatement.setInt(1, masterID);
+            return preparedStatement.executeQuery();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static ResultSet getFlightsCount(int masterID) {
+        try {
+            PreparedStatement preparedStatement = DBConnection.getConnection().prepareStatement("select count(*) as count from ticket inner join flight f on ticket.flightNumber = f.flightNumber where master_id=? group by f.master_id ; ");
+            preparedStatement.setInt(1, masterID);
+            return preparedStatement.executeQuery();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

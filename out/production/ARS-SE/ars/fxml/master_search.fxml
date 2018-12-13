@@ -34,12 +34,12 @@
                   </JFXTextField>
                   <HBox prefHeight="34.0" prefWidth="913.0">
                      <children>
-                        <JFXComboBox fx:id="departComboBox" disable="true" focusColor="#009688" labelFloat="true" onAction="#onDepartureAirportSelected" prefHeight="29.0" prefWidth="268.0" promptText="Departure Airport" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                        <JFXComboBox fx:id="departComboBox" disable="true" focusColor="#009688" labelFloat="true" onAction="#onDepartureAirportSelected" prefHeight="29.0" prefWidth="268.0" promptText="Departure Airport" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
                            <HBox.margin>
                               <Insets right="20.0" />
                            </HBox.margin>
                         </JFXComboBox>
-                        <JFXComboBox fx:id="destComboBox" disable="true" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Destination Airport" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                        <JFXComboBox fx:id="destComboBox" disable="true" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="268.0" promptText="Destination Airport" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>

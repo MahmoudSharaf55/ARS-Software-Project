@@ -1112,11 +1112,10 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="270" parent="246" name="id">
+    <column id="270" parent="246" name="ticket_number">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="271" parent="246" name="user_id">
@@ -1141,7 +1140,7 @@
     </index>
     <key id="275" parent="246" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>ticket_number</ColNames>
       <Primary>1</Primary>
     </key>
     <foreign-key id="276" parent="246" name="user_id">

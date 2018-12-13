@@ -1,7 +1,6 @@
 package ars.models;
 
 
-
 public class Ticket {
 
     private int ticketID;
@@ -15,13 +14,21 @@ public class Ticket {
         this.flightID=flightID;
     }
 
-    public int getTicketID() {return ticketID;}
+    public int getTicketID() {
+        return ticketID;
+    }
 
-    public void setTicketID(int ticketID) {this.ticketID = ticketID;}
+    public void setTicketID(int ticketID) {
+        this.ticketID = ticketID;
+    }
 
-    public int getUserID() {return userID;}
+    public int getUserID() {
+        return userID;
+    }
 
-    public void setUserID(int userID) {this.userID = userID;}
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
 
     public String getFlightID() { return flightID;}
 

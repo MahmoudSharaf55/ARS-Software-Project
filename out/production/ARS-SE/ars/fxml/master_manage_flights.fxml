@@ -8,80 +8,90 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="604.0" prefWidth="1044.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.MasterManageFlights">
+<StackPane fx:id="sp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="1056.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.MasterManageFlights">
    <children>
-      <VBox layoutX="10.0" layoutY="17.0" prefHeight="200.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="604.0" prefWidth="1044.0" style="-fx-background-color: #455A64;">
          <children>
-            <JFXTextField focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Flight Number" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
-               <VBox.margin>
-                  <Insets left="250.0" right="250.0" />
-               </VBox.margin>
-            </JFXTextField>
-            <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Load" textFill="WHITE">
-               <VBox.margin>
-                  <Insets left="250.0" right="250.0" top="30.0" />
-               </VBox.margin>
-            </JFXButton>
-            <HBox prefHeight="34.0" prefWidth="913.0">
+            <VBox layoutX="10.0" layoutY="17.0" prefHeight="200.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="581.0" promptText="Depart" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
-                     <HBox.margin>
-                        <Insets right="20.0" />
-                     </HBox.margin>
-                  </JFXComboBox>
-                  <JFXComboBox focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="584.0" promptText="Destination" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </JFXComboBox>
-               </children>
-               <VBox.margin>
-                  <Insets bottom="30.0" left="250.0" right="250.0" top="30.0" />
-               </VBox.margin>
-            </HBox>
-            <JFXTextField focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Number Of Seats" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
-               <VBox.margin>
-                  <Insets bottom="30.0" left="250.0" right="250.0" />
-               </VBox.margin>
-            </JFXTextField>
-            <JFXDatePicker id="datePicker" defaultColor="#eeeeee" prefHeight="31.0" prefWidth="589.0" promptText="Flight Date" style="-jfx-default-color: #009688;" stylesheets="@../Resources/stylesheets/master.css">
-               <VBox.margin>
-                  <Insets bottom="30.0" left="250.0" right="250.0" />
-               </VBox.margin>
-            </JFXDatePicker>
-            <JFXTimePicker prefHeight="31.0" prefWidth="614.0" promptText="Flight Time" style="-jfx-default-color: #009688;" stylesheets="@../Resources/stylesheets/master.css">
-               <VBox.margin>
-                  <Insets bottom="30.0" left="250.0" right="250.0" />
-               </VBox.margin>
-            </JFXTimePicker>
-            <JFXTextField focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Price" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
-               <VBox.margin>
-                  <Insets bottom="30.0" left="250.0" right="250.0" />
-               </VBox.margin>
-            </JFXTextField>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <JFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="225.0" ripplerFill="#aeaeae" style="-fx-background-color: #ab003c;" text="Cancel Flight" textFill="WHITE">
-                     <HBox.margin>
-                        <Insets right="10.0" />
-                     </HBox.margin>
+                  <JFXTextField fx:id="flightNumberTextField" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Flight Number" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                     <VBox.margin>
+                        <Insets left="250.0" right="250.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXButton buttonType="RAISED" onAction="#loadFlightInfo" prefHeight="31.0" prefWidth="932.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Load" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="250.0" right="250.0" top="30.0" />
+                     </VBox.margin>
                   </JFXButton>
-                  <JFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="222.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Edit / Delay" textFill="WHITE">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </JFXButton>
+                  <HBox prefHeight="34.0" prefWidth="913.0">
+                     <children>
+                        <JFXComboBox fx:id="departComboBox" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="581.0" promptText="Depart" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </JFXComboBox>
+                        <JFXComboBox fx:id="destComboBox" focusColor="#009688" labelFloat="true" prefHeight="29.0" prefWidth="584.0" promptText="Destination" style="-fx-prompt-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" stylesheets="@../Resources/stylesheets/master.css" unFocusColor="#cfd8dc">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXComboBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="250.0" right="250.0" top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <JFXTextField fx:id="numberOfSeatsTF" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Number Of Seats" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="250.0" right="250.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="delayTF" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Delay In Days" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="250.0" right="250.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXDatePicker id="datePicker" fx:id="datePicker" defaultColor="#eeeeee" disable="true" editable="false" prefHeight="31.0" prefWidth="589.0" promptText="Flight Date" style="-jfx-default-color: #009688;" stylesheets="@../Resources/stylesheets/master.css">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="250.0" right="250.0" />
+                     </VBox.margin>
+                  </JFXDatePicker>
+                  <JFXTimePicker fx:id="timePicker" prefHeight="31.0" prefWidth="614.0" promptText="Flight Time" style="-jfx-default-color: #009688;" stylesheets="@../Resources/stylesheets/master.css">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="250.0" right="250.0" />
+                     </VBox.margin>
+                  </JFXTimePicker>
+                  <JFXTextField fx:id="priceTextField" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="804.0" promptText="Price" style="-fx-prompt-text-fill: gray; -fx-text-fill: white; -fx-font-family: &quot;Century Gothic&quot;;" unFocusColor="#cfd8dc">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="250.0" right="250.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" onAction="#cancel" prefHeight="60.0" prefWidth="225.0" ripplerFill="#aeaeae" style="-fx-background-color: #ab003c;" text="Cancel Flight" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#edit" prefHeight="60.0" prefWidth="222.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Edit / Delay" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="250.0" right="250.0" />
+                     </VBox.margin>
+                  </HBox>
                </children>
-               <VBox.margin>
-                  <Insets left="250.0" right="250.0" />
-               </VBox.margin>
-            </HBox>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+            </VBox>
          </children>
-         <padding>
-            <Insets top="30.0" />
-         </padding>
-      </VBox>
+      </AnchorPane>
    </children>
-</AnchorPane>
+</StackPane>

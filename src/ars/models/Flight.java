@@ -11,6 +11,7 @@ public class Flight {
     private String src;
     private String dest;
     private Date dateAndTime;
+
     private int price;
     private int seats;
     private int delay;
@@ -99,5 +100,6 @@ public class Flight {
     public void setMaster(Master master) {
         this.master = master;
     }
+
 
 }

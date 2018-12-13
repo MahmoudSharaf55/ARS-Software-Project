@@ -12,15 +12,20 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -176,7 +181,19 @@ public class MasterSearchController implements Initializable {
 
     @FXML
     void manageFlight(ActionEvent event) {
-
+        Parent container = sp.getParent();
+        Object controller = null;
+        do {
+            controller = container.getProperties().get("foo");
+            container = container.getParent();
+        } while (controller == null && container != null);
+        MasterController cMaster = (MasterController) controller;
+        if (!dataTable.getSelectionModel().isEmpty()) {
+            MasterManageFlights.selectedFlight = dataTable.getSelectionModel().getSelectedItem();
+            cMaster.openScene("../fxml/master_manage_flights.fxml", "Manage Flights");
+        } else {
+            UtilityServices.displayDialog(new Text("Check Your Inputs !"), new Text("Make sure that you selected a valid flight from the table !"), sp);
+        }
     }
 
     @FXML
