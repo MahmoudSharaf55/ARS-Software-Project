@@ -170,6 +170,12 @@ public class SignupController implements Initializable {
                     String encrypted = CipherEncryptionAndDecryption.encrypt(userPassword.getText(), "team");
                     User user = new User(userName.getText(), Date.valueOf(userDate.getValue()), userGender.getSelectionModel().getSelectedItem().toString(), userEmail.getText(), encrypted, 0);
                     AuthUser.signupUser(user);
+                    PreparedStatement ps = connection.prepareStatement("select id from user where email = ?");
+                    ps.setString(1,AuthUser.currentUser.getEmail());
+                    ResultSet rs = ps.executeQuery();
+                    rs.next();
+                    AuthUser.currentUser.setUserID(rs.getInt("id"));
+                    System.out.println(rs.getInt("id"));
                     openUserOrMaster("../fxml/user.fxml","User");
                 } else {
                     userEmail.setUnFocusColor(Paint.valueOf("#ab0529"));

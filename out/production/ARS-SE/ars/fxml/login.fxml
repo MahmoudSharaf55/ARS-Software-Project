@@ -46,12 +46,12 @@
                               </ImageView>
                            </children>
                         </HBox>
-                        <JFXTextField fx:id="emailTextField" focusColor="#009688" labelFloat="true" promptText="Email" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+                        <JFXTextField fx:id="emailTextField" focusColor="#009688" labelFloat="true" promptText="Email" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" text="d@" unFocusColor="#cfd8dc">
                            <VBox.margin>
                               <Insets left="90.0" right="90.0" top="30.0" />
                            </VBox.margin>
                         </JFXTextField>
-                        <JFXPasswordField fx:id="passwordTextField" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="523.0" promptText="Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc">
+                        <JFXPasswordField fx:id="passwordTextField" focusColor="#009688" labelFloat="true" prefHeight="31.0" prefWidth="523.0" promptText="Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" text="d" unFocusColor="#cfd8dc">
                            <VBox.margin>
                               <Insets left="90.0" right="90.0" top="40.0" />
                            </VBox.margin>

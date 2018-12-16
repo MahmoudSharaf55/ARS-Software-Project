@@ -11,6 +11,7 @@ public class Flight {
     private String src;
     private String dest;
     private Date dateAndTime;
+    public static Flight currentFlight;
 
     private int price;
     private int seats;

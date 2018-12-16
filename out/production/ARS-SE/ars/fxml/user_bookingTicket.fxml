@@ -4,51 +4,151 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import com.lynden.gmapsfx.GoogleMapView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="605.0" prefWidth="1044.0" style="-fx-background-color: #455A64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.UserBookingTicket">
+<StackPane fx:id="stackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.UserBookingTicket">
    <children>
-      <VBox prefHeight="605.0" prefWidth="1044.0">
+      <AnchorPane prefHeight="605.0" prefWidth="1044.0" style="-fx-background-color: #455A64;">
          <children>
-            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="1044.0">
+            <VBox prefHeight="605.0" prefWidth="1044.0">
                <children>
-                  <JFXTextField focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="338.0" promptText="Ticket Number" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc" />
-                  <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="199.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Find Ticket" textFill="WHITE">
-                     <HBox.margin>
-                        <Insets left="50.0" />
-                     </HBox.margin>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="1044.0">
+                     <children>
+                        <JFXTextField fx:id="ticketNumber" disable="true" focusColor="#009688" labelFloat="true" prefHeight="25.0" prefWidth="338.0" promptText="Ticket Number" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#cfd8dc" />
+                        <JFXButton buttonType="RAISED" onAction="#findTicketNumber" prefHeight="31.0" prefWidth="199.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Find Ticket" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="437.0" prefWidth="1044.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="437.0" prefWidth="466.0" style="-fx-border-radius: 10; -fx-border-color: white;">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="331.0" prefWidth="464.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Ticket Number" textFill="#c0ff39">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Flight Number" textFill="#c0ff39">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label text="From" textFill="#c0ff39">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label text="To" textFill="#c0ff39">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Date" textFill="#c0ff39">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Price" textFill="#c0ff39">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label fx:id="ticketNumberLbl" text="N / A" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="flightNumberLbl" text="N / A" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label fx:id="srcLbl" text="N / A" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label fx:id="destLbl" text="N / A" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="flightDateLbl" text="N / A" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="flightPriceLbl" text="N / A" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="30.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Label prefHeight="54.0" prefWidth="359.0" text="PLEASE BE AT THE GATE 60 MINUTES BEFORE DEPARTURE TIME" textAlignment="CENTER" textFill="#3bffdf" wrapText="true">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <GoogleMapView fx:id="mapView" prefHeight="437.0" prefWidth="538.0">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </GoogleMapView>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <JFXButton buttonType="RAISED" onAction="#generateTicket" prefHeight="39.0" prefWidth="804.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Generate" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="120.0" right="120.0" top="20.0" />
+                     </VBox.margin>
                   </JFXButton>
                </children>
-            </HBox>
-            <HBox prefHeight="437.0" prefWidth="1044.0">
-               <children>
-                  <Pane prefHeight="437.0" prefWidth="436.0" style="-fx-border-color: white; -fx-border-radius: 10;">
-                     <HBox.margin>
-                        <Insets left="20.0" />
-                     </HBox.margin>
-                  </Pane>
-                  <GoogleMapView fx:id="mapView" prefHeight="437.0" prefWidth="538.0">
-                     <HBox.margin>
-                        <Insets left="20.0" />
-                     </HBox.margin>
-                  </GoogleMapView>
-               </children>
-               <VBox.margin>
+               <padding>
                   <Insets top="20.0" />
-               </VBox.margin>
-            </HBox>
-            <JFXButton buttonType="RAISED" prefHeight="31.0" prefWidth="804.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Generate" textFill="WHITE">
-               <VBox.margin>
-                  <Insets left="120.0" right="120.0" top="20.0" />
-               </VBox.margin>
-            </JFXButton>
+               </padding>
+            </VBox>
          </children>
-         <padding>
-            <Insets top="20.0" />
-         </padding>
-      </VBox>
+      </AnchorPane>
    </children>
-</AnchorPane>
+</StackPane>

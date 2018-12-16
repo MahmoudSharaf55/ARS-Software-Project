@@ -1,5 +1,7 @@
 package ars.controllers;
 
+import ars.models.Flight;
+import ars.models.Ticket;
 import ars.models.User;
 import ars.utils.AuthUser;
 import com.jfoenix.controls.JFXDrawer;
@@ -133,6 +135,8 @@ public class UserController implements Initializable {
                                     drawer.close();
                                     LoginController.loginStage.show();
                                     ((Stage)node.getScene().getWindow()).close();
+                                    Flight.currentFlight = null;
+                                    Ticket.currentTicket = null;
                                     break;
                             }
                         } );

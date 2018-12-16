@@ -1,5 +1,6 @@
 package ars.controllers;
 
+import ars.models.Flight;
 import ars.models.Master;
 import ars.models.Ticket;
 import ars.models.User;
@@ -49,7 +50,6 @@ public class UserDashboardController implements Initializable {
                 PreparedStatement statement = connection.prepareStatement("update user set rating = ? where id = ?");
                 statement.setInt(1,newValue.intValue());
                 statement.setInt(2,AuthUser.currentUser.getUserID());
-                System.out.println(newValue);
                 statement.executeUpdate();
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
@@ -58,12 +58,12 @@ public class UserDashboardController implements Initializable {
 
         try {
             Connection c = DBConnection.getConnection();
-            PreparedStatement statement = c.prepareStatement("select ticket_number,flight_number from ticket where user_id = ?");
-            PreparedStatement statement1 = c.prepareStatement("select src,dest,dateAndTime,price from flight where flightNumber = ?");
+            PreparedStatement statement = c.prepareStatement("select ticket_number,flightNumber from ticket where user_id = ?");
+            PreparedStatement statement1 = c.prepareStatement("select * from flight where flightNumber = ?");
             statement.setInt(1,AuthUser.currentUser.getUserID());
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()){
-                String flightNumber = resultSet.getString("flight_number");
+                String flightNumber = resultSet.getString("flightNumber");
                 statement1.setString(1,flightNumber);
                 ResultSet flightResultSet = statement1.executeQuery();
                 if (flightResultSet.next()){
@@ -73,6 +73,9 @@ public class UserDashboardController implements Initializable {
                     DateFormat dateFormat = new SimpleDateFormat("dd/MM/YYYY HH:MM");
                     flightDateLbl.setText(dateFormat.format(flightResultSet.getDate("dateAndTime")));
                     flightPriceLbl.setText(String.valueOf(flightResultSet.getInt("price")));
+                    Flight.currentFlight = new Flight(flightNumber,flightResultSet.getString("src"),flightResultSet.getString("dest")
+                    ,flightResultSet.getDate("dateAndTime"),flightResultSet.getInt("price"),flightResultSet.getInt("seats")
+                            ,flightResultSet.getInt("delay"),flightResultSet.getInt("master_id"));
                 }
                 Ticket ticket = new Ticket(resultSet.getInt("ticket_number"),AuthUser.currentUser.getUserID(),flightNumber);
                 Ticket.currentTicket = ticket;

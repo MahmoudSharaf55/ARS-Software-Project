@@ -10,118 +10,109 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<StackPane fx:id="spTicket" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="1151.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.UserEditingTicket">
+<StackPane fx:id="spTicket" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ars.controllers.UserEditingTicket">
    <children>
-      <AnchorPane prefHeight="626.0" prefWidth="1075.0" style="-fx-background-color: #455A64;">
+      <AnchorPane prefHeight="605.0" prefWidth="1044.0" style="-fx-background-color: #455A64;">
          <children>
             <VBox prefHeight="605.0" prefWidth="1044.0">
                <children>
                   <HBox prefHeight="437.0" prefWidth="1044.0">
                      <children>
-                        <Pane prefHeight="437.0" prefWidth="724.0" style="-fx-border-color: white; -fx-border-radius: 10;">
+                        <Pane prefHeight="437.0" prefWidth="495.0" style="-fx-border-color: white; -fx-border-radius: 10;">
                            <HBox.margin>
-                              <Insets left="20.0" />
+                              <Insets left="20.0" right="20.0" />
                            </HBox.margin>
                         </Pane>
-                        <VBox alignment="CENTER" prefHeight="437.0" prefWidth="565.0">
+                        <HBox alignment="CENTER" prefHeight="437.0" prefWidth="492.0">
                            <children>
-                              <Label prefHeight="27.0" prefWidth="127.0" text="Ticket Number" textFill="#99f704">
-                                 <font>
-                                    <Font name="Arial Bold Italic" size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" top="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label prefHeight="27.0" prefWidth="125.0" text="Source" textFill="#99f704">
-                                 <font>
-                                    <Font name="System Bold Italic" size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" top="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label prefHeight="27.0" prefWidth="126.0" text="Destination " textFill="#99f704">
-                                 <font>
-                                    <Font name="System Bold Italic" size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" top="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label prefHeight="27.0" prefWidth="133.0" text="Flight Number" textFill="#99f704">
-                                 <font>
-                                    <Font name="System Bold Italic" size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" top="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label prefHeight="27.0" prefWidth="128.0" text="Price" textFill="#99f704">
-                                 <font>
-                                    <Font name="System Bold Italic" size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" top="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label prefHeight="27.0" prefWidth="125.0" text="Date" textFill="#99f704">
-                                 <font>
-                                    <Font name="System Bold Italic" size="18.0" />
-                                 </font>
-                              </Label>
+                              <VBox alignment="CENTER_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label text="Ticket Number" textFill="#c0ff39">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Flight Number" textFill="#c0ff39">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="From" textFill="#c0ff39">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="To" textFill="#c0ff39">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Date" textFill="#c0ff39">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Price" textFill="#c0ff39">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label fx:id="ticketNumberLbl" text="N / A" textFill="WHITE">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="flightNumberLbl" text="N / A" textFill="WHITE">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label fx:id="srcLbl" text="N / A" textFill="WHITE">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label fx:id="destLbl" text="N / A" textFill="WHITE">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="flightDateLbl" text="N / A" textFill="WHITE">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="flightPriceLbl" text="N / A" textFill="WHITE">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </VBox>
                            </children>
-                        </VBox>
-                        <VBox alignment="CENTER" prefHeight="437.0" prefWidth="585.0">
-                           <children>
-                              <Label fx:id="ticketNumber" prefHeight="27.0" prefWidth="110.0" text="10" textFill="WHITE">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" top="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="source" prefHeight="27.0" prefWidth="104.0" text="London" textFill="WHITE">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" top="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="dect" prefHeight="27.0" prefWidth="105.0" text="Cairo " textFill="WHITE">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" top="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="numFlight" prefHeight="27.0" prefWidth="98.0" text="5" textFill="WHITE">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" top="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="price" prefHeight="27.0" prefWidth="93.0" text="5000" textFill="WHITE">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" top="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="date" prefHeight="27.0" prefWidth="102.0" text="2108-05-02" textFill="WHITE">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </VBox>
+                        </HBox>
                      </children>
                      <VBox.margin>
                         <Insets top="20.0" />
@@ -129,12 +120,12 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="121.0" prefWidth="1044.0">
                      <children>
-                        <JFXButton fx:id="cancel" buttonType="RAISED" contentDisplay="CENTER" onAction="#deleteTicket" prefHeight="55.0" prefWidth="200.0" ripplerFill="#009688" style="-fx-background-color: #b71c1c;" text="Cancel" textFill="WHITE">
+                        <JFXButton fx:id="cancel" buttonType="RAISED" contentDisplay="CENTER" onAction="#deleteTicket" prefHeight="55.0" prefWidth="200.0" ripplerFill="#ff6969" style="-fx-background-color: #b71c1c;" text="Cancel" textFill="WHITE">
                            <HBox.margin>
                               <Insets left="10.0" right="10.0" />
                            </HBox.margin>
                         </JFXButton>
-                        <JFXButton buttonType="RAISED" contentDisplay="CENTER" prefHeight="55.0" prefWidth="200.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Delay" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" contentDisplay="CENTER" onAction="#delayTicket" prefHeight="55.0" prefWidth="200.0" ripplerFill="#009688" style="-fx-background-color: #006064;" text="Delay" textFill="WHITE">
                            <HBox.margin>
                               <Insets left="10.0" right="10.0" />
                            </HBox.margin>

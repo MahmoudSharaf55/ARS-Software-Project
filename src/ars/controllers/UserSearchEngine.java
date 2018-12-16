@@ -2,6 +2,7 @@ package ars.controllers;
 
 import ars.models.Flight;
 import ars.models.Master;
+import ars.models.Ticket;
 import ars.utils.DBConnection;
 import ars.utils.FlightDatabaseAPI;
 import ars.utils.UtilityServices;
@@ -144,7 +145,20 @@ public class UserSearchEngine implements Initializable {
 
     @FXML
     public void reserveTicket(ActionEvent e){
-
+        if (flightTable.getSelectionModel().getSelectedItem() != null){
+            if (flightTable.getSelectionModel().getSelectedItem().getSeats() > 0){
+                Flight.currentFlight = flightTable.getSelectionModel().getSelectedItem();
+                if (Ticket.currentTicket != null){
+                    Ticket.currentTicket.setTicketID(-1);
+                }
+                UtilityServices.displayDialog(new Text("Notify"),new Text("Please .. Move To Booking Iicket To Complete Your Ticket Info"),stackpane);
+            }
+            else
+                UtilityServices.displayDialog(new Text("Warning"),new Text("No Availble Seats In This Flight. Please Choose Another One!"),stackpane);
+        }
+        else {
+            UtilityServices.displayDialog(new Text("Check Your Choose"),new Text("Please Select A Flight !"),stackpane);
+        }
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
