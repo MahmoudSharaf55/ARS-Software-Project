@@ -70,7 +70,7 @@ CREATE TABLE `flight` (
 --
 
 /*!40000 ALTER TABLE `flight` DISABLE KEYS */;
-INSERT INTO `flight` (`flightNumber`,`src`,`dest`,`dateAndTime`,`price`,`seats`,`delay`,`master_id`) VALUES 
+INSERT INTO `flight` (flightNumber,`src`,`dest`,`dateAndTime`,`price`,`seats`,`delay`,`master_id`) VALUES
  ('AP250','Alexandria','Paris','2018-12-18',7000,190,0,9),
  ('EG115','Cairo','London','2018-12-15',5000,200,0,10),
  ('LS143','Luxor','Sharm El-shikh','2019-01-01',3000,250,0,9),
@@ -117,7 +117,7 @@ CREATE TABLE `ticket` (
   PRIMARY KEY  USING BTREE (`ticket_number`),
   KEY `user_id` (`user_id`),
   KEY `flight_id` USING BTREE (`flight_number`),
-  CONSTRAINT `flight_number` FOREIGN KEY (`flight_number`) REFERENCES `flight` (`flightNumber`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `flight_number` FOREIGN KEY (`flight_number`) REFERENCES `flight` (flightNumber) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -126,7 +126,7 @@ CREATE TABLE `ticket` (
 --
 
 /*!40000 ALTER TABLE `ticket` DISABLE KEYS */;
-INSERT INTO `ticket` (`ticket_number`,`user_id`,`flight_number`) VALUES 
+INSERT INTO `ticket` (`ticket_number`,`user_id`,flightNumber) VALUES
  (1,31,'EG115'),
  (2,30,'AP250');
 /*!40000 ALTER TABLE `ticket` ENABLE KEYS */;

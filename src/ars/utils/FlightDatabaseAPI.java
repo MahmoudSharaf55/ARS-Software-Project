@@ -26,7 +26,7 @@ public class FlightDatabaseAPI {
     public static ResultSet searchUsingMasterID(int masterID) {
 
         try {
-            PreparedStatement statement = DBConnection.getConnection().prepareStatement("select * from flight inner join master m on flight.master_id = m.id where master_id = ?");
+            PreparedStatement statement = DBConnection.getConnection().prepareStatement("select flight.*, m.*, s.latidude as 'srclat', s.longitude as 'srclon', d.longitude as 'destlon', d.latidude as 'destlat' from flight   inner join master m on flight.master_id = m.id     inner join airports d on flight.dest = d.name inner JOIN airports s on flight.src = s.name where master_id = ?;");
             statement.setInt(1, masterID);
             return statement.executeQuery();
         } catch (SQLException e) {

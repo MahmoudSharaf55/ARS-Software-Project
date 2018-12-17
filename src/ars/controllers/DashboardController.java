@@ -19,10 +19,10 @@ import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
-
-import static sun.dc.pr.Rasterizer.TILE_SIZE;
 
 public class DashboardController implements Initializable {
 
@@ -47,12 +47,7 @@ public class DashboardController implements Initializable {
     private TilePane tilePane4;
 
     private Tile worldTile;
-    private Location SanFranciso;
-    private Location NewYork;
-    private Location Chicago;
-    private Location Home;
-    private Location Moscow;
-    private Location Singapore;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -60,7 +55,7 @@ public class DashboardController implements Initializable {
         setupPieChart();
         setupTileMap();
         setupClock();
-        setupSmothAreaChart();
+        setupSmoothAreaChart();
         setupCalender();
     }
 
@@ -99,32 +94,36 @@ public class DashboardController implements Initializable {
     }
 
     private void setupTileMap() {
-        SanFranciso = new Location(37.7576171, -122.5776844, "San Francisco", Color.MAGENTA);
-        NewYork = new Location(40.7157216, -74.3036411, "New York", Color.MAGENTA);
-        Chicago = new Location(41.8333908, -88.0128341, "Chicago", Color.MAGENTA);
-        Home = new Location(51.9065938, 7.6352688, "Hause", Color.CRIMSON);
-        Moscow = new Location(55.751042, 37.619060, "Moscow", Color.MAGENTA);
-        Singapore = new Location(1.3346428, 103.8415972, "Singapore", Color.MAGENTA);
+        List<Location> locations = new ArrayList<>();
+        ResultSet resultSet = FlightDatabaseAPI.searchUsingMasterID(AuthMaster.currentMaster.getMasterID());
+        if (resultSet != null) {
+            try {
+                while (resultSet.next()) {
+                    Location locationsrc = new Location(resultSet.getDouble("srclat"), resultSet.getDouble("srclon"), resultSet.getString("src"));
+                    Location locationdest = new Location(resultSet.getDouble("destlat"), resultSet.getDouble("destlon"), resultSet.getString("dest"));
+                    locations.add(locationsrc);
+                    locations.add(locationdest);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+        }
+
         worldTile = TileBuilder.create()
                 .skinType(Tile.SkinType.WORLDMAP)
                 .title("Flights Areas")
                 .textVisible(false)
                 .backgroundColor(Color.rgb(96, 125, 139))
                 .prefSize(340, 330)
-                .pointsOfInterest(SanFranciso, Chicago, NewYork, Moscow)
-                .chartData(ChartDataBuilder.create()
-                        .name("Home")
-                        .fillColor(Color.RED)
-                        .value(20)
-                        .location(Home)
-                        .build())
+                .pointsOfInterest(locations)
                 .build();
         tilePane.getChildren().addAll(worldTile);
     }
 
     private void setupClock() {
         Tile clockTile = TileBuilder.create()
-                .prefSize(290, 235)
+                .prefSize(276, 235)
                 .skinType(Tile.SkinType.CLOCK)
                 .backgroundColor(Color.rgb(96, 125, 139))
                 .title("The Time Now In Your Area")
@@ -135,34 +134,36 @@ public class DashboardController implements Initializable {
         tilePane2.getChildren().addAll(clockTile);
     }
 
-    private void setupSmothAreaChart() {
+    private void setupSmoothAreaChart() {
         ResultSet resultSet = FlightDatabaseAPI.getFlightsCount(AuthMaster.currentMaster.getMasterID());
+       int tickets = 0;
         try {
-            if (resultSet != null){
-            if (resultSet.next()) {
-                Tile numberTile = TileBuilder.create()
-                        .prefSize(374, 235)
-                        .skinType(Tile.SkinType.NUMBER)
-                        .title("Number of Tickets")
-                        .backgroundColor(Color.rgb(96, 125, 139))
-                        .text("It always seems impossible until it's done." )
-                        .value(resultSet.getInt("count"))
-                        .unit("Tickets")
-                        .description("Reserved")
-                        .textVisible(true)
-                        .build();
-                tilePane3.getChildren().setAll(numberTile);
-            }
+            if (resultSet != null) {
+                if (resultSet.next()) {
+                   tickets = resultSet.getInt("count");
+                }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        Tile numberTile = TileBuilder.create()
+                .prefSize(340, 235)
+                .skinType(Tile.SkinType.NUMBER)
+                .title("Number of Tickets")
+                .backgroundColor(Color.rgb(96, 125, 139))
+                .text("It always seems impossible until it's done.")
+                .value(tickets)
+                .unit("Tickets")
+                .description("Reserved")
+                .textVisible(true)
+                .build();
+        tilePane3.getChildren().setAll(numberTile);
     }
 
-    private void setupCalender(){
+    private void setupCalender() {
         ZonedDateTime now = ZonedDateTime.now();
-        Tile calendarTile  = TileBuilder.create().skinType(Tile.SkinType.CALENDAR)
-                .prefSize(330, 235)
+        Tile calendarTile = TileBuilder.create().skinType(Tile.SkinType.CALENDAR)
+                .prefSize(380, 235)
                 .title("Calendar")
                 .text("")
                 .backgroundColor(Color.rgb(96, 125, 139))

@@ -968,18 +968,14 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="243" parent="2" name="airports"/>
-    <table id="244" parent="2" name="flight">
-      <Collation>utf16_general_ci</Collation>
-    </table>
+    <table id="244" parent="2" name="flight"/>
     <table id="245" parent="2" name="master">
       <Collation>utf16_general_ci</Collation>
     </table>
     <table id="246" parent="2" name="ticket">
       <Collation>utf16_general_ci</Collation>
     </table>
-    <table id="247" parent="2" name="user">
-      <Collation>utf16_general_ci</Collation>
-    </table>
+    <table id="247" parent="2" name="user"/>
     <column id="248" parent="243" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
@@ -1005,70 +1001,111 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="252" parent="243" name="PRIMARY">
+    <index id="252" parent="243" name="airports_id_uindex">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="253" parent="243" name="airports_name_uindex">
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="254" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="253" parent="244" name="flightNumber">
+    <key id="255" parent="243" name="airports_id_uindex">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>airports_id_uindex</UnderlyingIndexName>
+    </key>
+    <key id="256" parent="243" name="airports_name_uindex">
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>airports_name_uindex</UnderlyingIndexName>
+    </key>
+    <column id="257" parent="244" name="flightNumber">
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
+      <Collation>utf16_general_ci</Collation>
     </column>
-    <column id="254" parent="244" name="src">
+    <column id="258" parent="244" name="src">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="244" name="dest">
+    <column id="259" parent="244" name="dest">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="244" name="dateAndTime">
+    <column id="260" parent="244" name="dateAndTime">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="244" name="price">
+    <column id="261" parent="244" name="price">
       <Position>5</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="244" name="seats">
+    <column id="262" parent="244" name="seats">
       <Position>6</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="244" name="delay">
+    <column id="263" parent="244" name="delay">
       <Position>7</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="244" name="master_id">
+    <column id="264" parent="244" name="master_id">
       <Position>8</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="261" parent="244" name="master_id">
+    <index id="265" parent="244" name="flight_airports_name_name_fk">
+      <ColNames>src</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="266" parent="244" name="flight_airports_name_fk">
+      <ColNames>dest</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="267" parent="244" name="master_id">
       <ColNames>master_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="262" parent="244" name="PRIMARY">
+    <key id="268" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>flightNumber</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="263" parent="244" name="master_id">
+    <foreign-key id="269" parent="244" name="flight_airports_name_name_fk">
+      <ColNames>src</ColNames>
+      <RefSchemaName>airline</RefSchemaName>
+      <RefTableName>airports</RefTableName>
+      <RefColNames>name</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="270" parent="244" name="flight_airports_name_fk">
+      <ColNames>dest</ColNames>
+      <RefSchemaName>airline</RefSchemaName>
+      <RefTableName>airports</RefTableName>
+      <RefColNames>name</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="271" parent="244" name="master_id">
       <ColNames>master_id</ColNames>
       <RefSchemaName>airline</RefSchemaName>
       <RefTableName>master</RefTableName>
@@ -1076,74 +1113,74 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="264" parent="245" name="id">
+    <column id="272" parent="245" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="245" name="officeName">
+    <column id="273" parent="245" name="officeName">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="245" name="phone">
+    <column id="274" parent="245" name="phone">
       <Position>3</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="245" name="email">
+    <column id="275" parent="245" name="email">
       <Position>4</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="245" name="password">
+    <column id="276" parent="245" name="password">
       <Position>5</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="269" parent="245" name="PRIMARY">
+    <key id="277" parent="245" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="270" parent="246" name="ticket_number">
+    <column id="278" parent="246" name="ticket_number">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="271" parent="246" name="user_id">
+    <column id="279" parent="246" name="user_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="246" name="flightNumber">
+    <column id="280" parent="246" name="flightNumber">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="273" parent="246" name="user_id">
+    <index id="281" parent="246" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="274" parent="246" name="flight_id">
+    <index id="282" parent="246" name="flight_id">
       <ColNames>flightNumber</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="275" parent="246" name="PRIMARY">
+    <key id="283" parent="246" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ticket_number</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="276" parent="246" name="user_id">
+    <foreign-key id="284" parent="246" name="user_id">
       <ColNames>user_id</ColNames>
       <RefSchemaName>airline</RefSchemaName>
       <RefTableName>user</RefTableName>
@@ -1151,7 +1188,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="277" parent="246" name="flightNumber_fk">
+    <foreign-key id="285" parent="246" name="flightNumber_fk">
       <ColNames>flightNumber</ColNames>
       <RefSchemaName>airline</RefSchemaName>
       <RefTableName>flight</RefTableName>
@@ -1159,51 +1196,55 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="278" parent="247" name="id">
+    <column id="286" parent="247" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="279" parent="247" name="name">
+    <column id="287" parent="247" name="name">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
+      <Collation>utf16_general_ci</Collation>
     </column>
-    <column id="280" parent="247" name="date">
+    <column id="288" parent="247" name="date">
       <Position>3</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="281" parent="247" name="gender">
+    <column id="289" parent="247" name="gender">
       <Position>4</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
+      <Collation>utf16_general_ci</Collation>
     </column>
-    <column id="282" parent="247" name="email">
+    <column id="290" parent="247" name="email">
       <Position>5</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
+      <Collation>utf16_general_ci</Collation>
     </column>
-    <column id="283" parent="247" name="password">
+    <column id="291" parent="247" name="password">
       <Position>6</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
+      <Collation>utf16_general_ci</Collation>
     </column>
-    <column id="284" parent="247" name="rating">
+    <column id="292" parent="247" name="rating">
       <Position>7</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="285" parent="247" name="PRIMARY">
+    <key id="293" parent="247" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

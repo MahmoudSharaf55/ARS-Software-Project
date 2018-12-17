@@ -42,17 +42,17 @@
                   </BarChart>
                </children>
             </AnchorPane>
-            <TilePane id="tileStyle" fx:id="tilePane2" alignment="CENTER" prefHeight="235.0" prefWidth="290.0" style="-fx-background-color: #455A64;">
+            <TilePane id="tileStyle" fx:id="tilePane2" alignment="CENTER" prefHeight="235.0" prefWidth="276.0" style="-fx-background-color: #455A64;">
                <FlowPane.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </FlowPane.margin>
             </TilePane>
-            <TilePane id="tileStyle" fx:id="tilePane3" alignment="CENTER" prefHeight="235.0" prefWidth="374.0" style="-fx-background-color: #455A64;">
+            <TilePane id="tileStyle" fx:id="tilePane3" alignment="CENTER" prefHeight="235.0" prefWidth="340.0" style="-fx-background-color: #455A64;">
                <FlowPane.margin>
                   <Insets bottom="10.0" right="10.0" top="10.0" />
                </FlowPane.margin>
             </TilePane>
-            <TilePane id="tileStyle" fx:id="tilePane4" alignment="CENTER" prefHeight="235.0" prefWidth="330.0" style="-fx-background-color: #455A64;">
+            <TilePane id="tileStyle" fx:id="tilePane4" alignment="CENTER" prefHeight="235.0" prefWidth="380.0" style="-fx-background-color: #455A64;">
                <FlowPane.margin>
                   <Insets bottom="10.0" right="10.0" top="10.0" />
                </FlowPane.margin></TilePane>
