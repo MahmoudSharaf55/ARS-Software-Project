@@ -4,6 +4,7 @@ import ars.models.Flight;
 import ars.models.Ticket;
 import ars.models.User;
 import ars.utils.AuthUser;
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.controls.events.JFXDrawerEvent;
@@ -39,6 +40,8 @@ public class UserController implements Initializable {
     @FXML
     Label toolbarTitle;
     Node containerFXML;
+    public static JFXButton openBookingTicket = new JFXButton();
+    public static JFXButton openSearchEngine = new JFXButton();
     static Label sideNameLbl;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -71,6 +74,12 @@ public class UserController implements Initializable {
 
             }
 
+        });
+        openBookingTicket.setOnAction(event -> {
+            setScene("../fxml/user_bookingTicket.fxml","Booking Ticket");
+        });
+        openSearchEngine.setOnAction(event -> {
+            setScene("../fxml/user_searchEngine.fxml","Search Engine");
         });
     }
     private void setScene(String path, String title) {

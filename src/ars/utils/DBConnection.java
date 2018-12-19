@@ -13,7 +13,7 @@ public class DBConnection {
                 Class.forName("com.mysql.jdbc.Driver");
                 String url = "jdbc:mysql://localhost:3306/airline";
                 String user = "root";
-                connection = DriverManager.getConnection(url, user, "");
+                connection = DriverManager.getConnection(url, user, "root");
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
             } catch (ClassNotFoundException e) {

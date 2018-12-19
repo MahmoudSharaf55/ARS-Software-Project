@@ -2,12 +2,12 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import com.lynden.gmapsfx.GoogleMapView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -27,11 +27,11 @@
                         </JFXButton>
                      </children>
                   </HBox>
-                  <HBox prefHeight="437.0" prefWidth="1044.0">
+                  <HBox prefHeight="437.0" prefWidth="1044.0" spacing="30.0">
                      <children>
                         <VBox alignment="TOP_CENTER" prefHeight="437.0" prefWidth="466.0" style="-fx-border-radius: 10; -fx-border-color: white;">
                            <HBox.margin>
-                              <Insets left="10.0" />
+                              <Insets left="25.0" />
                            </HBox.margin>
                            <children>
                               <HBox alignment="CENTER" prefHeight="331.0" prefWidth="464.0">
@@ -128,11 +128,11 @@
                               </Label>
                            </children>
                         </VBox>
-                        <GoogleMapView fx:id="mapView" prefHeight="437.0" prefWidth="538.0">
+                        <TilePane fx:id="mapTiles" prefHeight="437.0" prefWidth="500.0">
                            <HBox.margin>
-                              <Insets left="20.0" />
+                              <Insets />
                            </HBox.margin>
-                        </GoogleMapView>
+                        </TilePane>
                      </children>
                      <VBox.margin>
                         <Insets top="20.0" />

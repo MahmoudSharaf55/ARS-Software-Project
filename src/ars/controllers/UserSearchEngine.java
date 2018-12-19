@@ -9,10 +9,12 @@ import ars.utils.UtilityServices;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.controls.events.JFXDialogEvent;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -32,6 +34,7 @@ import java.util.Date;
 import java.util.ResourceBundle;
 
 public class UserSearchEngine implements Initializable {
+    ArrayList<Flight> flightArrayList = new ArrayList<>();
     @FXML
     private JFXComboBox<String> searchBy;
     @FXML
@@ -60,40 +63,37 @@ public class UserSearchEngine implements Initializable {
     private TableColumn<Flight, String> companyCol;
     @FXML
     private StackPane stackpane;
-    ArrayList<Flight> flightArrayList = new ArrayList<>();
 
-    public void displayFlights(ActionEvent e){
-        switch (searchBy.getSelectionModel().getSelectedIndex()){
+    public void displayFlights(ActionEvent e) {
+        switch (searchBy.getSelectionModel().getSelectedIndex()) {
             case 0:
-                if (departure.getSelectionModel().getSelectedItem() != null && destination.getSelectionModel().getSelectedItem() != null){
-                    getFlightsByDepartDest(departure.getSelectionModel().getSelectedItem(),destination.getSelectionModel().getSelectedItem());
-                }
-                else {
-                    UtilityServices.displayDialog(new Text("Check Your Inputs"),new Text("Make sure that you selected a valid departure and destination type!"),stackpane);
+                if (departure.getSelectionModel().getSelectedItem() != null && destination.getSelectionModel().getSelectedItem() != null) {
+                    getFlightsByDepartDest(departure.getSelectionModel().getSelectedItem(), destination.getSelectionModel().getSelectedItem());
+                } else {
+                    UtilityServices.displayDialog(new Text("Check Your Inputs"), new Text("Make sure that you selected a valid departure and destination type!"), stackpane);
                 }
                 break;
             case 1:
-                if (!flightNumberField.getText().isEmpty()){
+                if (!flightNumberField.getText().isEmpty()) {
                     getFlightsByFlightNumber(flightNumberField.getText());
-                }
-                else {
-                    UtilityServices.displayDialog(new Text("Check Your Inputs"),new Text("Make sure that you typed a valid flight number!"),stackpane);
+                } else {
+                    UtilityServices.displayDialog(new Text("Check Your Inputs"), new Text("Make sure that you typed a valid flight number!"), stackpane);
                 }
                 break;
             case 2:
                 getAllFlights();
                 break;
             default:
-                UtilityServices.displayDialog(new Text("Check Your Inputs"),new Text("Make sure that you selected a valid search type !"),stackpane);
+                UtilityServices.displayDialog(new Text("Check Your Inputs"), new Text("Make sure that you selected a valid search type !"), stackpane);
         }
     }
 
-    public void getFlightsByDepartDest(String src , String dest){
+    public void getFlightsByDepartDest(String src, String dest) {
         PreparedStatement preparedStatement = null;
         try {
             preparedStatement = DBConnection.getConnection().prepareStatement("select * from flight f join master m on f.master_id = m.id where f.src = ? and f.dest = ?");
-            preparedStatement.setString(1,src);
-            preparedStatement.setString(2,dest);
+            preparedStatement.setString(1, src);
+            preparedStatement.setString(2, dest);
             ResultSet resultSet = preparedStatement.executeQuery();
             addRecords(resultSet);
 
@@ -101,11 +101,12 @@ public class UserSearchEngine implements Initializable {
             e.printStackTrace();
         }
     }
-    public void getFlightsByFlightNumber(String number){
+
+    public void getFlightsByFlightNumber(String number) {
         PreparedStatement preparedStatement = null;
         try {
             preparedStatement = DBConnection.getConnection().prepareStatement("select * from flight f join master m on f.master_id = m.id where f.flightNumber = ?");
-            preparedStatement.setString(1,number);
+            preparedStatement.setString(1, number);
             ResultSet resultSet = preparedStatement.executeQuery();
             addRecords(resultSet);
 
@@ -113,6 +114,7 @@ public class UserSearchEngine implements Initializable {
             e.printStackTrace();
         }
     }
+
     public void getAllFlights() {
         PreparedStatement preparedStatement = null;
         try {
@@ -123,10 +125,11 @@ public class UserSearchEngine implements Initializable {
             e.printStackTrace();
         }
     }
-    public void addRecords(ResultSet resultSet){
+
+    public void addRecords(ResultSet resultSet) {
         flightArrayList.clear();
         try {
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 Flight flight = new Flight(resultSet.getString("flightNumber"), resultSet.getString("src"),
                         resultSet.getString("dest"), resultSet.getTimestamp("dateAndTime"),
                         resultSet.getInt("price"), resultSet.getInt("seats"),
@@ -138,38 +141,41 @@ public class UserSearchEngine implements Initializable {
                 flightTable.setItems(FXCollections.observableArrayList(flightArrayList));
             }
             flightTable.setItems(FXCollections.observableArrayList(flightArrayList));
-        }catch (SQLException e){
+        } catch (SQLException e) {
 
         }
     }
 
     @FXML
-    public void reserveTicket(ActionEvent e){
-        if (flightTable.getSelectionModel().getSelectedItem() != null){
-            if (flightTable.getSelectionModel().getSelectedItem().getSeats() > 0){
+    public void reserveTicket(ActionEvent e) {
+        if (flightTable.getSelectionModel().getSelectedItem() != null) {
+            if (flightTable.getSelectionModel().getSelectedItem().getSeats() > 0) {
                 Flight.currentFlight = flightTable.getSelectionModel().getSelectedItem();
-                if (Ticket.currentTicket != null){
+                if (Ticket.currentTicket != null) {
                     Ticket.currentTicket.setTicketID(-1);
                 }
-                UtilityServices.displayDialog(new Text("Notify"),new Text("Please .. Move To Booking Iicket To Complete Your Ticket Info"),stackpane);
-            }
-            else
-                UtilityServices.displayDialog(new Text("Warning"),new Text("No Availble Seats In This Flight. Please Choose Another One!"),stackpane);
-        }
-        else {
-            UtilityServices.displayDialog(new Text("Check Your Choose"),new Text("Please Select A Flight !"),stackpane);
+                UtilityServices.displayDialog(new Text("Notify"), new Text("Please .. Move To Booking Iicket To Complete Your Ticket Info"), stackpane);
+                UtilityServices.button.setText("GO");
+                UtilityServices.button.setOnAction(event1 -> {
+                    UserController.openBookingTicket.fire();
+                });
+            } else
+                UtilityServices.displayDialog(new Text("Warning"), new Text("No Availble Seats In This Flight. Please Choose Another One!"), stackpane);
+        } else {
+            UtilityServices.displayDialog(new Text("Check Your Choose"), new Text("Please Select A Flight !"), stackpane);
         }
     }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         searchBy.getItems().addAll("Departure & Destination", "Flight Number", "All Flights");
         ArrayList<String> ArrayList = new ArrayList<>();
         ResultSet resultSet = FlightDatabaseAPI.getAllAirports();
         try {
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 ArrayList.add(resultSet.getString(1));
             }
-        }catch (SQLException s){
+        } catch (SQLException s) {
             System.out.println();
         }
         departure.getItems().setAll(FXCollections.observableList(ArrayList));

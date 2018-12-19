@@ -31,8 +31,9 @@ CREATE TABLE `airports` (
   `name` varchar(45) NOT NULL,
   `latidude` double NOT NULL,
   `longitude` double NOT NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `name_unique` USING BTREE (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `airports`
@@ -42,7 +43,11 @@ CREATE TABLE `airports` (
 INSERT INTO `airports` (`id`,`name`,`latidude`,`longitude`) VALUES 
  (1,'Cairo',12.45,0.12),
  (2,'Luxor',12.45,0.12),
- (3,'London',123.45,13.2);
+ (3,'London',123.45,13.2),
+ (4,'Tanta',32.5,934.5),
+ (5,'Alexandria',66.3,95.1),
+ (6,'Paris',10,97.4),
+ (7,'Sharm El-shikh',64.5,934.6);
 /*!40000 ALTER TABLE `airports` ENABLE KEYS */;
 
 
@@ -62,7 +67,11 @@ CREATE TABLE `flight` (
   `master_id` int(10) unsigned NOT NULL,
   PRIMARY KEY  (`flightNumber`),
   KEY `master_id` (`master_id`),
-  CONSTRAINT `master_id` FOREIGN KEY (`master_id`) REFERENCES `master` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `src_fk` (`src`),
+  KEY `dest_fk` (`dest`),
+  CONSTRAINT `dest_fk` FOREIGN KEY (`dest`) REFERENCES `airports` (`name`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `master_id` FOREIGN KEY (`master_id`) REFERENCES `master` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `src_fk` FOREIGN KEY (`src`) REFERENCES `airports` (`name`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -70,12 +79,13 @@ CREATE TABLE `flight` (
 --
 
 /*!40000 ALTER TABLE `flight` DISABLE KEYS */;
-INSERT INTO `flight` (flightNumber,`src`,`dest`,`dateAndTime`,`price`,`seats`,`delay`,`master_id`) VALUES
- ('AP250','Alexandria','Paris','2018-12-18',7000,190,0,9),
+INSERT INTO `flight` (`flightNumber`,`src`,`dest`,`dateAndTime`,`price`,`seats`,`delay`,`master_id`) VALUES 
+ ('AP250','Alexandria','Paris','2018-12-18',7000,188,0,9),
  ('EG115','Cairo','London','2018-12-15',5000,200,0,10),
+ ('fa4483','Cairo','Luxor','2018-12-26',2500,0,0,10),
  ('LS143','Luxor','Sharm El-shikh','2019-01-01',3000,250,0,9),
- ('TS140','tanta','Sharm El-shikh','2018-12-19',2000,150,0,10),
- ('TS150','tanta','Sharm El-shikh','2018-12-19',2000,150,0,9);
+ ('TS140','Tanta','Sharm El-shikh','2018-12-19',2000,150,0,10),
+ ('TS150','Tanta','Sharm El-shikh','2018-12-19',2000,150,0,9);
 /*!40000 ALTER TABLE `flight` ENABLE KEYS */;
 
 
@@ -92,7 +102,7 @@ CREATE TABLE `master` (
   `password` varchar(45) NOT NULL,
   PRIMARY KEY  (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `master`
@@ -101,7 +111,8 @@ CREATE TABLE `master` (
 /*!40000 ALTER TABLE `master` DISABLE KEYS */;
 INSERT INTO `master` (`id`,`officeName`,`phone`,`email`,`password`) VALUES 
  (9,'Mahmoud','0565545','sharaf','Bmx7rH7lfa4='),
- (10,'fa','02','d@','t/gv+axlMQY=');
+ (10,'fa','02','d@','t/gv+axlMQY='),
+ (11,'asd','3456657','asd@','vdF8Wbh/pbE=');
 /*!40000 ALTER TABLE `master` ENABLE KEYS */;
 
 
@@ -113,11 +124,11 @@ DROP TABLE IF EXISTS `ticket`;
 CREATE TABLE `ticket` (
   `ticket_number` int(10) unsigned NOT NULL default '0',
   `user_id` int(10) unsigned NOT NULL,
-  `flight_number` varchar(10) NOT NULL,
+  `flightNumber` varchar(10) default NULL,
   PRIMARY KEY  USING BTREE (`ticket_number`),
   KEY `user_id` (`user_id`),
-  KEY `flight_id` USING BTREE (`flight_number`),
-  CONSTRAINT `flight_number` FOREIGN KEY (`flight_number`) REFERENCES `flight` (flightNumber) ON DELETE CASCADE ON UPDATE CASCADE,
+  KEY `flightNumber` (`flightNumber`),
+  CONSTRAINT `flightNumber` FOREIGN KEY (`flightNumber`) REFERENCES `flight` (`flightNumber`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -126,9 +137,18 @@ CREATE TABLE `ticket` (
 --
 
 /*!40000 ALTER TABLE `ticket` DISABLE KEYS */;
-INSERT INTO `ticket` (`ticket_number`,`user_id`,flightNumber) VALUES
- (1,31,'EG115'),
- (2,30,'AP250');
+INSERT INTO `ticket` (`ticket_number`,`user_id`,`flightNumber`) VALUES 
+ (2,30,'AP250'),
+ (2954,38,'TS150'),
+ (3022,42,'fa4483'),
+ (3101,36,'EG115'),
+ (4813,41,'EG115'),
+ (5653,39,'LS143'),
+ (5891,31,'AP250'),
+ (6459,40,'EG115'),
+ (6617,41,'EG115'),
+ (8083,34,'EG115'),
+ (9945,37,'LS143');
 /*!40000 ALTER TABLE `ticket` ENABLE KEYS */;
 
 
@@ -147,7 +167,7 @@ CREATE TABLE `user` (
   `rating` int(10) unsigned NOT NULL default '0',
   PRIMARY KEY  USING BTREE (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
@@ -170,7 +190,17 @@ INSERT INTO `user` (`id`,`name`,`date`,`gender`,`email`,`password`,`rating`) VAL
  (30,'Mahmoud Sharaf','2018-12-18','Male','mahmoud','d3VjSauUVjU=',0),
  (31,'asdasd','2018-12-22','Male','d@','t/gv+axlMQY=',4);
 INSERT INTO `user` (`id`,`name`,`date`,`gender`,`email`,`password`,`rating`) VALUES 
- (32,'Mahmoud','2018-12-28','Male','m@','fAlGh+jTloE=',0);
+ (32,'Mahmoud','2018-12-28','Male','m@','fAlGh+jTloE=',0),
+ (33,'asdvc','2018-12-29','Male','asdasd@','vdF8Wbh/pbE=',0),
+ (34,'mahmoud','2018-12-27','Male','a@','8oz4n/PWIvo=',0),
+ (36,'asd','2018-12-29','Male','z@','lxs4E+e354E=',0),
+ (37,'asd','2018-12-29','Male','s@','spujvFdiPKE=',0),
+ (38,'asd','2018-12-27','Male','f@','nvkS/kn8FkY=',0),
+ (39,'asd','2018-12-28','Male','e@','BVZEA1SBM28=',0),
+ (40,'mahfouz','2018-12-29','Male','mahfouz@gmail.com','vdF8Wbh/pbE=',0),
+ (41,'asd','2018-12-29','Male','1@','UirmHQbqBQ0=',0),
+ (42,'zxc','2018-12-24','Male','2@','SuwNy3srjNc=',4),
+ (43,'asd','2018-12-19','Male','3@','Ixizho4KTUA=',4);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
 

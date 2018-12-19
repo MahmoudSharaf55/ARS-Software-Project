@@ -6,11 +6,20 @@ import ars.utils.AuthUser;
 import ars.utils.DBConnection;
 import ars.utils.UtilityServices;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.events.JFXDialogEvent;
+import eu.hansolo.tilesfx.Tile;
+import eu.hansolo.tilesfx.TileBuilder;
+import eu.hansolo.tilesfx.TimeSection;
+import eu.hansolo.tilesfx.tools.Helper;
+import eu.hansolo.tilesfx.tools.Location;
 import javafx.event.ActionEvent;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.TilePane;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
 import java.net.URL;
@@ -22,6 +31,8 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Locale;
@@ -57,6 +68,9 @@ public class UserEditingTicket implements Initializable {
     @FXML
     private JFXButton cancel;
 
+    @FXML
+    private TilePane clockTiles;
+
     public long getDiffrenceHours() {
         try {
             DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -70,12 +84,28 @@ public class UserEditingTicket implements Initializable {
         }
         return 0;
     }
-
+    public void clockTiles(double h){
+        Tile tile = TileBuilder.create()
+                .skinType(Tile.SkinType.NUMBER)
+                .prefSize(480, 437)
+                .backgroundColor(Color.valueOf("#4c6876"))
+                .title("The Time Before Take Off")
+                .text("Can't Cancel Before 72H From Take Off")
+                .value(h)
+                .unit("H")
+                .description("Remaining Time")
+                .textVisible(true)
+                .build();
+        clockTiles.getChildren().add(tile);
+    }
     @FXML
     void delayTicket(ActionEvent event) {
-
+        UtilityServices.displayDialog(new Text("Notify"), new Text("Please Choose Another Flight From Search Engine"), spTicket);
+        UtilityServices.button.setText("GO");
+        UtilityServices.button.setOnAction(event1 -> {
+            UserController.openSearchEngine.fire();
+        });
     }
-
     @FXML
     void deleteTicket(ActionEvent event) {
         if (getDiffrenceHours() >= 72) {
@@ -90,7 +120,7 @@ public class UserEditingTicket implements Initializable {
                 Flight.currentFlight = null;
                 setLabelData("N/A", "N/A", "N/A", "N/A", "N/A", "N/A");
                 UtilityServices.displayDialog(new Text("Confirm Cancel"), new Text("You are cancel Successfully...  "), spTicket);
-
+                clockTiles(0);
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
@@ -125,9 +155,12 @@ public class UserEditingTicket implements Initializable {
                     setLabelData(String.valueOf(resultSet.getInt("ticket_number")),flightNumber,flightResultSet.getString("src"),
                             flightResultSet.getString("dest"),dateFormat.format(flightResultSet.getDate("dateAndTime")),
                             String.valueOf(flightResultSet.getInt("price")));
+                    clockTiles((double)getDiffrenceHours());
                 }
-            } else
+            } else {
                 setLabelData("N/A", "N/A", "N/A", "N/A", "N/A", "N/A");
+                clockTiles(0);
+            }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }

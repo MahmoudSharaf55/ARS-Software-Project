@@ -9,13 +9,20 @@ import com.jfoenix.controls.JFXTextField;
 import com.lynden.gmapsfx.GoogleMapView;
 import com.lynden.gmapsfx.MapComponentInitializedListener;
 import com.lynden.gmapsfx.javascript.object.*;
+import eu.hansolo.tilesfx.Tile;
+import eu.hansolo.tilesfx.TileBuilder;
+import eu.hansolo.tilesfx.tools.Location;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.TilePane;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
+import javax.swing.event.TreeModelEvent;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -23,14 +30,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class UserBookingTicket implements Initializable, MapComponentInitializedListener {
+public class UserBookingTicket implements Initializable {
 
-    @FXML
-    GoogleMapView mapView;
-    GoogleMap map;
     int flightTicketNumber = -1;
+    ArrayList<Location> locations = new ArrayList<>();
     @FXML
     private JFXTextField ticketNumber;
     @FXML
@@ -47,6 +53,8 @@ public class UserBookingTicket implements Initializable, MapComponentInitialized
     private Label flightPriceLbl;
     @FXML
     private StackPane stackpane;
+    @FXML
+    private TilePane mapTiles;
 
     @FXML
     void findTicketNumber(ActionEvent event) {
@@ -78,7 +86,7 @@ public class UserBookingTicket implements Initializable, MapComponentInitialized
                 if (Ticket.currentTicket != null) {
                     try {
                         PreparedStatement statement = DBConnection.getConnection().prepareStatement("update flight set seats = seats + 1 where flightNumber = ?");
-                        statement.setString(1,Ticket.currentTicket.getFlightID());
+                        statement.setString(1, Ticket.currentTicket.getFlightID());
                         statement.executeUpdate();
                         PreparedStatement ps = DBConnection.getConnection().prepareStatement("update ticket set ticket_number = ?,user_id = ?,flightNumber = ? where user_id = ?");
                         ps.setInt(1, flightTicketNumber);
@@ -89,9 +97,9 @@ public class UserBookingTicket implements Initializable, MapComponentInitialized
                         Ticket.currentTicket = new Ticket(flightTicketNumber, AuthUser.currentUser.getUserID(), Flight.currentFlight.getFlightNumber());
                         UtilityServices.displayDialog(new Text("Message"), new Text("Your Flight is generated Successfully"), stackpane);
                         PreparedStatement preparedStatement = DBConnection.getConnection().prepareStatement("update flight set seats = seats - 1 where flightNumber = ?");
-                        preparedStatement.setString(1,Flight.currentFlight.getFlightNumber());
+                        preparedStatement.setString(1, Flight.currentFlight.getFlightNumber());
                         preparedStatement.executeUpdate();
-                        Flight.currentFlight.setSeats(Flight.currentFlight.getSeats()-1);
+                        Flight.currentFlight.setSeats(Flight.currentFlight.getSeats() - 1);
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
@@ -105,9 +113,9 @@ public class UserBookingTicket implements Initializable, MapComponentInitialized
                         Ticket.currentTicket = new Ticket(flightTicketNumber, AuthUser.currentUser.getUserID(), Flight.currentFlight.getFlightNumber());
                         UtilityServices.displayDialog(new Text("Message"), new Text("Your Flight is generated Successfully"), stackpane);
                         PreparedStatement preparedStatement = DBConnection.getConnection().prepareStatement("update flight set seats = seats - 1 where flightNumber = ?");
-                        preparedStatement.setString(1,Flight.currentFlight.getFlightNumber());
+                        preparedStatement.setString(1, Flight.currentFlight.getFlightNumber());
                         preparedStatement.executeUpdate();
-                        Flight.currentFlight.setSeats(Flight.currentFlight.getSeats()-1);
+                        Flight.currentFlight.setSeats(Flight.currentFlight.getSeats() - 1);
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
@@ -120,9 +128,22 @@ public class UserBookingTicket implements Initializable, MapComponentInitialized
         }
     }
 
+    public void setupMapTiles(Location src, Location dest) {
+        Tile tile = TileBuilder.create()
+                .prefSize(500, 437)
+                .backgroundColor(Color.valueOf("#4c6876"))
+                .title("Departure & Destination Airport")
+                .skinType(Tile.SkinType.MAP)
+                .currentLocation(src)
+                .pointsOfInterest(dest)
+                .mapProvider(Tile.MapProvider.STREET)
+                .dateVisible(true)
+                .build();
+        mapTiles.getChildren().add(tile);
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        mapView.addMapInializedListener(this);
         if (Flight.currentFlight != null) {
             flightNumberLbl.setText(Flight.currentFlight.getFlightNumber());
             srcLbl.setText(Flight.currentFlight.getSrc());
@@ -130,14 +151,31 @@ public class UserBookingTicket implements Initializable, MapComponentInitialized
             DateFormat dateFormat = new SimpleDateFormat("dd/MM/YYYY HH:MM");
             flightDateLbl.setText(dateFormat.format(Flight.currentFlight.getDateAndTime()));
             flightPriceLbl.setText(String.valueOf(Flight.currentFlight.getPrice()));
+            try {
+                PreparedStatement ps = DBConnection.getConnection().prepareStatement("select latidude,longitude,name from airports where name = ? || name = ?");
+                ps.setString(1,Flight.currentFlight.getSrc());
+                ps.setString(2,Flight.currentFlight.getDest());
+                ResultSet rs =  ps.executeQuery();
+                rs.next();
+                Location src = new Location(Double.parseDouble(rs.getString("latidude")),Double.parseDouble(rs.getString("longitude")),rs.getString("name"));
+                System.out.println(src.getName());
+                rs.next();
+                Location dest = new Location(Double.parseDouble(rs.getString("latidude")),Double.parseDouble(rs.getString("longitude")),rs.getString("name"));
+                System.out.println(dest.getName());
+                setupMapTiles(src,dest);
+            }catch (SQLException e){
+
+            }
+
         } else {
+            setupMapTiles(new Location(),new Location());
             flightNumberLbl.setText("N / A");
             srcLbl.setText("N / A");
             destLbl.setText("N / A");
             flightDateLbl.setText("N / A");
             flightPriceLbl.setText("N / A");
         }
-        if (Ticket.currentTicket != null ) {
+        if (Ticket.currentTicket != null) {
             if (Ticket.currentTicket.getTicketID() != -1)
                 ticketNumberLbl.setText(String.valueOf(Ticket.currentTicket.getTicketID()));
             else
@@ -147,42 +185,5 @@ public class UserBookingTicket implements Initializable, MapComponentInitialized
         }
     }
 
-    @Override
-    public void mapInitialized() {
-        try {
-            LatLong joeSmithLocation = new LatLong(47.6197, -122.3231);
-            //Set the initial properties of the map.
-            MapOptions mapOptions = new MapOptions();
 
-            mapOptions.center(new LatLong(47.6097, -122.3331))
-                    .mapType(MapTypeIdEnum.ROADMAP)
-                    .overviewMapControl(false)
-                    .panControl(false)
-                    .rotateControl(false)
-                    .scaleControl(false)
-                    .streetViewControl(false)
-                    .zoomControl(false)
-                    .zoom(12);
-
-            map = mapView.createMap(mapOptions);
-
-            //Add markers to the map
-            MarkerOptions markerOptions1 = new MarkerOptions();
-            markerOptions1.position(joeSmithLocation);
-
-            Marker joeSmithMarker = new Marker(markerOptions1);
-
-            map.addMarker(joeSmithMarker);
-
-            InfoWindowOptions infoWindowOptions = new InfoWindowOptions();
-            infoWindowOptions.content("<h2>Fred Wilkie</h2>"
-                    + "Current Location: Safeway<br>"
-                    + "ETA: 45 minutes");
-
-            InfoWindow fredWilkeInfoWindow = new InfoWindow(infoWindowOptions);
-            fredWilkeInfoWindow.open(map, joeSmithMarker);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
 }

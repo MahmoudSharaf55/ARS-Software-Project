@@ -11,6 +11,8 @@ import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
 
 public class UtilityServices {
+    public static JFXDialog dialog;
+    public static JFXButton button;;
     public static void displayDialog(Text heading, Text body, StackPane myController) {
         JFXDialogLayout content = new JFXDialogLayout();
         content.setStyle("-fx-background-color: #607D8B; -fx-fill: white;");
@@ -18,8 +20,8 @@ public class UtilityServices {
         body.setFill(Paint.valueOf("#BDBDBD"));
         content.setHeading(heading);
         content.setBody(body);
-        JFXDialog dialog = new JFXDialog(myController, content, JFXDialog.DialogTransition.CENTER);
-        JFXButton button = new JFXButton("OK");
+        dialog = new JFXDialog(myController, content, JFXDialog.DialogTransition.CENTER);
+        button = new JFXButton("OK");
         button.setStyle("-fx-background-color:  #006064 ; -jfx-button-type: FLAT ; -fx-text-fill: white ");
 
         button.setOnAction(new EventHandler<ActionEvent>() {
