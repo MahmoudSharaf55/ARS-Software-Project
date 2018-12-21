@@ -21,6 +21,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+import netscape.javascript.JSException;
 
 import javax.swing.event.TreeModelEvent;
 import java.net.URL;

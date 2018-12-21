@@ -33,6 +33,7 @@
 
 .chart-title {
     -fx-text-fill: #FFFF;
+    -fx-font-size: 13px;
 }
 
 .axis-label {

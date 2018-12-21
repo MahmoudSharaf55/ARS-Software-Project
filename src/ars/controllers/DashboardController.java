@@ -67,7 +67,7 @@ public class DashboardController implements Initializable {
             while (resultSet.next()) {
                 XYChart.Series<String, Number> series1 = new XYChart.Series();
                 series1.setName(resultSet.getString("src"));
-                series1.getData().add(new XYChart.Data<String, Number>(resultSet.getString("src") + " to " + resultSet.getString("dest"), resultSet.getInt("price")));
+                series1.getData().add(new XYChart.Data<String, Number>(resultSet.getString("src").substring(0, resultSet.getString("src").indexOf(' ')) + " to " + resultSet.getString("dest").substring(0, resultSet.getString("dest").indexOf(' ')), resultSet.getInt("price")));
                 priceChart.getData().add(series1);
             }
 
@@ -83,7 +83,7 @@ public class DashboardController implements Initializable {
             while (resultSet.next()) {
                 System.out.println(resultSet.getString("dest"));
                 pieChartData = FXCollections.observableArrayList(
-                        new PieChart.Data(resultSet.getString("dest"), resultSet.getInt("count")));
+                        new PieChart.Data(resultSet.getString("dest").substring(0, resultSet.getString("dest").indexOf(' ')), resultSet.getInt("count")));
 
 
             }
@@ -136,11 +136,11 @@ public class DashboardController implements Initializable {
 
     private void setupSmoothAreaChart() {
         ResultSet resultSet = FlightDatabaseAPI.getFlightsCount(AuthMaster.currentMaster.getMasterID());
-       int tickets = 0;
+        int tickets = 0;
         try {
             if (resultSet != null) {
                 if (resultSet.next()) {
-                   tickets = resultSet.getInt("count");
+                    tickets = resultSet.getInt("count");
                 }
             }
         } catch (SQLException e) {
