@@ -70,6 +70,7 @@ public class UserEditingTicket implements Initializable {
 
     @FXML
     private TilePane clockTiles;
+    Tile tile;
 
     public long getDiffrenceHours() {
         try {
@@ -85,7 +86,7 @@ public class UserEditingTicket implements Initializable {
         return 0;
     }
     public void clockTiles(double h){
-        Tile tile = TileBuilder.create()
+        tile = TileBuilder.create()
                 .skinType(Tile.SkinType.NUMBER)
                 .prefSize(480, 437)
                 .backgroundColor(Color.valueOf("#4c6876"))
@@ -108,24 +109,26 @@ public class UserEditingTicket implements Initializable {
     }
     @FXML
     void deleteTicket(ActionEvent event) {
-        if (getDiffrenceHours() >= 72) {
-            try {
-                PreparedStatement statement = DBConnection.getConnection().prepareStatement("update flight set seats = seats + 1 where flightNumber = ?");
-                statement.setString(1,Ticket.currentTicket.getFlightID());
-                statement.executeUpdate();
-                PreparedStatement deleteStatement = DBConnection.getConnection().prepareStatement("delete from ticket where user_id = ?");
-                deleteStatement.setInt(1, AuthUser.currentUser.getUserID());
-                deleteStatement.executeUpdate();
-                Ticket.currentTicket = null;
-                Flight.currentFlight = null;
-                setLabelData("N/A", "N/A", "N/A", "N/A", "N/A", "N/A");
-                UtilityServices.displayDialog(new Text("Confirm Cancel"), new Text("You are cancel Successfully...  "), spTicket);
-                clockTiles(0);
-            } catch (SQLException ex) {
-                ex.printStackTrace();
+        if (Flight.currentFlight != null){
+            if (getDiffrenceHours() >= 72) {
+                try {
+                    PreparedStatement statement = DBConnection.getConnection().prepareStatement("update flight set seats = seats + 1 where flightNumber = ?");
+                    statement.setString(1,Ticket.currentTicket.getFlightID());
+                    statement.executeUpdate();
+                    PreparedStatement deleteStatement = DBConnection.getConnection().prepareStatement("delete from ticket where user_id = ?");
+                    deleteStatement.setInt(1, AuthUser.currentUser.getUserID());
+                    deleteStatement.executeUpdate();
+                    Ticket.currentTicket = null;
+                    Flight.currentFlight = null;
+                    setLabelData("N/A", "N/A", "N/A", "N/A", "N/A", "N/A");
+                    UtilityServices.displayDialog(new Text("Confirm Cancel"), new Text("You are cancel Successfully...  "), spTicket);
+                    tile.setValue(0);
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+            } else {
+                UtilityServices.displayDialog(new Text("Failed"), new Text("You Cannot Cancel This Flight Because The Take Off Time is Less Than 72 H"), spTicket);
             }
-        } else {
-            UtilityServices.displayDialog(new Text("Failed"), new Text("You Cannot Cancel This Flight Because The Take Off Time is Less Than 72 H"), spTicket);
         }
     }
 
